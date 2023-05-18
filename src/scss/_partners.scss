@@ -1,0 +1,53 @@
+@import 'resets';
+
+.our-partners {
+	min-height: 200px;
+	margin-bottom: 6em;
+
+	.heading-wrap {
+		text-align: center;
+		margin-bottom: 2em;
+
+		.heading {
+			color: $body-heading-color;
+		}
+	}
+
+	.partner-brand-wrap {
+		width: 90%;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.wrap {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+
+			.partner {
+				height: 100px;
+				width: 100px;
+				background: $accent-green;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: $box-radius;
+			}
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		.heading-wrap {
+			.heading {
+				font-size: $desktop-size;
+			}
+		}
+
+		.partner-brand-wrap {
+			.wrap {
+				gap: 30px;
+			}
+		}
+	}
+}

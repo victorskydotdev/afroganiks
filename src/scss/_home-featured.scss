@@ -1,0 +1,115 @@
+@import 'resets';
+
+.featured {
+	margin-bottom: 5em;
+
+	.container {
+		.featured-heading {
+			text-align: center;
+			color: $body-heading-color;
+			margin-bottom: 2em;
+		}
+
+		.media-scroller {
+			display: grid;
+			gap: 10px;
+			grid-auto-flow: column;
+			grid-auto-columns: 50%;
+			overflow-x: auto;
+			margin-bottom: 2em;
+			scroll-snap-type: inline mandatory;
+
+			& > * {
+				scroll-snap-align: center;
+			}
+
+			.product {
+				height: 300px;
+				background: $accent-green;
+				border-radius: $box-radius;
+				overflow: hidden;
+				padding: 10px;
+			}
+
+			.product > * {
+				inline-size: 100%;
+				height: 280px;
+				object-fit: cover;
+				border-radius: $box-radius;
+			}
+		}
+
+		.btn-wrap {
+			display: flex;
+			justify-content: center;
+
+			.view-btn {
+				display: inline-block !important;
+
+				background: teal;
+				@include primaryBtn();
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			.featured-heading {
+				text-align: center;
+				color: $body-heading-color;
+				margin-bottom: 2em;
+			}
+
+			.media-scroller {
+				display: grid;
+				gap: 10px;
+				grid-auto-flow: column;
+				grid-auto-columns: 30%;
+				overflow-x: auto;
+				margin-bottom: 2em;
+				scroll-snap-type: inline mandatory;
+
+				& > * {
+					scroll-snap-align: center;
+				}
+
+				.product {
+					height: 300px;
+				}
+
+				.product > * {
+					height: 280px;
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			.featured-heading {
+				text-align: center;
+				color: $body-heading-color;
+				margin-bottom: 2em;
+			}
+
+			.media-scroller {
+				display: grid;
+				gap: 10px;
+				grid-template-columns: repeat(4, 1fr);
+				width: 80%;
+				margin: 0 auto;
+
+				overflow-x: unset;
+				margin-bottom: 2em;
+
+				& > * {
+					scroll-snap-align: center;
+				}
+
+				.product {
+					height: 300px;
+				}
+
+				.product > * {
+					height: 280px;
+				}
+			}
+		}
+	}
+}

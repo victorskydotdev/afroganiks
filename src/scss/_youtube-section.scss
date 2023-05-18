@@ -1,0 +1,124 @@
+@import 'resets';
+
+.youtube-section {
+	min-height: 90vh;
+	margin-bottom: 8em;
+	position: relative;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+		padding: 2em;
+		text-align: center;
+		border-radius: $box-radius;
+
+		.heading-text {
+			color: $dominant-green;
+			line-height: 1.6;
+			width: 70%;
+			margin: 0 auto;
+			margin-bottom: 2em;
+			padding: 0 1em;
+		}
+
+		.p-text {
+			font-weight: $font-regular;
+			color: $body-p-color;
+			line-height: $body-line-height;
+			font-size: $body-font-size;
+			margin-bottom: 4em;
+		}
+
+		.img-container {
+			background: url('/dist/images/video_thumbnail.jpeg') center/cover,
+				no-repeat;
+			height: 250px;
+			border-radius: $box-radius;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			.play-btn {
+				background: transparent;
+				border: none;
+
+				i {
+					color: red;
+					font-size: 40px;
+				}
+			}
+		}
+
+		.rounded-shape {
+			position: absolute;
+			bottom: -60px;
+			left: -13%;
+			width: 40%;
+			z-index: -1;
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		.container {
+			width: 80%;
+
+			.heading-text {
+				color: $dominant-green;
+				line-height: 1.6;
+				width: 70%;
+				margin: 0 auto;
+				margin-bottom: 2em;
+			}
+
+			.p-text {
+				max-width: 450px;
+				margin: 0 auto;
+				margin-bottom: 4em;
+				text-align: justify;
+			}
+
+			.img-container {
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			.rounded-shape {
+				position: absolute;
+				bottom: -60px;
+				left: 1%;
+				width: 30%;
+				z-index: -1;
+			}
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		.container {
+			width: 80%;
+
+			.heading-text {
+				color: $dominant-green;
+				line-height: 1.6;
+				width: 70%;
+				margin: 0 auto;
+				margin-bottom: 2em;
+			}
+
+			.img-container {
+				width: 50%;
+				margin: 0 auto;
+				margin-bottom: -4em;
+				height: 300px;
+			}
+
+			.rounded-shape {
+				position: absolute;
+				bottom: -80px;
+				left: 22%;
+				width: 20%;
+				z-index: -2;
+			}
+		}
+	}
+}
