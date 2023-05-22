@@ -84,3 +84,16 @@ a {
 	color: $light;
 	font-weight: $font-bold;
 }
+
+@mixin secondaryBtn() {
+	display: inline-block;
+	min-width: 164px;
+	height: 52px;
+	padding: $btn-padding;
+	border: 2px solid $accent-green;
+	text-transform: capitalize;
+	font-size: 0.9rem;
+	border-radius: $btn-radius;
+	color: $accent-green;
+	font-weight: $font-bold;
+}

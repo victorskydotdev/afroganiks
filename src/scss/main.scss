@@ -8,3 +8,7 @@
 @use 'snapshot';
 @use 'newsletter';
 @use 'footer';
+
+// product page styles
+@use 'prodPage-main-section';
+@use 'products';

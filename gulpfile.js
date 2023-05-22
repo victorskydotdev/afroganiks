@@ -61,7 +61,7 @@ function jsTask() {
 // cachebursting task
 const cbString = new Date().getTime();
 function cacheBustTask() {
-	return src('index.html')
+	return src('*.html')
 		.pipe(replace(/cb=\d+/g, 'cb=' + cbString))
 		.pipe(dest('.'));
 }
