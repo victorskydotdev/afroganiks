@@ -18,6 +18,7 @@
 
 			.heading {
 				@include myPrimaryFont();
+
 				color: $body-heading-color;
 				font-size: 2rem;
 				text-transform: capitalize;
