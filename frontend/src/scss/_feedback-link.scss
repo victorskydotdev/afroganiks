@@ -1,0 +1,72 @@
+@import 'resets';
+
+.feedback-link-section {
+	margin-bottom: 4em;
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		background: $rgb-bg;
+		border-radius: $box-radius;
+		position: relative;
+		padding: 4em 0;
+		overflow: hidden;
+
+		.p-text {
+			text-align: center;
+			font-weight: $font-medium;
+			color: $body-heading-color;
+			margin-bottom: 1em;
+		}
+
+		.heading {
+			width: 80%;
+			margin: 0 auto;
+			text-align: center;
+			line-height: 1.5;
+			color: $body-heading-color;
+			position: relative;
+			z-index: 1;
+		}
+
+		.position-icon {
+			position: absolute;
+		}
+
+		.position-icon > img {
+			inline-size: 100%;
+		}
+
+		.caution-sign {
+			top: 10%;
+			right: 0;
+			width: 50%;
+		}
+
+		.elipse-shape {
+			top: 70%;
+			left: -70%;
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 70%;
+
+			.elipse-shape {
+				top: 50%;
+				left: -50%;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 50%;
+
+			.heading {
+				width: 68%;
+			}
+
+			.elipse-shape {
+				top: 50%;
+				left: -50%;
+			}
+		}
+	}
+}

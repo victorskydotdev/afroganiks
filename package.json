@@ -4,7 +4,9 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "eleventy --serve",
+		"build": "build",
+		"compile-styles": "gulp"
 	},
 	"keywords": [
 		"Afroganiks",
@@ -15,6 +17,7 @@
 	"author": "Victor Sky Emejor | Codedly Africa HQ <me@victorsky.dev & victorsky@codedlyafrica.com>",
 	"license": "ISC",
 	"devDependencies": {
+		"@11ty/eleventy": "^2.0.1",
 		"@babel/core": "^7.21.8",
 		"@babel/preset-env": "^7.21.5",
 		"autoprefixer": "^10.4.14",

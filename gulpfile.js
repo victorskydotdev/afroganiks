@@ -23,39 +23,39 @@ const babel = require('gulp-babel');
 // imagemin task
 async function imgOptimizeTask() {
 	const imagemin = await import('gulp-imagemin');
-	return src('src/assets/*.{jpg, png}')
+	return src('./frontend/src/assets/*.{jpg,  png, jpeg}')
 		.pipe(
 			imagemin.default([
 				imagemin.mozjpeg({ quality: 80, progressive: true }),
 				imagemin.optipng({ optimizationLevel: 2 }),
 			])
 		)
-		.pipe(dest('dist/images'));
+		.pipe(dest('./frontend/dist/images'));
 }
 
 async function webpTask() {
 	const webp = await import('gulp-webp');
-	return src('dist/images/*.{jpg,png}')
+	return src('./frontent/dist/images/*.{jpg, png, jpeg}')
 		.pipe(webp.default())
-		.pipe(dest('dist/images'));
+		.pipe(dest('./frontend/dist/images'));
 }
 
 // sass task
 function sassTask() {
-	return src('src/scss/**/*.scss')
+	return src('./frontend/src/scss/**/*.scss')
 		.pipe(sourcemaps.init())
 		.pipe(sass())
 		.pipe(postcss([autoprefixer(), cssnano()]))
 		.pipe(sourcemaps.write('.'))
-		.pipe(dest('dist/css'));
+		.pipe(dest('./frontend/dist/css'));
 }
 
 //  js task
 function jsTask() {
-	return src('src/js/*.js')
+	return src('./frontend/src/js/*.js')
 		.pipe(concat('afroJsFiles.js'))
 		.pipe(uglify())
-		.pipe(dest('dist/js'));
+		.pipe(dest('./frontend/dist/js'));
 }
 
 // cachebursting task
@@ -68,10 +68,10 @@ function cacheBustTask() {
 
 // watch task
 function watchTask() {
-	watch('src/images/*.{jpg,png}', imgOptimizeTask);
-	watch('dist/images/*.{jpg,png}', webpTask);
-	watch('src/scss/*.scss', sassTask);
-	watch('src/js/*.js', jsTask);
+	watch('./frontend/src/images/*.{jpg,png}', imgOptimizeTask);
+	watch('./frontend/dist/images/*.{jpg,png}', webpTask);
+	watch('./frontend/src/scss/*.scss', sassTask);
+	watch('./frontend/src/js/*.js', jsTask);
 }
 
 // default task

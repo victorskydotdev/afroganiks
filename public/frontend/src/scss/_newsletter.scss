@@ -1,0 +1,139 @@
+@import 'resets';
+
+.newsletter-section {
+	min-height: 250px;
+	margin-bottom: 6em;
+
+	.sign-up-box {
+		background: $accent-green;
+
+		width: 90%;
+		margin: 0 auto;
+		border-radius: $box-radius;
+		padding: 3em 2em;
+		position: relative;
+		overflow: hidden;
+
+		.text-wrap {
+			text-align: center;
+			position: relative;
+			z-index: 1;
+
+			.heading {
+				color: $light;
+				line-height: 1.5;
+				margin-bottom: 0.8em;
+			}
+
+			.p-text {
+				font-family: $secondary-font;
+				font-weight: $font-medium;
+				color: $light;
+				margin-bottom: 2em;
+			}
+		}
+
+		.form {
+			display: flex;
+			justify-content: center;
+
+			.wrap {
+				display: flex;
+				align-items: center;
+				position: relative;
+				z-index: 1;
+
+				input {
+					outline: none;
+					padding: 0.8em 0.8em;
+					display: inline-block;
+					border-radius: 10px 0 0 10px;
+					border: none;
+					position: relative;
+					width: 70%;
+					color: $body-p-color;
+					font-family: $secondary-font;
+					font-weight: $font-medium;
+				}
+
+				button {
+					background: transparent;
+					border: none;
+					background: #d6cd00;
+					padding: 0.78em 2.5em;
+					cursor: pointer;
+					font-family: $secondary-font;
+					font-weight: $font-medium;
+					color: $light;
+					margin-left: -0.5em;
+					display: inline-block;
+					border-radius: 0 10px 10px 0;
+				}
+			}
+		}
+
+		.elipse1 {
+			display: inline-block;
+			position: absolute;
+			width: 150px;
+			left: 0;
+			bottom: 0;
+		}
+
+		.elipse2 {
+			display: inline-block;
+			position: absolute;
+			width: 150px;
+			right: 0;
+			top: 0;
+			z-index: 0;
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		.sign-up-box {
+			width: 70%;
+			padding: 4em 3em;
+
+			.form {
+				.wrap {
+					input {
+						width: 300px;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		.sign-up-box {
+			width: 55%;
+
+			.text-wrap {
+				// padding: 0 6em;
+
+				.heading {
+					font-size: $desktop-size;
+					font-weight: $font-bold;
+					font-family: $secondary-font;
+
+					width: 80%;
+					margin: 0 auto;
+					margin-bottom: 1em;
+
+					@media screen and (min0-width: 1300px) {
+						padding: 0 2em;
+					}
+				}
+			}
+
+			.form {
+				.wrap {
+					input {
+						width: 300px;
+					}
+				}
+			}
+		}
+	}
+}

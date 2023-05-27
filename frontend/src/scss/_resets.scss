@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+@font-face {
+	font-family: 'GT Walsheim Bold';
+	src: url('/src/assets/@font-face/91e0638dac19aba2539d2b8b2a7981e8.eot'); /* IE9*/
+	src: url('/src/assets/@font-face/91e0638dac19aba2539d2b8b2a7981e8.eot?#iefix')
+		format('embedded-opentype'); /* IE6-IE8 */
+	src: url('91e0638dac19aba2539d2b8b2a7981e8.eot?#iefix')
+			format('embedded-opentype'),
+		/* IE6-IE8 */
+			url('/src/assets/@font-face/91e0638dac19aba2539d2b8b2a7981e8.woff2')
+			format('woff2'),
+		/* chrome、firefox */
+			url('/src/assets/@font-face/91e0638dac19aba2539d2b8b2a7981e8.woff')
+			format('woff'),
+		/* chrome、firefox */
+			url('/src/assets/@font-face/91e0638dac19aba2539d2b8b2a7981e8.ttf')
+			format('truetype'),
+		/* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+			url('/src/assets/@font-face/91e0638dac19aba2539d2b8b2a7981e8.svg#GT Walsheim Bold"')
+			format('svg'); /* iOS 4.1- */
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+// global variables
+
+// ===Colors=== //
+$dominant-green: #227203;
+$accent-green: #6aba43;
+$body-heading-color: #1a1a1a;
+$rgb-bg: rgba(214, 205, 0, 0.55);
+$body-p-color: #949494;
+$light: #fff;
+$btn-padding: 15px 20px 15px 20px;
+$btn-radius: 10px;
+$box-radius: 15px;
+$primary-font: '"GT Walsheim Bold", !important';
+$secondary-font: 'Poppins', sans-serif;
+$font-bold: 700;
+$font-medium: 500;
+$font-regular: 400;
+$desktop-size: 1.6rem;
+$body-font-size: 15px;
+$body-line-height: 1.7;
+$font-sm: 2rem;
+
+html {
+	font-size: 100%;
+}
+
+body {
+	line-height: 1.3;
+	font-family: $secondary-font;
+	overflow-x: hidden;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	list-style: none;
+}
+
+@mixin myPrimaryFont() {
+	font-family: $primary-font;
+	font-style: normal;
+	-webkit-font-smoothing: antialiased;
+	-webkit-text-stroke-width: 0.2px;
+	-moz-osx-font-smoothing: grayscale;
+	font-style: bold;
+}
+
+@mixin primaryBtn() {
+	display: inline-block;
+	min-width: 164px;
+	height: 52px;
+	padding: $btn-padding;
+	background: $accent-green;
+	text-transform: capitalize;
+	font-size: 0.9rem;
+	border-radius: $btn-radius;
+	color: $light;
+	font-weight: $font-bold;
+}
+
+@mixin secondaryBtn() {
+	display: inline-block;
+	min-width: 164px;
+	height: 52px;
+	padding: $btn-padding;
+	border: 2px solid $accent-green;
+	text-transform: capitalize;
+	font-size: 0.9rem;
+	border-radius: $btn-radius;
+	color: $accent-green;
+	font-weight: $font-bold;
+}

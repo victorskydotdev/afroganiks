@@ -1,0 +1,90 @@
+@import 'resets';
+
+.dist-cta-section {
+	background: url('/frontend/dist/images/distributor.webp') center/cover,
+		no-repeat;
+	height: 90vh;
+	position: relative;
+	display: flex;
+	align-items: center;
+
+	&::after {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: rgba(0, 0, 0, 0.808);
+	}
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+		display: grid;
+		gap: 4em;
+
+		.text-area {
+			display: grid;
+			gap: 4em;
+
+			.text {
+				line-height: 1.7;
+				color: $light;
+			}
+
+			.pseudoclass-text {
+				position: relative;
+
+				&::after {
+					content: '';
+					position: absolute;
+					width: 70%;
+					height: 2px;
+					top: 125%;
+					left: 15%;
+					background: $accent-green;
+				}
+			}
+		}
+
+		.btn-wrap {
+			text-align: center;
+			.btn {
+				background: $accent-green;
+				color: $light;
+				padding: $btn-padding;
+				border-radius: $btn-radius;
+				font-weight: $font-medium;
+			}
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		.container {
+			width: 70%;
+
+			.text-area {
+				.pseudoclass-text {
+					&::after {
+						top: 138%;
+					}
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		.container {
+			width: 50%;
+
+			.text-area {
+				text-align: center;
+				.pseudoclass-text {
+					&::after {
+						top: 138%;
+					}
+				}
+			}
+		}
+	}
+}

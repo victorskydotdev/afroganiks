@@ -1,0 +1,135 @@
+@import 'resets';
+
+.slider {
+	min-height: 600px;
+	position: relative;
+	z-index: 0;
+	margin-bottom: 4em;
+
+	.elipse-shape {
+		position: absolute;
+		display: inline-block;
+		height: 400px;
+		width: 50%;
+		top: 20%;
+		z-index: -1;
+	}
+
+	.elipse-overlay {
+		position: absolute;
+		display: inline-block;
+		height: 400px;
+		width: 60%;
+		z-index: 1;
+		top: -7%;
+		left: -10%;
+	}
+
+	// media querries for elipse shapes
+	@media screen and (min-width: 43em) {
+		.elipse-shape {
+			position: absolute;
+			display: inline-block;
+			height: 400px;
+			width: 50%;
+			top: 20%;
+			left: -20%;
+			z-index: -1;
+		}
+
+		.elipse-overlay {
+			position: absolute;
+			display: inline-block;
+			height: 400px;
+			width: 60%;
+			z-index: 1;
+			top: -7%;
+			left: -20%;
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		.elipse-shape {
+			height: 400px;
+			width: 100%;
+			top: 20%;
+			left: -30%;
+			z-index: -1;
+		}
+
+		.elipse-overlay {
+			height: 300px;
+			width: 60%;
+			z-index: 1;
+			top: -7%;
+			left: -10%;
+		}
+	}
+
+	.slider-container {
+		width: 90%;
+		margin: 0 auto;
+		padding: 4em 0;
+		.content-wrap {
+			.img-wrap {
+				background: url('/dist/images/img1.jpeg') center/cover, no-repeat;
+				height: 300px;
+				width: 100%;
+				border-radius: $box-radius;
+				margin-bottom: 2em;
+			}
+
+			.text-area-wrap {
+				text-align: center;
+
+				.heading {
+					margin-bottom: 1em;
+					color: $body-heading-color;
+				}
+
+				.p-text {
+					color: $body-p-color;
+					font-size: $body-font-size;
+					font-weight: $font-regular;
+					line-height: $body-line-height;
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 60%;
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 70%;
+
+			.content-wrap {
+				display: grid;
+				grid-template-columns: 2fr 1.5fr;
+				gap: 40px;
+				// align-items: center;
+
+				.img-wrap {
+					height: 350px;
+				}
+
+				.text-area-wrap {
+					text-align: left;
+					padding-top: 2em;
+
+					.heading {
+						margin-bottom: 1em;
+						color: $body-heading-color;
+					}
+
+					.p-text {
+						color: $body-p-color;
+						font-size: $body-font-size;
+						font-weight: $font-regular;
+						line-height: $body-line-height;
+					}
+				}
+			}
+		}
+	}
+}

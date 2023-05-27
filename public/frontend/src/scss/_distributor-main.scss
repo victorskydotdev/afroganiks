@@ -1,0 +1,130 @@
+@import 'resets';
+
+.distributor-main {
+	min-height: 100vh;
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding-top: 10em;
+	margin-bottom: 5em;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		position: relative;
+		z-index: 1;
+		display: grid;
+
+		.text-area {
+			.heading {
+				margin-bottom: 1em;
+				line-height: 1.5;
+				color: $body-heading-color;
+				font-size: $font-sm;
+			}
+
+			.p-text {
+				line-height: 1.5;
+				margin-bottom: 2em;
+				color: $body-p-color;
+			}
+
+			.btn {
+				display: inline-block;
+				background: $accent-green;
+				color: $light;
+				font-weight: $font-medium;
+				padding: $btn-padding;
+				border-radius: $btn-radius;
+			}
+		}
+
+		.image-wrap > img {
+			inline-size: 100%;
+		}
+	}
+
+	.dist-svg-wrap {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	.dist-elipse-shape-wrap {
+		position: absolute;
+		left: -40%;
+	}
+
+	.dist-svg-wrap > img {
+		inline-size: 300px;
+	}
+
+	.dist-elipse-shape-wrap > img {
+		inline-size: 70%;
+	}
+
+	@media screen and (min-width: 43em) {
+		.container {
+			.text-area {
+				max-width: 450px;
+			}
+
+			.image-wrap {
+				display: flex;
+				justify-content: center;
+			}
+
+			.image-wrap > img {
+				inline-size: 60%;
+				display: inline-block;
+			}
+		}
+
+		.dist-svg-wrap {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		.dist-elipse-shape-wrap {
+			position: absolute;
+			left: -20%;
+			top: 15%;
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		.container {
+			display: flex;
+			padding-top: unset;
+			height: 100%;
+
+			.image-wrap {
+				display: flex;
+				height: 600px;
+				align-items: flex-end;
+			}
+
+			.image-wrap > img {
+				inline-size: 80%;
+				display: inline-block;
+			}
+		}
+
+		.dist-svg-wrap {
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		.dist-elipse-shape-wrap {
+			position: absolute;
+			left: 30%;
+			top: 70%;
+		}
+
+		.dist-elipse-shape-wrap > img {
+			inline-size: 20%;
+		}
+	}
+}

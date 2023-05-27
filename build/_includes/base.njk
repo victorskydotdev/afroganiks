@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!-- fontawesome cdn icons -->
+		<script
+			src="https://kit.fontawesome.com/8464da9b67.js"
+			crossorigin="anonymous"></script>
+
+		<!-- css file -->
+		<link
+			rel="stylesheet"
+			href="/frontend/dist/css/main.css?cb=1685003408159" />
+
+		<!-- page title -->
+		<title>{{ title }}</title>
+	</head>
+	<body>
+		{% include "header.njk" %}
+		{{ content | safe }}
+		{% include "footer.njk" %}
+
+		<script src="dist/afroJsFiles.js?cb=1685003408159"></script>
+	</body>
+</html>
