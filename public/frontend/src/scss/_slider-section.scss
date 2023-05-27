@@ -72,7 +72,8 @@
 		padding: 4em 0;
 		.content-wrap {
 			.img-wrap {
-				background: url('/dist/images/img1.jpeg') center/cover, no-repeat;
+				background: url('/frontend/dist/images/img1.jpeg') center/cover,
+					no-repeat;
 				height: 300px;
 				width: 100%;
 				border-radius: $box-radius;

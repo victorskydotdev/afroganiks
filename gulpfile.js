@@ -37,7 +37,7 @@ async function webpTask() {
 	const webp = await import('gulp-webp');
 	return src('./frontent/dist/images/*.{jpg, png, jpeg}')
 		.pipe(webp.default())
-		.pipe(dest('./frontend/dist/images'));
+		.pipe(dest('./frontend/dist/images/'));
 }
 
 // sass task
