@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",()=>{fetch("/frontend/json/product-data.json").then(e=>e.json()).then(e=>{console.log(e);var o=document.querySelectorAll(".order-btn");for(let e=0;e<o.length;e++){var n=o[e];console.log(n),n.addEventListener("click",()=>{window.location.href="/product-description"})}})});

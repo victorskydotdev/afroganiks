@@ -1,0 +1,318 @@
+{
+	"products": [
+		{
+			"id": "prod1",
+			"name": "FreFlo Herbal Capsule (for women)",
+
+			"therapeutic_class": "Gynecology/Other hormonal preparations",
+
+			"dosage_form_composition": "FreFlo Capsule for women -500mg",
+
+			"reg_no": "NAFDAC Reg. No. A7-1867L",
+
+			"pack_size": "A pack of FreFlo Capsule -500mg contains 60 capsules",
+
+			"active_ingredients": [
+				"Turnera diffusa 150mg",
+				"Sambucus nigra 100mg",
+				"Juglans regia 250mg"
+			],
+
+			"pharmacology": "The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place.",
+
+			"indications": "Promotes female reproductive health",
+
+			"contraindications": "FreFlo Capsule should not be taken with any therapeutic drugs like anti-malaria, anti-bacterial, etc except vitamins and food supplements. The active ingredients in FreFlo for women may react with most therapeutic drug ingredients.",
+
+			"precautions_warnings": "FreFlo Capsule is not to be used by a lactating mother of less than 6 months and pregnant women. If you are using FreFlo and you are trying to conceive, careful monitoring is advised so that you can stop the capsule once pregnancy is confirmed. For children less than 18 years, one capsule is recommended instead of the usual 2*2.",
+
+			"adverse_effects_reactions": "FreFlo Herbal Capsule for women is well tolerated. In a clinical research using 2 capsules morning and 2 capsules at night daily (500mg per capsule), the overall incident of adverse reaction was approximately 30%, with nausea, vomiting, purging, and increased appetite for food.",
+
+			"dosage_administration": "FreFlo Capsule is best taken orally and the recommended dosage is two capsules of FreFlo Capsule with warm or normal water 10 minutes before breakfast and two capsules 10 minutes before dinner. For the best result, the patient is advised to use 6 packs for 90 days (3 cycles).",
+
+			"storage_condition": "Store in a cool dry place & do not freeze. Keep out of the reach of children.",
+
+			"shelf_life": "2 years from the date of manufacturing."
+		},
+
+		{
+			"id": "prod2",
+			"name": "FreFlo Herbal Capsule (for women)",
+
+			"therapeutic_class": "Gynecology/Other hormonal preparations",
+
+			"dosage_form_composition": "FreFlo Capsule for women -500mg",
+
+			"reg_no": "NAFDAC Reg. No. A7-1867L",
+
+			"pack_size": "A pack of FreFlo Capsule -500mg contains 60 capsules",
+
+			"active_ingredients": [
+				"Turnera diffusa 150mg",
+				"Sambucus nigra 100mg",
+				"Juglans regia 250mg"
+			],
+
+			"pharmacology": "The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place.",
+
+			"indications": "Promotes female reproductive health",
+
+			"contraindications": "FreFlo Capsule should not be taken with any therapeutic drugs like anti-malaria, anti-bacterial, etc except vitamins and food supplements. The active ingredients in FreFlo for women may react with most therapeutic drug ingredients.",
+
+			"precautions_warnings": "FreFlo Capsule is not to be used by a lactating mother of less than 6 months and pregnant women. If you are using FreFlo and you are trying to conceive, careful monitoring is advised so that you can stop the capsule once pregnancy is confirmed. For children less than 18 years, one capsule is recommended instead of the usual 2*2.",
+
+			"adverse_effects_reactions": "FreFlo Herbal Capsule for women is well tolerated. In a clinical research using 2 capsules morning and 2 capsules at night daily (500mg per capsule), the overall incident of adverse reaction was approximately 30%, with nausea, vomiting, purging, and increased appetite for food.",
+
+			"dosage_administration": "FreFlo Capsule is best taken orally and the recommended dosage is two capsules of FreFlo Capsule with warm or normal water 10 minutes before breakfast and two capsules 10 minutes before dinner. For the best result, the patient is advised to use 6 packs for 90 days (3 cycles).",
+
+			"storage_condition": "Store in a cool dry place & do not freeze. Keep out of the reach of children.",
+
+			"shelf_life": "2 years from the date of manufacturing."
+		},
+
+		{
+			"id": "prod3",
+			"name": "FreFlo Herbal Capsule (for women)",
+
+			"therapeutic_class": "Gynecology/Other hormonal preparations",
+
+			"dosage_form_composition": "FreFlo Capsule for women -500mg",
+
+			"reg_no": "NAFDAC Reg. No. A7-1867L",
+
+			"pack_size": "A pack of FreFlo Capsule -500mg contains 60 capsules",
+
+			"active_ingredients": [
+				"Turnera diffusa 150mg",
+				"Sambucus nigra 100mg",
+				"Juglans regia 250mg"
+			],
+
+			"pharmacology": "The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place.",
+
+			"indications": "Promotes female reproductive health",
+
+			"contraindications": "FreFlo Capsule should not be taken with any therapeutic drugs like anti-malaria, anti-bacterial, etc except vitamins and food supplements. The active ingredients in FreFlo for women may react with most therapeutic drug ingredients.",
+
+			"precautions_warnings": "FreFlo Capsule is not to be used by a lactating mother of less than 6 months and pregnant women. If you are using FreFlo and you are trying to conceive, careful monitoring is advised so that you can stop the capsule once pregnancy is confirmed. For children less than 18 years, one capsule is recommended instead of the usual 2*2.",
+
+			"adverse_effects_reactions": "FreFlo Herbal Capsule for women is well tolerated. In a clinical research using 2 capsules morning and 2 capsules at night daily (500mg per capsule), the overall incident of adverse reaction was approximately 30%, with nausea, vomiting, purging, and increased appetite for food.",
+
+			"dosage_administration": "FreFlo Capsule is best taken orally and the recommended dosage is two capsules of FreFlo Capsule with warm or normal water 10 minutes before breakfast and two capsules 10 minutes before dinner. For the best result, the patient is advised to use 6 packs for 90 days (3 cycles).",
+
+			"storage_condition": "Store in a cool dry place & do not freeze. Keep out of the reach of children.",
+
+			"shelf_life": "2 years from the date of manufacturing."
+		},
+
+		{
+			"id": "prod4",
+			"name": "FreFlo Herbal Capsule (for women)",
+
+			"therapeutic_class": "Gynecology/Other hormonal preparations",
+
+			"dosage_form_composition": "FreFlo Capsule for women -500mg",
+
+			"reg_no": "NAFDAC Reg. No. A7-1867L",
+
+			"pack_size": "A pack of FreFlo Capsule -500mg contains 60 capsules",
+
+			"active_ingredients": [
+				"Turnera diffusa 150mg",
+				"Sambucus nigra 100mg",
+				"Juglans regia 250mg"
+			],
+
+			"pharmacology": "The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place.",
+
+			"indications": "Promotes female reproductive health",
+
+			"contraindications": "FreFlo Capsule should not be taken with any therapeutic drugs like anti-malaria, anti-bacterial, etc except vitamins and food supplements. The active ingredients in FreFlo for women may react with most therapeutic drug ingredients.",
+
+			"precautions_warnings": "FreFlo Capsule is not to be used by a lactating mother of less than 6 months and pregnant women. If you are using FreFlo and you are trying to conceive, careful monitoring is advised so that you can stop the capsule once pregnancy is confirmed. For children less than 18 years, one capsule is recommended instead of the usual 2*2.",
+
+			"adverse_effects_reactions": "FreFlo Herbal Capsule for women is well tolerated. In a clinical research using 2 capsules morning and 2 capsules at night daily (500mg per capsule), the overall incident of adverse reaction was approximately 30%, with nausea, vomiting, purging, and increased appetite for food.",
+
+			"dosage_administration": "FreFlo Capsule is best taken orally and the recommended dosage is two capsules of FreFlo Capsule with warm or normal water 10 minutes before breakfast and two capsules 10 minutes before dinner. For the best result, the patient is advised to use 6 packs for 90 days (3 cycles).",
+
+			"storage_condition": "Store in a cool dry place & do not freeze. Keep out of the reach of children.",
+
+			"shelf_life": "2 years from the date of manufacturing."
+		},
+
+		{
+			"id": "prod5",
+			"name": "FreFlo Herbal Capsule (for women)",
+
+			"therapeutic_class": "Gynecology/Other hormonal preparations",
+
+			"dosage_form_composition": "FreFlo Capsule for women -500mg",
+
+			"reg_no": "NAFDAC Reg. No. A7-1867L",
+
+			"pack_size": "A pack of FreFlo Capsule -500mg contains 60 capsules",
+
+			"active_ingredients": [
+				"Turnera diffusa 150mg",
+				"Sambucus nigra 100mg",
+				"Juglans regia 250mg"
+			],
+
+			"pharmacology": "The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place.",
+
+			"indications": "Promotes female reproductive health",
+
+			"contraindications": "FreFlo Capsule should not be taken with any therapeutic drugs like anti-malaria, anti-bacterial, etc except vitamins and food supplements. The active ingredients in FreFlo for women may react with most therapeutic drug ingredients.",
+
+			"precautions_warnings": "FreFlo Capsule is not to be used by a lactating mother of less than 6 months and pregnant women. If you are using FreFlo and you are trying to conceive, careful monitoring is advised so that you can stop the capsule once pregnancy is confirmed. For children less than 18 years, one capsule is recommended instead of the usual 2*2.",
+
+			"adverse_effects_reactions": "FreFlo Herbal Capsule for women is well tolerated. In a clinical research using 2 capsules morning and 2 capsules at night daily (500mg per capsule), the overall incident of adverse reaction was approximately 30%, with nausea, vomiting, purging, and increased appetite for food.",
+
+			"dosage_administration": "FreFlo Capsule is best taken orally and the recommended dosage is two capsules of FreFlo Capsule with warm or normal water 10 minutes before breakfast and two capsules 10 minutes before dinner. For the best result, the patient is advised to use 6 packs for 90 days (3 cycles).",
+
+			"storage_condition": "Store in a cool dry place & do not freeze. Keep out of the reach of children.",
+
+			"shelf_life": "2 years from the date of manufacturing."
+		},
+
+		{
+			"id": "prod6",
+			"name": "FreFlo Herbal Capsule (for women)",
+
+			"therapeutic_class": "Gynecology/Other hormonal preparations",
+
+			"dosage_form_composition": "FreFlo Capsule for women -500mg",
+
+			"reg_no": "NAFDAC Reg. No. A7-1867L",
+
+			"pack_size": "A pack of FreFlo Capsule -500mg contains 60 capsules",
+
+			"active_ingredients": [
+				"Turnera diffusa 150mg",
+				"Sambucus nigra 100mg",
+				"Juglans regia 250mg"
+			],
+
+			"pharmacology": "The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place.",
+
+			"indications": "Promotes female reproductive health",
+
+			"contraindications": "FreFlo Capsule should not be taken with any therapeutic drugs like anti-malaria, anti-bacterial, etc except vitamins and food supplements. The active ingredients in FreFlo for women may react with most therapeutic drug ingredients.",
+
+			"precautions_warnings": "FreFlo Capsule is not to be used by a lactating mother of less than 6 months and pregnant women. If you are using FreFlo and you are trying to conceive, careful monitoring is advised so that you can stop the capsule once pregnancy is confirmed. For children less than 18 years, one capsule is recommended instead of the usual 2*2.",
+
+			"adverse_effects_reactions": "FreFlo Herbal Capsule for women is well tolerated. In a clinical research using 2 capsules morning and 2 capsules at night daily (500mg per capsule), the overall incident of adverse reaction was approximately 30%, with nausea, vomiting, purging, and increased appetite for food.",
+
+			"dosage_administration": "FreFlo Capsule is best taken orally and the recommended dosage is two capsules of FreFlo Capsule with warm or normal water 10 minutes before breakfast and two capsules 10 minutes before dinner. For the best result, the patient is advised to use 6 packs for 90 days (3 cycles).",
+
+			"storage_condition": "Store in a cool dry place & do not freeze. Keep out of the reach of children.",
+
+			"shelf_life": "2 years from the date of manufacturing."
+		},
+
+		{
+			"id": "prod7",
+			"name": "FreFlo Herbal Capsule (for women)",
+
+			"therapeutic_class": "Gynecology/Other hormonal preparations",
+
+			"dosage_form_composition": "FreFlo Capsule for women -500mg",
+
+			"reg_no": "NAFDAC Reg. No. A7-1867L",
+
+			"pack_size": "A pack of FreFlo Capsule -500mg contains 60 capsules",
+
+			"active_ingredients": [
+				"Turnera diffusa 150mg",
+				"Sambucus nigra 100mg",
+				"Juglans regia 250mg"
+			],
+
+			"pharmacology": "The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place.",
+
+			"indications": "Promotes female reproductive health",
+
+			"contraindications": "FreFlo Capsule should not be taken with any therapeutic drugs like anti-malaria, anti-bacterial, etc except vitamins and food supplements. The active ingredients in FreFlo for women may react with most therapeutic drug ingredients.",
+
+			"precautions_warnings": "FreFlo Capsule is not to be used by a lactating mother of less than 6 months and pregnant women. If you are using FreFlo and you are trying to conceive, careful monitoring is advised so that you can stop the capsule once pregnancy is confirmed. For children less than 18 years, one capsule is recommended instead of the usual 2*2.",
+
+			"adverse_effects_reactions": "FreFlo Herbal Capsule for women is well tolerated. In a clinical research using 2 capsules morning and 2 capsules at night daily (500mg per capsule), the overall incident of adverse reaction was approximately 30%, with nausea, vomiting, purging, and increased appetite for food.",
+
+			"dosage_administration": "FreFlo Capsule is best taken orally and the recommended dosage is two capsules of FreFlo Capsule with warm or normal water 10 minutes before breakfast and two capsules 10 minutes before dinner. For the best result, the patient is advised to use 6 packs for 90 days (3 cycles).",
+
+			"storage_condition": "Store in a cool dry place & do not freeze. Keep out of the reach of children.",
+
+			"shelf_life": "2 years from the date of manufacturing."
+		},
+
+		{
+			"id": "prod8",
+			"name": "FreFlo Herbal Capsule (for women)",
+
+			"therapeutic_class": "Gynecology/Other hormonal preparations",
+
+			"dosage_form_composition": "FreFlo Capsule for women -500mg",
+
+			"reg_no": "NAFDAC Reg. No. A7-1867L",
+
+			"pack_size": "A pack of FreFlo Capsule -500mg contains 60 capsules",
+
+			"active_ingredients": [
+				"Turnera diffusa 150mg",
+				"Sambucus nigra 100mg",
+				"Juglans regia 250mg"
+			],
+
+			"pharmacology": "The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place.",
+
+			"indications": "Promotes female reproductive health",
+
+			"contraindications": "FreFlo Capsule should not be taken with any therapeutic drugs like anti-malaria, anti-bacterial, etc except vitamins and food supplements. The active ingredients in FreFlo for women may react with most therapeutic drug ingredients.",
+
+			"precautions_warnings": "FreFlo Capsule is not to be used by a lactating mother of less than 6 months and pregnant women. If you are using FreFlo and you are trying to conceive, careful monitoring is advised so that you can stop the capsule once pregnancy is confirmed. For children less than 18 years, one capsule is recommended instead of the usual 2*2.",
+
+			"adverse_effects_reactions": "FreFlo Herbal Capsule for women is well tolerated. In a clinical research using 2 capsules morning and 2 capsules at night daily (500mg per capsule), the overall incident of adverse reaction was approximately 30%, with nausea, vomiting, purging, and increased appetite for food.",
+
+			"dosage_administration": "FreFlo Capsule is best taken orally and the recommended dosage is two capsules of FreFlo Capsule with warm or normal water 10 minutes before breakfast and two capsules 10 minutes before dinner. For the best result, the patient is advised to use 6 packs for 90 days (3 cycles).",
+
+			"storage_condition": "Store in a cool dry place & do not freeze. Keep out of the reach of children.",
+
+			"shelf_life": "2 years from the date of manufacturing."
+		},
+
+		{
+			"id": "prod9",
+			"name": "FreFlo Herbal Capsule (for women)",
+
+			"therapeutic_class": "Gynecology/Other hormonal preparations",
+
+			"dosage_form_composition": "FreFlo Capsule for women -500mg",
+
+			"reg_no": "NAFDAC Reg. No. A7-1867L",
+
+			"pack_size": "A pack of FreFlo Capsule -500mg contains 60 capsules",
+
+			"active_ingredients": [
+				"Turnera diffusa 150mg",
+				"Sambucus nigra 100mg",
+				"Juglans regia 250mg"
+			],
+
+			"pharmacology": "The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place.",
+
+			"indications": "Promotes female reproductive health",
+
+			"contraindications": "FreFlo Capsule should not be taken with any therapeutic drugs like anti-malaria, anti-bacterial, etc except vitamins and food supplements. The active ingredients in FreFlo for women may react with most therapeutic drug ingredients.",
+
+			"precautions_warnings": "FreFlo Capsule is not to be used by a lactating mother of less than 6 months and pregnant women. If you are using FreFlo and you are trying to conceive, careful monitoring is advised so that you can stop the capsule once pregnancy is confirmed. For children less than 18 years, one capsule is recommended instead of the usual 2*2.",
+
+			"adverse_effects_reactions": "FreFlo Herbal Capsule for women is well tolerated. In a clinical research using 2 capsules morning and 2 capsules at night daily (500mg per capsule), the overall incident of adverse reaction was approximately 30%, with nausea, vomiting, purging, and increased appetite for food.",
+
+			"dosage_administration": "FreFlo Capsule is best taken orally and the recommended dosage is two capsules of FreFlo Capsule with warm or normal water 10 minutes before breakfast and two capsules 10 minutes before dinner. For the best result, the patient is advised to use 6 packs for 90 days (3 cycles).",
+
+			"storage_condition": "Store in a cool dry place & do not freeze. Keep out of the reach of children.",
+
+			"shelf_life": "2 years from the date of manufacturing."
+		}
+	]
+}
