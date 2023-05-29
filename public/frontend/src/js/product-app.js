@@ -8,26 +8,33 @@ document.addEventListener('DOMContentLoaded', () => {
 		.then((response) => response.json())
 		.then((data) => {
 			// Iterate over the order buttons using a for loop
-			console.log(data);
+			// console.log(data.products[0]);
+
 			const orderButtons = document.querySelectorAll('.order-btn');
 
 			// loop through the order buttons
 			for (let i = 0; i < orderButtons.length; i++) {
 				const button = orderButtons[i];
-
-				// const product = data[i];
-				// console.log(product);
-				console.log(button);
+				const prodId = data.products[i].id;
+				// console.log(prodId);
+				// console.log(button);
 
 				// assign the product id to the button
-				// button.dataset.productId = product.id;
+				button.dataset.prodId = prodId;
 
 				button.addEventListener('click', () => {
+					// Find the product object with the matching ID in the JSON data
+					const productId = button.dataset.prodId;
+					const product = data.products.find((item) => item.id === productId);
+
+					// Store the product ID in session storage
+					sessionStorage.setItem('productId', productId);
+
 					window.location.href = '/product-description';
 				});
 			}
+		})
+		.catch((error) => {
+			console.error('Error:', error);
 		});
-	// .catch((error) => {
-	// 	console.error('Error:', error);
-	// });
 });

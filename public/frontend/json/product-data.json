@@ -2,7 +2,12 @@
 	"products": [
 		{
 			"id": "prod1",
-			"name": "FreFlo Herbal Capsule (for women)",
+
+			"productImage": "/frontend/dist/images/fully-optimized-products/product1.webp",
+
+			"name": "Greenolax Capsules",
+
+			"price": 50,
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
@@ -37,7 +42,7 @@
 
 		{
 			"id": "prod2",
-			"name": "FreFlo Herbal Capsule (for women)",
+			"name": "Gynovit Capsules",
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
@@ -72,7 +77,7 @@
 
 		{
 			"id": "prod3",
-			"name": "FreFlo Herbal Capsule (for women)",
+			"name": "Wellness Tea",
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
@@ -107,7 +112,7 @@
 
 		{
 			"id": "prod4",
-			"name": "FreFlo Herbal Capsule (for women)",
+			"name": "FreFlo Herbal Capsule (for men)",
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
@@ -142,7 +147,7 @@
 
 		{
 			"id": "prod5",
-			"name": "FreFlo Herbal Capsule (for women)",
+			"name": "Prostagen Capsules",
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
