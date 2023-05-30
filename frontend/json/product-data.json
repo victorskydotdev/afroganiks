@@ -42,7 +42,12 @@
 
 		{
 			"id": "prod2",
+
+			"productImage": "/frontend/dist/images/fully-optimized-products/product2.webp",
+
 			"name": "Gynovit Capsules",
+
+			"price": 50,
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
@@ -77,7 +82,12 @@
 
 		{
 			"id": "prod3",
+
+			"productImage": "/frontend/dist/images/fully-optimized-products/product3.webp",
+
 			"name": "Wellness Tea",
+
+			"price": 100,
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
@@ -112,7 +122,12 @@
 
 		{
 			"id": "prod4",
+
+			"productImage": "/frontend/dist/images/fully-optimized-products/product4.webp",
+
 			"name": "FreFlo Herbal Capsule (for men)",
+
+			"price": 75,
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
@@ -147,7 +162,12 @@
 
 		{
 			"id": "prod5",
+
+			"productImage": "/frontend/dist/images/fully-optimized-products/product5.webp",
+
 			"name": "Prostagen Capsules",
+
+			"price": 40,
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
@@ -182,7 +202,12 @@
 
 		{
 			"id": "prod6",
-			"name": "FreFlo Herbal Capsule (for women)",
+
+			"productImage": "/frontend/dist/images/fully-optimized-products/product6.webp",
+
+			"name": "FreFlo Herbal Capsule",
+
+			"price": 50,
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
@@ -217,7 +242,12 @@
 
 		{
 			"id": "prod7",
-			"name": "FreFlo Herbal Capsule (for women)",
+
+			"productImage": "/frontend/dist/images/fully-optimized-products/product7.webp",
+
+			"name": "Afroganiks Bitters",
+
+			"price": 100,
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
@@ -252,7 +282,12 @@
 
 		{
 			"id": "prod8",
-			"name": "FreFlo Herbal Capsule (for women)",
+
+			"productImage": "/frontend/dist/images/fully-optimized-products/product8.webp",
+
+			"name": "Feloklear",
+
+			"price": 50,
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
@@ -287,7 +322,12 @@
 
 		{
 			"id": "prod9",
-			"name": "FreFlo Herbal Capsule (for women)",
+
+			"productImage": "/frontend/dist/images/fully-optimized-products/product9.webp",
+
+			"name": "FreeFlow Herbal Capsule (for women)",
+
+			"price": 60,
 
 			"therapeutic_class": "Gynecology/Other hormonal preparations",
 
@@ -318,6 +358,18 @@
 			"storage_condition": "Store in a cool dry place & do not freeze. Keep out of the reach of children.",
 
 			"shelf_life": "2 years from the date of manufacturing."
+		},
+
+		{
+			"_COMMENT": "the treatment package data starts here"
+		},
+
+		{
+			"id": "prod10",
+
+			"name": "Anuovulation / lack of ovulation treatment pacjage",
+
+			"price": 100
 		}
 	]
 }

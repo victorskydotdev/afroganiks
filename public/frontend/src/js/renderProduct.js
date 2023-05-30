@@ -36,13 +36,15 @@ function renderProduct(product) {
 	const template = `
     <section class="product">
 
-			<div class="product-image-wrap">
-				<img class"product-img" src="${product.productImage}" alt="${product.name}">
-			</div>
+			<div class="wrap">
+				<div class="product-image-wrap">
+					<img class"product-img" src="${product.productImage}" alt="${product.name}">
+				</div>
 
-      <div class="product-content">
-				<h1 class="heading">${product.name}</h1>
-				<p class="price-text">Price: $${product.price}</p>
+				<div class="product-info">
+					<h1 class="heading">${product.name}</h1>
+					<p class="price-text">Price: $${product.price}</p>
+				</div>
 			</div>
 
 			<!-- ***comment*** product description -->

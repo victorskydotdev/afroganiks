@@ -1,13 +1,15 @@
 function renderProduct(o){var t=document.getElementById("product-container"),o=`
     <section class="product">
 
-			<div class="product-image-wrap">
-				<img class"product-img" src="${o.productImage}" alt="${o.name}">
-			</div>
+			<div class="wrap">
+				<div class="product-image-wrap">
+					<img class"product-img" src="${o.productImage}" alt="${o.name}">
+				</div>
 
-      <div class="product-content">
-				<h1 class="heading">${o.name}</h1>
-				<p class="price-text">Price: $${o.price}</p>
+				<div class="product-info">
+					<h1 class="heading">${o.name}</h1>
+					<p class="price-text">Price: $${o.price}</p>
+				</div>
 			</div>
 
 			<!-- ***comment*** product description -->
