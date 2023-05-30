@@ -3,7 +3,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 	// Retrieve the product ID from session storage
 	const productId = sessionStorage.getItem('productId');
-	console.log(productId);
+	// console.log(productId);
 
 	if (productId) {
 		// Fetch the JSON product data
@@ -63,7 +63,7 @@ function renderProduct(product) {
 					</div>
 
 				
-				<button class="btn">Order now</button>
+				<button class="btn" id="getToFormPage">Order now</button>
 				</form>
 				
 			</div>
@@ -72,4 +72,18 @@ function renderProduct(product) {
 
 	// Set the template as the HTML content of the container
 	container.innerHTML = template;
+
+	function gotoNextPage() {
+		const getToFormBtn = document.getElementById('getToFormPage');
+
+		getToFormBtn.addEventListener('click', (event) => {
+			event.preventDefault();
+
+			console.log('this button is working!');
+
+			window.location.href = '/shipping-info';
+		});
+	}
+
+	gotoNextPage();
 }

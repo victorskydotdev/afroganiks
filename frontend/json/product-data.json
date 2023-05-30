@@ -361,13 +361,131 @@
 		},
 
 		{
-			"_COMMENT": "the treatment package data starts here"
+			"id": "prod10",
+
+			"productImage": "/frontend/dist/images/treatment-assets/anovulation.jpg",
+
+			"name": "Anuovulation / lack of ovulation treatment package",
+
+			"price": 100
 		},
 
 		{
-			"id": "prod10",
+			"id": "prod11",
 
-			"name": "Anuovulation / lack of ovulation treatment pacjage",
+			"productImage": "/frontend/dist/images/treatment-assets/azoospermia.jpg",
+
+			"name": "Azoospermia treatment package",
+
+			"price": 100
+		},
+
+		{
+			"id": "prod12",
+
+			"productImage": "/frontend/dist/images/treatment-assets/candidiasis.jpg",
+
+			"name": "Candidiasis treatment package",
+
+			"price": 100
+		},
+
+		{
+			"id": "prod13",
+
+			"productImage": "/frontend/dist/images/treatment-assets/diabetes.jpg",
+
+			"name": "Diabetes treatment package",
+
+			"price": 100
+		},
+
+		{
+			"id": "prod14",
+
+			"productImage": "/frontend/dist/images/treatment-assets/erectile.jpg",
+
+			"name": "Erectile Dysfunction treatment package",
+
+			"price": 100
+		},
+
+		{
+			"id": "prod15",
+
+			"productImage": "/frontend/dist/images/treatment-assets/hbp.jpg",
+
+			"name": "High Blood Pressure treatment package",
+
+			"price": 100
+		},
+
+		{
+			"id": "prod16",
+
+			"productImage": "/frontend/dist/images/treatment-assets/high-prolactin.jpg",
+
+			"name": "High-prolactin treatment package",
+
+			"price": 100
+		},
+
+		{
+			"id": "prod17",
+
+			"productImage": "/frontend/dist/images/treatment-assets/kidney-stone.jpg",
+
+			"name": "Kidney Stone treatment package",
+
+			"price": 100
+		},
+
+		{
+			"id": "prod18",
+
+			"productImage": "/frontend/dist/images/treatment-assets/low-sperm-count.jpg",
+
+			"name": "Low-sperm count treatment package",
+
+			"price": 100
+		},
+
+		{
+			"id": "prod19",
+
+			"productImage": "/frontend/dist/images/treatment-assets/mestrual-seizure.jpg",
+
+			"name": "Menstrual Seizure treatment package",
+
+			"price": 100
+		},
+
+		{
+			"id": "prod20",
+
+			"productImage": "/frontend/dist/images/treatment-assets/ovarian-cyst.jpg",
+
+			"name": "Ovarian Cyst treatment package",
+
+			"price": 100
+		},
+
+		{
+			"id": "prod21",
+
+			"productImage": "/frontend/dist/images/treatment-assets/prostate.jpg",
+
+			"name": "Prostate Enlargement treatment package",
+
+			"price": 100
+		},
+
+		{
+			"id": "prod22",
+
+			"productImage": "/frontend/dist/images/treatment-assets/staphylococcus.jpg",
+
+			"name": "Staphylococcus treatment package",
 
 			"price": 100
 		}

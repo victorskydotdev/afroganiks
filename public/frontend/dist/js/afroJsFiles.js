@@ -28,9 +28,9 @@ function renderProduct(o){var t=document.getElementById("product-container"),o=`
 					</div>
 
 				
-				<button class="btn">Order now</button>
+				<button class="btn" id="getToFormPage">Order now</button>
 				</form>
 				
 			</div>
     </section>
-  `;t.innerHTML=o}document.addEventListener("DOMContentLoaded",()=>{fetch("/frontend/json/product-data.json").then(o=>o.json()).then(e=>{var t=document.querySelectorAll(".order-btn");for(let o=0;o<t.length;o++){const d=t[o];var n=e.products[o].id;d.dataset.prodId=n,d.addEventListener("click",()=>{const t=d.dataset.prodId;e.products.find(o=>o.id===t);sessionStorage.setItem("productId",t),window.location.href="/product-description"})}}).catch(o=>{console.error("Error:",o)})}),document.addEventListener("DOMContentLoaded",()=>{const t=sessionStorage.getItem("productId");console.log(t),t?fetch("/frontend/json/product-data.json").then(o=>o.json()).then(o=>{o=o.products.find(o=>o.id===t);o?renderProduct(o):console.log("Product not found")}).catch(o=>{console.error("Error:",o)}):console.log("Product ID not found in session storage")});
+  `;t.innerHTML=o,document.getElementById("getToFormPage").addEventListener("click",o=>{o.preventDefault(),console.log("this button is working!"),window.location.href="/shipping-info"})}document.addEventListener("DOMContentLoaded",()=>{fetch("/frontend/json/product-data.json").then(o=>o.json()).then(e=>{var t=document.querySelectorAll(".order-btn");for(let o=0;o<t.length;o++){const d=t[o];var n=e.products[o].id;d.dataset.prodId=n,d.addEventListener("click",()=>{const t=d.dataset.prodId;e.products.find(o=>o.id===t);sessionStorage.setItem("productId",t),window.location.href="/product-description"})}}).catch(o=>{console.error("Error:",o)})}),document.addEventListener("DOMContentLoaded",()=>{const t=sessionStorage.getItem("productId");t?fetch("/frontend/json/product-data.json").then(o=>o.json()).then(o=>{o=o.products.find(o=>o.id===t);o?renderProduct(o):console.log("Product not found")}).catch(o=>{console.error("Error:",o)}):console.log("Product ID not found in session storage")});

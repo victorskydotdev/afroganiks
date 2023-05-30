@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
 			for (let i = 0; i < orderButtons.length; i++) {
 				const button = orderButtons[i];
 				const prodId = data.products[i].id;
-				// console.log(prodId);
-				// console.log(button);
 
 				// assign the product id to the button
 				button.dataset.prodId = prodId;

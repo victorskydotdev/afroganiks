@@ -104,7 +104,10 @@
 					display: block;
 					color: $light;
 					text-transform: capitalize;
+					font-family: $secondary-font;
 					text-align: center;
+					border: none;
+					cursor: pointer;
 				}
 			}
 		}

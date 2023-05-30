@@ -1,0 +1,29 @@
+@import 'resets';
+
+.shipping-form {
+	height: 80vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	.container {
+		box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15);
+		width: 90%;
+		margin: 0 auto;
+		padding: 2em;
+		border-radius: $box-radius;
+
+		.info {
+			color: $accent-green;
+		}
+
+		@media screen and (min-width: 43em) {
+			max-width: 500px;
+			text-align: center;
+
+			.info {
+				line-height: 1.7;
+			}
+		}
+	}
+}
