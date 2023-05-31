@@ -6,7 +6,12 @@ layout: 'base.njk'
 <section class="section-wrap">
 	<div class="layout-wrap">
 		<div class="form-container">
-			<form action="#" netlify method="post" class="shipping-form">
+			<form
+				action="#"
+				netlify
+				method="post"
+				class="shipping-form"
+				id="paymentForm">
 				<div class="heading-container">
 					<h3 class="heading">Enter shipping address</h3>
 					<p class="subheading">You're almost done!</p>
@@ -31,12 +36,13 @@ layout: 'base.njk'
 					<input
 						class="info-input"
 						type="text"
-						placeholder="Phone number*"
+						placeholder="+235 8100 5444689*"
 						required />
 					<input
 						class="info-input"
 						type="email"
-						placeholder="email address*"
+						placeholder="johndoe@gmail.com*"
+						id="email-address"
 						required />
 				</div>
 
@@ -45,7 +51,7 @@ layout: 'base.njk'
 					<input
 						type="text"
 						class="address-input"
-						placeholder="Street, houese/apartment/unit*"
+						placeholder="Street, house/apartment/unit*"
 						required />
 					<input
 						type="text"
@@ -60,7 +66,31 @@ layout: 'base.njk'
 				</div>
 
 				<div class="btn-wrap">
-					<button class="checkout-btn">Checkout</button>
+					<button
+						type="submit"
+						class="checkout-btn"
+						onclick="payWithPaystack()">
+						Checkout
+					</button>
+				</div>
+
+				<!-- hidden input elements -->
+				<div class="order-details-wrap">
+					<!-- product or treatment name -->
+					<input
+						type="text"
+						id="name"
+						name="name-of-product-ordered"
+						class="name-input"
+						required />
+
+					<!-- price -->
+					<input
+						type="number"
+						id="price"
+						class="price-input"
+						name="amount-paid-at-checkout"
+						required />
 				</div>
 			</form>
 		</div>
@@ -71,9 +101,9 @@ layout: 'base.njk'
 
 			<div class="card-icons">
 				<i class="fa-brands fa-cc-mastercard"></i>
-				<i class="fa-brands fa-cc-mastercard"></i>
-				<i class="fa-brands fa-cc-mastercard"></i>
-				<i class="fa-brands fa-cc-mastercard"></i>
+				<i class="fa-brands fa-cc-visa"></i>
+				<i class="fa-brands fa-cc-paypal"></i>
+				<!-- <i class="fa-brands fa-cc-mastercard"></i> -->
 			</div>
 		</div>
 	</div>

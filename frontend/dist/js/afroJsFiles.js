@@ -1,20 +1,20 @@
-function renderProduct(o){var t=document.getElementById("product-container"),o=`
+const paymentForm=document.getElementById("paymentForm"),emailInfo=document.getElementById("email-address"),productName=sessionStorage.getItem("productName"),productPrice=parseInt(sessionStorage.getItem("productPrice"));if(productPrice||productName){const priceInfo=document.getElementById("price"),a=document.getElementById("name");priceInfo.value=productPrice,a.value=productName}else console.log("nothing found in session storage");function payWithPaystack(e){e.preventDefault(),PaystackPop.setup({key:"pk_test_651b1d0cbcbe5f7d43887faa975ad7abfbdd82fc",email:emailInfo.value,amount:100*priceInfo.value,ref:""+Math.floor(1e9*Math.random()+1),onClose:function(){alert("Window closed.")},callback:function(e){e="Payment complete! Reference: "+e.reference;alert(e)}}).openIframe()}function renderProduct(e){var t=document.getElementById("product-container"),o=`
     <section class="product">
 
 			<div class="wrap">
 				<div class="product-image-wrap">
-					<img class"product-img" src="${o.productImage}" alt="${o.name}">
+					<img class"product-img" src="${e.productImage}" alt="${e.name}">
 				</div>
 
 				<div class="product-info">
-					<h1 class="heading">${o.name}</h1>
-					<p class="price-text">Price: $${o.price}</p>
+					<h1 id="product-name" value="${e.name}" class="heading">${e.name}</h1>
+					<p id="product-price" value="${e.price}" class="price-text">Price: $${e.price}</p>
 				</div>
 			</div>
 
 			<!-- ***comment*** product description -->
 			<!-- <div class="product-desc-wrap">
-				<p>${o.description}</p>
+				<p>${e.description}</p>
 			</div> -->
 
 			<div class="payment-box">
@@ -28,9 +28,9 @@ function renderProduct(o){var t=document.getElementById("product-container"),o=`
 					</div>
 
 				
-				<button class="btn" id="getToFormPage">Order now</button>
+				<button class="btn" id="getToFormPageBtn">Order now</button>
 				</form>
 				
 			</div>
     </section>
-  `;t.innerHTML=o,document.getElementById("getToFormPage").addEventListener("click",o=>{o.preventDefault(),console.log("this button is working!"),window.location.href="/shipping-info"})}document.addEventListener("DOMContentLoaded",()=>{fetch("/frontend/json/product-data.json").then(o=>o.json()).then(e=>{var t=document.querySelectorAll(".order-btn");for(let o=0;o<t.length;o++){const d=t[o];var n=e.products[o].id;d.dataset.prodId=n,d.addEventListener("click",()=>{const t=d.dataset.prodId;e.products.find(o=>o.id===t);sessionStorage.setItem("productId",t),window.location.href="/product-description"})}}).catch(o=>{console.error("Error:",o)})}),document.addEventListener("DOMContentLoaded",()=>{const t=sessionStorage.getItem("productId");t?fetch("/frontend/json/product-data.json").then(o=>o.json()).then(o=>{o=o.products.find(o=>o.id===t);o?renderProduct(o):console.log("Product not found")}).catch(o=>{console.error("Error:",o)}):console.log("Product ID not found in session storage")});
+  `;t.innerHTML=o;const n=""+e.name,r=""+e.price;document.getElementById("getToFormPageBtn").addEventListener("click",e=>{e.preventDefault(),sessionStorage.setItem("productName",n),sessionStorage.setItem("productPrice",r),window.location.href="/shipping-info"})}console.log(emailInfo.value),paymentForm.addEventListener("submit",payWithPaystack()),document.addEventListener("DOMContentLoaded",()=>{fetch("/frontend/json/product-data.json").then(e=>e.json()).then(o=>{var t=document.querySelectorAll(".order-btn");for(let e=0;e<t.length;e++){const r=t[e];var n=o.products[e].id;r.dataset.prodId=n,r.addEventListener("click",()=>{const t=r.dataset.prodId;o.products.find(e=>e.id===t);sessionStorage.setItem("productId",t),window.location.href="/product-description"})}}).catch(e=>{console.error("Error:",e)})}),document.addEventListener("DOMContentLoaded",()=>{const t=sessionStorage.getItem("productId");t?fetch("/frontend/json/product-data.json").then(e=>e.json()).then(e=>{e=e.products.find(e=>e.id===t);e?renderProduct(e):console.log("Product not found")}).catch(e=>{console.error("Error:",e)}):console.log("Product ID not found in session storage")});

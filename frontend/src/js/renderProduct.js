@@ -42,8 +42,8 @@ function renderProduct(product) {
 				</div>
 
 				<div class="product-info">
-					<h1 class="heading">${product.name}</h1>
-					<p class="price-text">Price: $${product.price}</p>
+					<h1 id="product-name" value="${product.name}" class="heading">${product.name}</h1>
+					<p id="product-price" value="${product.price}" class="price-text">Price: $${product.price}</p>
 				</div>
 			</div>
 
@@ -63,7 +63,7 @@ function renderProduct(product) {
 					</div>
 
 				
-				<button class="btn" id="getToFormPage">Order now</button>
+				<button class="btn" id="getToFormPageBtn">Order now</button>
 				</form>
 				
 			</div>
@@ -73,13 +73,19 @@ function renderProduct(product) {
 	// Set the template as the HTML content of the container
 	container.innerHTML = template;
 
+	// fetch the dynamically rendered product details to parse to the shipping form and payment function
+
+	const productName = `${product.name}`;
+	const productPrice = `${product.price}`;
+
 	function gotoNextPage() {
-		const getToFormBtn = document.getElementById('getToFormPage');
+		const getToFormBtn = document.getElementById('getToFormPageBtn');
 
 		getToFormBtn.addEventListener('click', (event) => {
 			event.preventDefault();
 
-			console.log('this button is working!');
+			sessionStorage.setItem('productName', productName);
+			sessionStorage.setItem('productPrice', productPrice);
 
 			window.location.href = '/shipping-info';
 		});
