@@ -23,6 +23,7 @@ layout: 'base.njk'
 						class="country-input"
 						type="text"
 						placeholder="Nigeria"
+						name="country"
 						required />
 				</div>
 
@@ -32,17 +33,22 @@ layout: 'base.njk'
 						class="info-input"
 						type="text"
 						placeholder="Contact name*"
+						name="customer-name"
 						required />
+
 					<input
 						class="info-input"
 						type="text"
 						placeholder="+235 8100 5444689*"
+						name="customer-phone"
 						required />
+
 					<input
 						class="info-input"
 						type="email"
 						placeholder="johndoe@gmail.com*"
 						id="email-address"
+						name="customer-email"
 						required />
 				</div>
 
@@ -52,16 +58,21 @@ layout: 'base.njk'
 						type="text"
 						class="address-input"
 						placeholder="Street, house/apartment/unit*"
+						name="address"
 						required />
+
 					<input
 						type="text"
 						class="address-input"
 						placeholder="City*"
+						name="city"
 						required />
+
 					<input
 						type="text"
 						class="address-input"
 						placeholder="State*"
+						name="state"
 						required />
 				</div>
 
@@ -81,6 +92,7 @@ layout: 'base.njk'
 						type="text"
 						id="name"
 						name="name-of-product-ordered"
+						hidden
 						class="name-input"
 						required />
 
@@ -90,6 +102,7 @@ layout: 'base.njk'
 						id="price"
 						class="price-input"
 						name="amount-paid-at-checkout"
+						hidden
 						required />
 				</div>
 			</form>

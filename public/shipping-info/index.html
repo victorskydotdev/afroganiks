@@ -93,6 +93,7 @@
 						class="country-input"
 						type="text"
 						placeholder="Nigeria"
+						name="country"
 						required />
 				</div>
 
@@ -102,17 +103,22 @@
 						class="info-input"
 						type="text"
 						placeholder="Contact name*"
+						name="customer-name"
 						required />
+
 					<input
 						class="info-input"
 						type="text"
 						placeholder="+235 8100 5444689*"
+						name="customer-phone"
 						required />
+
 					<input
 						class="info-input"
 						type="email"
 						placeholder="johndoe@gmail.com*"
 						id="email-address"
+						name="customer-email"
 						required />
 				</div>
 
@@ -122,16 +128,21 @@
 						type="text"
 						class="address-input"
 						placeholder="Street, house/apartment/unit*"
+						name="address"
 						required />
+
 					<input
 						type="text"
 						class="address-input"
 						placeholder="City*"
+						name="city"
 						required />
+
 					<input
 						type="text"
 						class="address-input"
 						placeholder="State*"
+						name="state"
 						required />
 				</div>
 
@@ -151,6 +162,7 @@
 						type="text"
 						id="name"
 						name="name-of-product-ordered"
+						hidden
 						class="name-input"
 						required />
 
@@ -160,6 +172,7 @@
 						id="price"
 						class="price-input"
 						name="amount-paid-at-checkout"
+						hidden
 						required />
 				</div>
 			</form>
@@ -293,6 +306,6 @@
 		<script src="/frontend/src/js/product-app.js"></script>
 		<script src="/frontend/src/js/renderProduct.js"></script>
 		<script src="/frontend/src/js/payment.js"></script>
-		<script src="https://js.paystack.co/v1/inline.js"></script>
+		<script src="https://js.paystack.co/v2/inline.js"></script>
 	</body>
 </html>

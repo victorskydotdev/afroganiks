@@ -1,4 +1,6 @@
 const paymentForm = document.getElementById('paymentForm');
+
+console.log(paymentForm);
 const emailInfo = document.getElementById('email-address');
 
 const productName = sessionStorage.getItem('productName');
