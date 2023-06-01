@@ -38,6 +38,7 @@
 			padding-top: 3em;
 			text-align: center;
 			display: none;
+			border-radius: $box-radius;
 
 			.nav-links {
 				margin-bottom: 2.4em;
@@ -72,6 +73,10 @@
 					padding: 0.8em 0;
 				}
 			}
+		}
+
+		.openNav {
+			display: block;
 		}
 
 		.cart,

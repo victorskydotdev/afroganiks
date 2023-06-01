@@ -1,0 +1,20 @@
+---
+title: Order Success
+layout: 'success-base.njk'
+---
+
+<section class="success-section">
+	<div class="container">
+		<h3 class="success-heading">
+			Hey, <span class="customer-name"></span>! You have successfully selected
+			and ordered for
+			<span id="product-name"></span>
+		</h3>
+
+		<h4 class="email-area">Please proceed to payment to complete your order</h4>
+
+		<form action="#" id="payment">
+			<button onclick="payWithPaystack" type="submit">Go to payments</button>
+		</form>
+	</div>
+</section>

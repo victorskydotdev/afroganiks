@@ -6,12 +6,7 @@ layout: 'base.njk'
 <section class="section-wrap">
 	<div class="layout-wrap">
 		<div class="form-container">
-			<form
-				action="#"
-				netlify
-				method="post"
-				class="shipping-form"
-				id="paymentForm">
+			<form action="#" method="post" class="shipping-form" id="shipping">
 				<div class="heading-container">
 					<h3 class="heading">Enter shipping address</h3>
 					<p class="subheading">You're almost done!</p>
@@ -34,6 +29,7 @@ layout: 'base.njk'
 						type="text"
 						placeholder="Contact name*"
 						name="customer-name"
+						id="customer-name"
 						required />
 
 					<input
@@ -77,12 +73,7 @@ layout: 'base.njk'
 				</div>
 
 				<div class="btn-wrap">
-					<button
-						type="submit"
-						class="checkout-btn"
-						onclick="payWithPaystack()">
-						Checkout
-					</button>
+					<button type="submit" class="checkout-btn">Go to payments</button>
 				</div>
 
 				<!-- hidden input elements -->

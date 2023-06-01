@@ -31,7 +31,7 @@
 			</a>
 		</div>
 
-		<nav class="navigation" id="nav-toggle-btn">
+		<nav class="navigation" id="nav-toggle">
 			<div class="wrap">
 				<ul class="nav-links">
 					<li>
@@ -65,7 +65,7 @@
 			<i class="fa-solid fa-cart-shopping"></i>
 		</button> -->
 
-		<button class="hamburger">
+		<button class="hamburger" id="nav-btn">
 			<i class="fa-solid fa-bars"></i>
 		</button>
 	</div>
@@ -76,12 +76,7 @@
 <section class="section-wrap">
 	<div class="layout-wrap">
 		<div class="form-container">
-			<form
-				action="#"
-				netlify
-				method="post"
-				class="shipping-form"
-				id="paymentForm">
+			<form action="#" method="post" class="shipping-form" id="shipping">
 				<div class="heading-container">
 					<h3 class="heading">Enter shipping address</h3>
 					<p class="subheading">You're almost done!</p>
@@ -104,6 +99,7 @@
 						type="text"
 						placeholder="Contact name*"
 						name="customer-name"
+						id="customer-name"
 						required />
 
 					<input
@@ -147,12 +143,7 @@
 				</div>
 
 				<div class="btn-wrap">
-					<button
-						type="submit"
-						class="checkout-btn"
-						onclick="payWithPaystack()">
-						Checkout
-					</button>
+					<button type="submit" class="checkout-btn">Go to payments</button>
 				</div>
 
 				<!-- hidden input elements -->
@@ -302,10 +293,14 @@
 
 		<!-- 
 		<script src="/frontend/dist/js/afroJsFiles.js?cb=1685003408159"></script> -->
+		<script src="/frontend/src/js/nav.js"></script>
 
 		<script src="/frontend/src/js/product-app.js"></script>
+
 		<script src="/frontend/src/js/renderProduct.js"></script>
-		<script src="/frontend/src/js/payment.js"></script>
+
+		<script src="/frontend/src/js/confirm-order.js"></script>
+
 		<script src="https://js.paystack.co/v2/inline.js"></script>
 	</body>
 </html>
