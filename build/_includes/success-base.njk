@@ -4,7 +4,18 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+
+		<!-- css file -->
+		<link
+			rel="stylesheet"
+			href="/frontend/dist/css/main.css?cb=1685003408159" />
+
+		<!-- page title -->
+		<title>{{ title }}</title>
 	</head>
-	<body></body>
+	<body>
+		{{ content | safe }}
+
+		<script src="/frontend/src/js/confirm-order.js"></script>
+	</body>
 </html>

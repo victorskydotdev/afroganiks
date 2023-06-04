@@ -1,5 +1,61 @@
 @import 'resets';
 
 .success-section {
-	background: red;
+	height: 100vh;
+	background: $accent-green;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		background: $light;
+		padding: 2em;
+		border-radius: $box-radius;
+		line-height: 1.7;
+		box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+
+		.success-heading {
+			color: $body-heading-color;
+			margin-bottom: 0.3em;
+		}
+
+		.email-area {
+			color: $body-p-color;
+			padding: 0 1.5em;
+			margin-bottom: 1.5em;
+			font-weight: $font-medium;
+		}
+
+		#payment {
+			display: flex;
+			justify-content: center;
+			margin: 0 auto;
+			padding-bottom: 1em;
+
+			button {
+				font-size: 14px;
+				background: $accent-green;
+				padding: $btn-padding;
+				border-radius: $btn-radius;
+				font-weight: $font-bold;
+				display: inline-block;
+				color: $light;
+				text-transform: capitalize;
+				font-family: $secondary-font;
+				text-align: center;
+				border: none;
+				cursor: pointer;
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 80%;
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 50%;
+		}
+	}
 }

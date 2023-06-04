@@ -76,7 +76,12 @@
 <section class="section-wrap">
 	<div class="layout-wrap">
 		<div class="form-container">
-			<form action="#" method="post" class="shipping-form" id="shipping">
+			<form
+				action="/success"
+				netlify
+				method="post"
+				class="shipping-form"
+				id="shipping">
 				<div class="heading-container">
 					<h3 class="heading">Enter shipping address</h3>
 					<p class="subheading">You're almost done!</p>
@@ -300,6 +305,8 @@
 		<script src="/frontend/src/js/renderProduct.js"></script>
 
 		<script src="/frontend/src/js/confirm-order.js"></script>
+
+		<script src="/frontend/src/js/payment.js"></script>
 
 		<script src="https://js.paystack.co/v2/inline.js"></script>
 	</body>

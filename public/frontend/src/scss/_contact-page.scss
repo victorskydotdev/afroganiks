@@ -1,0 +1,106 @@
+@import 'resets';
+
+.contact-section {
+	padding-top: 7em;
+	margin-bottom: 5em;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		gap: 2em;
+
+		.text-area {
+			background: rgba(214, 205, 0, 0.55);
+			padding: 2em;
+			line-height: 1.5;
+			border-radius: $box-radius;
+			position: relative;
+			overflow: hidden;
+		}
+
+		.image-wrap {
+			position: absolute;
+			left: 0;
+		}
+
+		.image-wrap > img {
+			inline-size: 100%;
+		}
+
+		.form-area {
+			background: $dominant-green;
+			border-radius: $box-radius;
+			padding: 2em;
+
+			.heading-wrap {
+				margin-bottom: 1.5em;
+				.heading {
+					color: $light;
+				}
+			}
+
+			.form {
+				.input-wrap {
+					input,
+					textarea {
+						width: 100%;
+						outline: none;
+						padding: 0.8em 0.5em;
+						border-radius: 10px;
+						border: 1.5px solid $accent-green;
+						margin-bottom: 1em;
+						font-family: $secondary-font;
+						// color: ;
+						font-weight: $font-medium;
+					}
+				}
+
+				.btn {
+					background: #d6cd00;
+					padding: $btn-padding;
+					border: none;
+					border-radius: $btn-radius;
+					font-family: $secondary-font;
+					width: 100%;
+					font-weight: $font-medium;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		width: 70%;
+	}
+
+	@media screen and (min-width: 62em) {
+		width: 100%;
+
+		.container {
+			display: flex;
+			justify-content: center;
+
+			.text-area {
+				width: 45%;
+				padding-top: 4em;
+
+				.image-wrap {
+					left: -30%;
+					bottom: -40%;
+				}
+
+				.image-wrap > img {
+					inline-size: 500px;
+				}
+			}
+
+			.form {
+				.name {
+					display: flex;
+					gap: 10px;
+				}
+			}
+		}
+	}
+}
