@@ -38,7 +38,6 @@
 			padding-top: 3em;
 			text-align: center;
 			display: none;
-			border-radius: $box-radius;
 
 			.nav-links {
 				margin-bottom: 2.4em;
@@ -122,8 +121,9 @@
 	@media screen and (min-width: 43em) {
 		.nav-container {
 			.navigation {
-				width: 60%;
-				left: 31%;
+				width: 50%;
+				left: 41%;
+				border-radius: $box-radius;
 			}
 		}
 

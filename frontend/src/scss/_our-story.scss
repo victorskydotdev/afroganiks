@@ -1,0 +1,65 @@
+@import 'resets';
+
+.our-story-section {
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		margin-bottom: 5em;
+
+		.image-section > img {
+			inline-size: 100%;
+		}
+
+		.text-section {
+			.article {
+				max-width: 500px;
+
+				.heading {
+					line-height: 1.4;
+					// font-size: $desktop-size;
+					// font-size: 35px;
+					margin-bottom: 2em;
+					color: $body-heading-color;
+				}
+
+				.first-p {
+					margin-bottom: 2em;
+					color: $body-p-color;
+					line-height: 1.6;
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			.image-section {
+				width: 400px;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-areas: 'text-section image-section';
+			gap: 40px;
+			position: relative;
+
+			.image-section {
+				grid-area: image-section;
+				position: sticky;
+				top: 15%;
+
+				height: 380px;
+			}
+
+			.text-section {
+				grid-area: text-section;
+
+				.heading {
+					font-size: 35px;
+					margin-bottom: unset;
+					margin-bottom: 0.5em;
+				}
+			}
+		}
+	}
+}

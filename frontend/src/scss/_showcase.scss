@@ -1,0 +1,60 @@
+@import 'resets';
+
+.showcase-section {
+	// background-color: teal;
+	margin-bottom: 7em;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+
+		.heading {
+			margin-bottom: 2em;
+			line-height: 1.6;
+			color: $body-heading-color;
+
+			.span-element {
+				color: $accent-green;
+			}
+		}
+
+		.img-wrap {
+			display: grid;
+			gap: 15px;
+		}
+
+		.img-wrap > img {
+			inline-size: 100%;
+			border-radius: $box-radius;
+			display: block;
+		}
+
+		@media screen and (min-width: 43em) {
+			.heading {
+				text-align: center;
+				width: 70%;
+				margin: 0 auto;
+				margin-bottom: 1em;
+			}
+
+			.img-wrap {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+
+			.img-wrap > img {
+				inline-size: 300px;
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			.heading {
+				width: 65%;
+				margin-bottom: 2em;
+				font-size: 2rem;
+				line-height: 1.4;
+			}
+		}
+	}
+}

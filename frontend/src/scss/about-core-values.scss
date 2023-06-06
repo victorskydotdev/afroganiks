@@ -1,0 +1,70 @@
+@import 'resets';
+
+.values-section {
+	margin-bottom: 5em;
+
+	.container {
+		background: #f8f8f8;
+
+		.wrap {
+			padding: 3em 0;
+			width: 90%;
+			margin: 0 auto;
+
+			.heading {
+				text-align: center;
+				font-weight: $font-medium;
+				text-transform: capitalize;
+				margin-bottom: 2em;
+
+				.acronym {
+					text-transform: uppercase;
+					color: #d6cd00;
+					display: inline-block;
+					margin: 0.3em 0 0.1em 0;
+				}
+
+				.tagline {
+					font-size: 0.7rem;
+				}
+			}
+
+			.value-wrap {
+				margin-bottom: 2em;
+				display: grid;
+				gap: 10px;
+
+				.value {
+					font-family: $secondary-font;
+					font-weight: 600;
+					// color: $body-p-color;
+					color: $accent-green;
+				}
+			}
+
+			.paragraph {
+				max-width: 500px;
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			.wrap {
+				.value-wrap {
+					display: flex;
+
+					gap: 20px;
+					justify-content: center;
+
+					.value {
+						display: inline-block;
+					}
+				}
+
+				.paragraph {
+					margin: 0 auto;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
