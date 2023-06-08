@@ -13,7 +13,7 @@
 
 			.heading {
 				text-align: center;
-				font-weight: $font-medium;
+				font-weight: $font-bold;
 				text-transform: capitalize;
 				margin-bottom: 2em;
 
@@ -44,6 +44,7 @@
 
 			.paragraph {
 				max-width: 500px;
+				line-height: 1.6;
 			}
 		}
 

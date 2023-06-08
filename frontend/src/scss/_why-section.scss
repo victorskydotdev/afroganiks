@@ -1,0 +1,44 @@
+@import 'resets';
+
+.why-section {
+	background: $rgb-bg;
+	margin-bottom: 15em;
+	min-height: 400px;
+	padding: 3em 0;
+	position: relative;
+
+	#{&}__container {
+		width: 90%;
+		margin: 0 auto;
+
+		.copy-wrap {
+			text-align: center;
+
+			.heading {
+				margin-bottom: 0.5em;
+			}
+
+			.vision-text {
+				max-width: 450px;
+				margin: 0 auto;
+				margin-bottom: 2em;
+				line-height: 1.6;
+			}
+		}
+
+		.img-wrap {
+			display: flex;
+			justify-content: center;
+			.copy-img {
+				inline-size: 400px;
+				position: absolute;
+				// left: 10%;
+				// right: 10%;
+				bottom: -40%;
+				border-radius: $box-radius;
+				margin: 0 auto;
+				filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.15));
+			}
+		}
+	}
+}
