@@ -1,7 +1,6 @@
 @import 'resets';
 
 .showcase-section {
-	// background-color: teal;
 	margin-bottom: 7em;
 
 	.container {
@@ -11,11 +10,15 @@
 		.heading {
 			margin-bottom: 2em;
 			line-height: 1.6;
-			color: $body-heading-color;
+			color: $light;
+			background: $accent-green;
+			font-family: $secondary-font;
+			padding: 1em;
+			border-radius: $box-radius;
 
-			.span-element {
-				color: $accent-green;
-			}
+			// .span-element {
+			// 	color: $accent-green;
+			// }
 		}
 
 		.img-wrap {
@@ -52,8 +55,8 @@
 			.heading {
 				width: 65%;
 				margin-bottom: 2em;
-				font-size: 2rem;
-				line-height: 1.4;
+				padding: 2em 3em;
+				line-height: 1.6;
 			}
 		}
 	}
