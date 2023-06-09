@@ -1,0 +1,447 @@
+{
+	"distributors": [
+		{
+			"id": 1,
+
+			"distibutor-name": "Vatassured Pharmacy",
+
+			"phone": "08167582991",
+
+			"address": "10, Olabode Aluko Str,    behind Zenith Bank, Olojojo",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 2,
+
+			"distibutor-name": "Tobi-Ebenco Pharmacy and Stores Limited",
+
+			"phone": "080 3910 4756",
+
+			"address": "New Ibadan Shagari Area, Atagba road, Adjacent Taska Filling Station, Boluwaji, Ibadan",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 3,
+
+			"distibutor-name": "Wellness Pharmacy",
+
+			"phone": "070 3211 2589",
+
+			"address": "Old Lagos Jakande Gate, Isolo, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 4,
+
+			"distibutor-name": "Pharm. James Mudiaga",
+
+			"phone": "231 8864 11389",
+
+			"address": "Paynesville City, Liberia",
+
+			"countty": "Liberia"
+		},
+
+		{
+			"id": 5,
+
+			"distibutor-name": "Duru Melda",
+
+			"phone": "070 3678 2967",
+
+			"address": "25, Alice Tinubu Str, Coker, Aguda, Surulere, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 6,
+
+			"distibutor-name": "Sanusi Ibukun",
+
+			"phone": "081 3196 9060",
+
+			"address": "1, Owolabani Str, Ajara Topa, Badagry, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 7,
+
+			"distibutor-name": "SYA Medical Diagnostics Center",
+
+			"phone": "080 5662 9369",
+
+			"address": "64, Ajosewa Str, New Garage Okitipupa, Ondo State",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 8,
+
+			"distibutor-name": "Edoh Mercy (Nurse Mercy)",
+
+			"phone": "081 6382 0879",
+
+			"address": "24, Adeniyi Str, Off Bamishile Str, Off Karimu Laka Road, Egbeda",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 9,
+
+			"distibutor-name": "Pharmacist Oguntomeso",
+
+			"phone": "080 6659 5612",
+
+			"address": "4, Ijomu Junction, beside Igoba Park, Beside 3chub, Akure, Ondo State",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 10,
+
+			"distibutor-name": "Agha Tobia",
+
+			"phone": "081 6563 9863",
+
+			"address": "Egbeda, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 11,
+
+			"distibutor-name": "Alhaji Muritala Muhydeen",
+
+			"phone": "080 3572 1178",
+
+			"address": "11, Sanusi Oladosu str, Mushin",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 12,
+
+			"distibutor-name": "Mbah CHRISTIANA",
+
+			"phone": "080 3743 3952",
+
+			"address": "5, Oduduwa Str, Oworonshoki, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 13,
+
+			"distibutor-name": "Mrs. Gabriel Ruth",
+
+			"phone": "080 3584 0400",
+
+			"address": "4, Ifelodun str, Alakia, Ibadan, Oyo State",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 14,
+
+			"distibutor-name": "Famobio Oluwasegun",
+
+			"phone": "080 3611 5966",
+
+			"address": "Famoseg Medical, Bauchi Ring Road, Jos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 15,
+
+			"distibutor-name": "Gracious Medicals",
+
+			"phone": "Not available",
+
+			"address": "Maria Okor road, Bucknor , Isheri Osun road, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 16,
+
+			"distibutor-name": "Mrs. Ngozi",
+
+			"phone": "081 0999 5606",
+
+			"address": "Igando –Ikotun, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 17,
+
+			"distibutor-name": "Drugplux Pharmacy",
+
+			"phone": "080 3687 7870",
+
+			"address": "14, Kemberi road, Okomaiko, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 18,
+
+			"distibutor-name": "Mr. Gilbert",
+
+			"phone": "080 3520 8941",
+
+			"address": "Isheri Ijegun road, Field bus stop, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 19,
+
+			"distibutor-name": "Mr. Chigozie",
+
+			"phone": "070 3107 4546",
+
+			"address": "Idumota",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 20,
+
+			"distibutor-name": "Unique Laboratory",
+
+			"phone": "080 2302 6235",
+
+			"address": "Anifowoshe street, Ikeja, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 21,
+
+			"distibutor-name": "Mrs. Nebo Chinwe",
+
+			"phone": "080 3868 6317",
+
+			"address": "Ojo, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 22,
+
+			"distibutor-name": "Mr. Wilson",
+
+			"phone": "080 3335 2279",
+
+			"address": "Idumota, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 23,
+
+			"distibutor-name": "Pharm. JOHN Akinbo",
+
+			"phone": "080 3577 8731",
+
+			"address": "Getwell Lab, Olokuta Idi Aba, Abeokuta",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 24,
+
+			"distibutor-name": "Mr. Ikechukwu",
+
+			"phone": "080 3318 5875",
+
+			"address": "Bio-flourish Lab, 22/24. Ago Palace Way, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 25,
+
+			"distibutor-name": "Medlab Ezeneto",
+
+			"phone": "080 6327 0103",
+
+			"address": "Ojo, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 26,
+
+			"distibutor-name": "Mrs. Chinyere",
+
+			"phone": "081 6032 8003",
+
+			"address": "Ojo, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 27,
+
+			"distibutor-name": "Mrs. Amaka Obasi",
+
+			"phone": "081 5079 8902",
+
+			"address": "Akute, Ogun State",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 28,
+
+			"distibutor-name": "Dr. Jerry Oyebade",
+
+			"phone": "Not available",
+
+			"address": "Isheri Idimu road, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 29,
+
+			"distibutor-name": "Tripod Pharmacy",
+
+			"phone": "Not available",
+
+			"address": "22/23, Ago Palace Way, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 30,
+
+			"distibutor-name": "Mrs. Oduntan",
+
+			"phone": "Not available",
+
+			"address": "Fagbile Estate, Isheri Ijegun Road, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 31,
+
+			"distibutor-name": "Noble Drugs Pharmacy",
+
+			"phone": "08033206785",
+
+			"address": "32 Mbari street, Ikenegbu, Owerri",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 32,
+
+			"distibutor-name": "Stamford Pharmacy",
+
+			"phone": "08033206785",
+
+			"address": "No. 9 Royce Road, Owerri",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 33,
+
+			"distibutor-name": "Afroganiks Nutrition PH",
+
+			"phone": "08063423633",
+
+			"address": "Airforce Shops Aba road by Market junction, opposite genesis fast food. Shop 1B-035",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 34,
+
+			"distibutor-name": "Nurse Maureen",
+
+			"phone": "08169794611",
+
+			"address": "Benin",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 35,
+
+			"distibutor-name": "Dr. Promise",
+
+			"phone": "07019500622",
+
+			"address": "44 Benin Agbor Road, Opposite Western Boys High School, Benin City, Edo State",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 36,
+
+			"distibutor-name": "Boongate Pharmacy Limited",
+
+			"phone": "08064128097",
+
+			"address": "44 Benin Agbor Road, Opposite Western Boys High School, Benin City, Edo State",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 37,
+
+			"distibutor-name": "BEZ PHARMACY",
+
+			"phone": "08064128097",
+
+			"address": "44 Benin Agbor Road, Opposite Western Boys High School, Benin City, Edo State",
+
+			"countty": "Nigeria"
+		}
+	]
+}

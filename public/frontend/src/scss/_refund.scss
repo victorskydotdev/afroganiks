@@ -1,0 +1,71 @@
+@import 'resets';
+
+.refund-main {
+	padding-top: 10em;
+	margin-bottom: 10em;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+
+		.section-heading {
+			margin-bottom: 2em;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+
+			.img-wrap {
+				img {
+					inline-size: 60px;
+				}
+			}
+		}
+
+		.section {
+			margin-bottom: 2.5em;
+
+			.heading {
+				margin-bottom: 1.4em;
+			}
+
+			.paragraph {
+				margin-bottom: 2em;
+				line-height: 1.7;
+			}
+
+			ul {
+				display: grid;
+				gap: 1em;
+				width: 80%;
+				margin: 0 auto;
+				margin-bottom: 2em;
+
+				li {
+					list-style-type: square;
+				}
+			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 70%;
+			margin-bottom: 10em;
+
+			.section {
+				.paragraph {
+					text-align: justify;
+				}
+
+				ul {
+					li {
+						text-align: justify;
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 50%;
+		}
+	}
+}
