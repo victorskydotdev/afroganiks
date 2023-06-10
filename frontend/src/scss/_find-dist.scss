@@ -1,0 +1,84 @@
+@import 'resets';
+
+.find-dist-section {
+	padding-top: 8em;
+	margin-bottom: 5em;
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+
+		.text-area {
+			margin-bottom: 1.5em;
+			.heading {
+				color: $body-heading-color;
+
+				i {
+					color: $accent-green;
+				}
+			}
+		}
+
+		.country-btns {
+			display: grid;
+			gap: 20px;
+			margin-bottom: 1.5em;
+
+			.country {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				// width: 100%;
+				border: none;
+				border-radius: $box-radius;
+				height: 300px;
+				background: teal;
+
+				button {
+					background: $accent-green;
+					border: none;
+					padding: $btn-padding;
+					font-family: $secondary-font;
+					font-weight: $font-medium;
+					color: $light;
+					border-radius: $btn-radius;
+					cursor: pointer;
+				}
+			}
+		}
+
+		.become-dist-btn-wrap {
+			a {
+				padding: $btn-padding;
+				border-radius: $btn-radius;
+				background: $accent-green;
+				margin-top: 2em;
+				display: inline-block;
+				color: $light;
+			}
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		.container {
+			.text-area {
+				text-align: center;
+				margin-bottom: 2.5em;
+			}
+
+			.country-btns {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+
+				.country {
+					width: 250px;
+				}
+			}
+
+			.become-dist-btn-wrap {
+				text-align: center;
+			}
+		}
+	}
+}

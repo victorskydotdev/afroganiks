@@ -427,7 +427,7 @@
 
 			"phone": "08064128097",
 
-			"address": "44 Benin Agbor Road, Opposite Western Boys High School, Benin City, Edo State",
+			"address": "No. 1 Accra Strret, Uwani, Enugu",
 
 			"countty": "Nigeria"
 		},
@@ -437,9 +437,621 @@
 
 			"distibutor-name": "BEZ PHARMACY",
 
-			"phone": "08064128097",
+			"phone": "08068579547",
 
-			"address": "44 Benin Agbor Road, Opposite Western Boys High School, Benin City, Edo State",
+			"address": "26 ETAGBOR ROAD, OPP. U JIMCO FILLING STATION, CALABAR, CROSS RIVERS STATE",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 38,
+
+			"distibutor-name": "Mrs Ellen",
+
+			"phone": "08038976348",
+
+			"address": "Non Available",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 39,
+
+			"distibutor-name": "Mrs. Oluchi",
+
+			"phone": "08060387020",
+
+			"address": "No. 2 Udumunovwri Quarters Ekpan, Along Jakpa Road, Warri",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 40,
+
+			"distibutor-name": "Enfra Pharmacy",
+
+			"phone": "08066703852",
+
+			"address": "157 Okigwe Road Opposite Access Bank Orji, Imo state",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 41,
+
+			"distibutor-name": "Mr. Jonas",
+
+			"phone": "08067476482",
+
+			"address": "Onitsha",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 42,
+
+			"distibutor-name": "BEZ PHARMACY",
+
+			"phone": "08185724076",
+
+			"address": "NO 20 ABAK ROAD, UYO",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 43,
+
+			"distibutor-name": "AFROGANIKS ABUJA",
+
+			"phone": "08067161990",
+
+			"address": "Suite D3, 1st Floor, Bobsar complex, Michika Street, beside Assemblies of God Church National Worship Centre Area 11, Garki Abuja",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 44,
+
+			"distibutor-name": "AFROGANIKS KANO",
+
+			"phone": "08057754360",
+
+			"address": "No. 256 Kundila Phase II Behind Al Bayan Group of School Opposite Aminu Kano Teaching Hospital Zaria Road Kano, Kano State",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 45,
+
+			"distibutor-name": "AFROGANIKS JOS",
+
+			"phone": "09047814607",
+
+			"address": "No. 6/7 Boundary Street, Behind Plateau Rider Park After Pearls Laboratories, Jos North Plateau state.",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 46,
+
+			"distibutor-name": "AFROGANIKS USA (Morolayo Adeyanju)",
+
+			"phone": "+12814066882",
+
+			"address": "Atlanta, Georgia USA.",
+
+			"countty": "USA"
+		},
+
+		{
+			"id": 47,
+
+			"distibutor-name": "AFROGANIKS UK (Nicholas Ojiako)",
+
+			"phone": "+447479076899",
+
+			"address": "Scotland, Uk.",
+
+			"countty": "UK"
+		},
+
+		{
+			"id": 48,
+
+			"distibutor-name": "AFROGANIKS ASABA",
+
+			"phone": "09166735613",
+
+			"address": "No. 2 Fidelity Fortune street, Behind Friendly supermarket, Summit Road Asaba, Delta state",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 49,
+
+			"distibutor-name": "AFROGANIKS ENUGU",
+
+			"phone": "08132534600",
+
+			"address": "A21 C To C Plaza, Nkponkiti Junction Around Presidential road, Enugu",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 50,
+
+			"distibutor-name": "AFROGANIKS LAGOS",
+
+			"phone": "08107057055",
+
+			"address": "Omotola Plaza, Afolabi Aina Street, Allen, Ikeja, Lagos",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 51,
+
+			"distibutor-name": "Amfit Medical Stores",
+
+			"phone": "08150798902",
+
+			"address": "1 George street, off Ajenishe street, Alagbole Akute off Ajuwon road, Ogun state.",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 52,
+
+			"distibutor-name": "Mrs. Ellen",
+
+			"phone": "08038976348",
+
+			"address": "104 Calabar road by bonny street, Calabar, Cross River state.",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 53,
+
+			"distibutor-name": "AFROGANIKS GHANA (Mrs. Emefa)",
+
+			"phone": "0200924501, 0271610374",
+
+			"address": "Accra, Ghana",
+
+			"countty": "Ghana"
+		},
+
+		{
+			"id": 54,
+
+			"distibutor-name": "AFROGANIKS CAMEROON (Mr. Njisong Godlove)",
+
+			"phone": "+237679112339, +237656056877",
+
+			"address": "Douala Cameroon.",
+
+			"countty": "Cameroon"
+		},
+
+		{
+			"id": 55,
+
+			"distibutor-name": "AFROGANIKS LIBERIA (Dr. Felix)",
+
+			"phone": "+231775577714, +231888589165",
+
+			"address": "Monrovia, Liberia",
+
+			"countty": "Liberia"
+		},
+
+		{
+			"id": 56,
+
+			"distibutor-name": "Mrs. Ajao",
+
+			"phone": "08034772755",
+
+			"address": "RCCG Niger Province 1 Maternity Opp. Gajere Filling Station, Minna, Niger State",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 57,
+
+			"distibutor-name": "Obidike Eucharia",
+
+			"phone": "08064573848, 09065258864",
+
+			"address": "Nnewi, Anambra state",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 58,
+
+			"distibutor-name": "AFROGANIKS ABA",
+
+			"phone": "09039734001",
+
+			"address": "Montenegro Plaza, No. 6 Ehere Road by Opobo Junction, Ogbor Hill, Aba, Abia State",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 59,
+
+			"distibutor-name": "Naematu",
+
+			"phone": "+233201853277, +233243125662",
+
+			"address": "Accra, Ghana",
+
+			"countty": "Ghana"
+		},
+
+		{
+			"id": 60,
+
+			"distibutor-name": "DoorStep Mall Ghana.. Dansoman- Agegea",
+
+			"phone": "0209848056",
+
+			"address": "Accra, Ghana",
+
+			"countty": "Ghana"
+		},
+
+		{
+			"id": 61,
+
+			"distibutor-name": "Mrs Charity Selorm (Lab Scientist)",
+
+			"phone": "+233242636835 +23326779689",
+
+			"address": "Accra, Ghana",
+
+			"countty": "Ghana"
+		},
+
+		{
+			"id": 62,
+
+			"distibutor-name": "PHILOMENA NYARKO (Narivpearl Superstores)",
+
+			"phone": "0546503564",
+
+			"address": "Takoradi, Ghana",
+
+			"countty": "Ghana"
+		},
+
+		{
+			"id": 63,
+
+			"distibutor-name": "Shirley Duku",
+
+			"phone": "0244029550",
+
+			"address": "Kumasi, Ghana",
+
+			"countty": "Ghana"
+		},
+
+		{
+			"id": 64,
+
+			"distibutor-name": "Ntumngia Lesley",
+
+			"phone": "+237674774600",
+
+			"address": "BAMENDA/CAMEROON",
+
+			"countty": "Cameroon"
+		},
+
+		{
+			"id": 65,
+
+			"distibutor-name": "Shu Yollande",
+
+			"phone": "676605495, +237676605495",
+
+			"address": "YAOUNDE/CAMEROON",
+
+			"countty": "Cameroon"
+		},
+
+		{
+			"id": 66,
+
+			"distibutor-name": "Miss. Agniglo Darrah",
+
+			"phone": "+22890872049, +22899499814",
+
+			"address": "LOME, TOGO",
+
+			"countty": "Togo"
+		},
+
+		{
+			"id": 67,
+
+			"distibutor-name": "Mrs. Abiodun Adzor",
+
+			"phone": "+22962421487, +22892076006",
+
+			"address": "LOME, TOGO",
+
+			"countty": "Togo"
+		},
+
+		{
+			"id": 68,
+
+			"distibutor-name": "Mr. Senam Adzor",
+
+			"phone": "+22898222327",
+
+			"address": "LOME, TOGO",
+
+			"countty": "Togo"
+		},
+
+		{
+			"id": 69,
+
+			"distibutor-name": "ONG 'SOURCE DE VIE' BELLEVILLE DIRECTION BIABOU",
+
+			"phone": "+22578771295 +2254641004",
+
+			"address": "ABIDJAN/IVORY COAST",
+
+			"countty": "Ivory Coast"
+		},
+
+		{
+			"id": 70,
+
+			"distibutor-name": "Barth wilfred",
+
+			"phone": "08036982785 , 08032761201",
+
+			"address": "G30/E20 Opposite Cream Line Bridge Head Mkt Onitsha Anambra",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 71,
+
+			"distibutor-name": "Christ De King Health Services LTD",
+
+			"phone": "08033746809, 08175615765",
+
+			"address": "No. 72 Old Onitsha RD. Nnewi, Anambra State.",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 72,
+
+			"distibutor-name": "EZIM PHARMACEUTICAL COMPANY",
+
+			"phone": "08064001661, 08068367777",
+
+			"address": "32 JERICHO ROAD, OTUKPO, BENUE STATE",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 73,
+
+			"distibutor-name": "Wendy Wood Pharmacy Ltd",
+
+			"phone": "Not available",
+
+			"address": "Shop 4and5 Murtala Muhammed Way, Adjacent To Glo Office. Kano",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 74,
+
+			"distibutor-name": "NURSE Uchechi",
+
+			"phone": "08034318424",
+
+			"address": "Kano",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 75,
+
+			"distibutor-name": "Safari Pharmacy",
+
+			"phone": "08074202391",
+
+			"address": "Legacy House, Opp St. Anthony’s Catholic Church, Airport Road, Warri, Delta State",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 76,
+
+			"distibutor-name": "Jodeg Pharmacy",
+
+			"phone": "Not available",
+
+			"address": "106 PTI Road By Alegbo Junction, Effurun, Warri, Delta State.",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 77,
+
+			"distibutor-name": "Mr. Asuquo",
+
+			"phone": "08036835620",
+
+			"address": "Uyo High School, Oron Road; University Of Uyo Permanent Site, Nwaniba Uyo/Akwa Ibom State",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 78,
+
+			"distibutor-name": "CAPSTONE PHARMACY",
+
+			"phone": "08066454849",
+
+			"address": "NO.1 MELFORD OKILO EXPRESS RD. AT HARBOUR, JETTY ROAD JUNCTION, AFTER ST. PETERS CHURCH, DOWN YENAGOA, BAYELSA.",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 79,
+
+			"distibutor-name": "YINKA AWONIYI",
+
+			"phone": "0806-760-1920, 0809-720-6515",
+
+			"address": "ADO-EKITI",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 80,
+
+			"distibutor-name": "Finrel Pharmacy",
+
+			"phone": "Not available",
+
+			"address": "Vulcanizer Bus Stop, Ojurin Akoba, Ibadan, OYO STATE.",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 81,
+
+			"distibutor-name": "Mr. Kingsley",
+
+			"phone": "07060604556",
+
+			"address": "79, Oliha Market, Along Siluko Road, Benin City, Edo State",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 82,
+
+			"distibutor-name": "Mr. Ikechukwu",
+
+			"phone": "08025070569",
+
+			"address": "19, Mission Road, Beside Butsher Junction, Benin City, Edo State.",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 83,
+
+			"distibutor-name": "ZAYTUN DIAGNOSTICS",
+
+			"phone": "08036922832",
+
+			"address": "Kaduna",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 84,
+
+			"distibutor-name": "Raymed Pharmacy",
+
+			"phone": "08038292367",
+
+			"address": "No. 1 Zaire Road, Halima Plaza, Barnawa, Kaduna. Mr. Tunde",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 85,
+
+			"distibutor-name": "Agent- Ms. Ada",
+
+			"phone": "08168787195",
+
+			"address": "No.8, Evo Road GRA Port Harcourt. 4b, Ejikini Street Mile 3 Diobu, Port Harcourt, RIVERS STATE",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 86,
+
+			"distibutor-name": "Thelma Ukoifeanyi",
+
+			"phone": "07033635575",
+
+			"address": "Obiwali Road, Rumuigbo Off Nkporlu Junction, PrtHarcourt",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 87,
+
+			"distibutor-name": "Mr. Sunday",
+
+			"phone": "0810 550 4440",
+
+			"address": "PORT HARCOURT",
+
+			"countty": "Nigeria"
+		},
+
+		{
+			"id": 88,
+
+			"distibutor-name": "NURSE NWAMAKA",
+
+			"phone": "08118693817",
+
+			"address": "HOME/OFFICE DELIVERY WITHIN  ENUGU",
 
 			"countty": "Nigeria"
 		}
