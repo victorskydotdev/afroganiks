@@ -28,11 +28,10 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				// width: 100%;
 				border: none;
 				border-radius: $box-radius;
 				height: 300px;
-				background: teal;
+				// background: ;
 
 				button {
 					background: $accent-green;
@@ -44,6 +43,46 @@
 					border-radius: $btn-radius;
 					cursor: pointer;
 				}
+			}
+
+			.nigeria {
+				background: url('/frontend/dist/images/dist-img1.jpg') center/cover,
+					no-repeat;
+			}
+
+			.ghana {
+				background: url('/frontend/dist/images/dist-img2.jpg') center/cover,
+					no-repeat;
+			}
+
+			.america {
+				background: url('/frontend/dist/images/dist-img3.jpg') center/cover,
+					no-repeat;
+			}
+
+			.cameroon {
+				background: url('/frontend/dist/images/dist-img4.jpg') center/cover,
+					no-repeat;
+			}
+
+			.togo {
+				background: url('/frontend/dist/images/dist-img5.jpg') center/cover,
+					no-repeat;
+			}
+
+			.liberia {
+				background: url('/frontend/dist/images/dist-img6.jpg') center/cover,
+					no-repeat;
+			}
+
+			.ivory-coast {
+				background: url('/frontend/dist/images/dist-img7.jpg') center/cover,
+					no-repeat;
+			}
+
+			.uk {
+				background: url('/frontend/dist/images/dist-img8.jpg') center/cover,
+					no-repeat;
 			}
 		}
 

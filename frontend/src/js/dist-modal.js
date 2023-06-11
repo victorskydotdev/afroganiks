@@ -65,9 +65,14 @@ const checkBtnClicked = () => {
 								.map(
 									(distributor) => `
                     <div class="content-wrap">
-                      <h3>${distributor.name}</h3>
-                      <p>Phone: ${distributor.phone}</p>
+                      <h3 class="dist-name">${distributor.name}</h3>
+                      <div class="sub-elements">
+											<p>Phone: ${distributor.phone}</p>
                       <p>Address: ${distributor.address}</p>
+											</div>
+											<div class="call-wrap">
+												<a class="dist-call-btn" href="tel:${distributor.callLine}"><i class="fa-solid fa-phone"></i> <span class="link-span">Call Distributor</span></a>
+											</div>
                     </div>
                   `
 								)
