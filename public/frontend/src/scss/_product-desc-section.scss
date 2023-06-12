@@ -71,8 +71,11 @@
 								font-family: $secondary-font;
 								width: 100px;
 								outline: none;
-								border: none;
+								border: 1.5px solid $accent-green;
 								font-weight: $font-medium;
+								padding: 0.5em 0.4em;
+								border-radius: 5px;
+								color: $accent-green;
 							}
 						}
 					}
@@ -85,7 +88,7 @@
 						font-family: $secondary-font;
 						font-weight: $font-medium;
 						padding: $btn-padding;
-						border-radius: 50px;
+						border-radius: $btn-radius;
 						color: $light;
 						text-transform: capitalize;
 						cursor: pointer;

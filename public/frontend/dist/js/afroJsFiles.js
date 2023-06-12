@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded",()=>{var e=document.querySelector("
 					<div class="location-wrap">
 						<label>Ship to:</label>
 
-						<span><i class="fa-solid fa-location-dot"></i> <input placeholder="Nigeria" ></span>
+						<span><i class="fa-solid fa-location-dot"></i> <input placeholder="Destination" ></span>
 						
 					</div>
 

@@ -36,6 +36,9 @@
 	}
 
 	.wrap {
+		width: 90%;
+		margin: 0 auto;
+
 		.heading-container {
 			position: fixed;
 			background: #d6cd00;
@@ -54,9 +57,9 @@
 		}
 
 		.modal-container {
-			width: 90%;
+			width: 100%;
 			max-height: 100%;
-			margin: 0 auto;
+
 			background: $light;
 			box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 			border-radius: $box-radius;
@@ -64,12 +67,10 @@
 			padding: 5em 2em 2em 2em;
 
 			.content-wrap {
-				// background: $accent-green;
 				box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
 				margin-bottom: 2em;
 				padding: 1em;
 				border-radius: $box-radius;
-				// color: $light;
 
 				.dist-name {
 					margin-bottom: 1em;
@@ -118,17 +119,51 @@
 
 	@media screen and (min-width: 43em) {
 		.modal-close-btn {
-			top: 5%;
 			right: 7%;
 		}
 
-		.modal-container {
+		.wrap {
+			width: 80%;
+
+			.heading-container {
+				width: 60%;
+				padding-left: 1.3em;
+				left: 7%;
+
+				.heading {
+					font-size: 1.1rem;
+				}
+			}
+
+			.modal-container {
+				.content-wrap {
+					max-width: 500px;
+					margin: 0 auto;
+					margin-bottom: 2em;
+				}
+			}
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		.modal-close-btn {
+			right: 13%;
+		}
+
+		.wrap {
 			width: 70%;
 
-			.content-wrap {
-				max-width: 500px;
-				margin: 0 auto;
-				margin-bottom: 2em;
+			.heading-container {
+				left: 13%;
+				width: 40%;
+			}
+
+			.modal-container {
+				.content-wrap {
+					max-width: 500px;
+					margin: 0 auto;
+					margin-bottom: 2em;
+				}
 			}
 		}
 	}
