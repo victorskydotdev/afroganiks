@@ -58,7 +58,7 @@ function renderProduct(product) {
 					<div class="location-wrap">
 						<label>Ship to:</label>
 
-						<span><i class="fa-solid fa-location-dot"></i> <input placeholder="Destination" ></span>
+						<span><i class="fa-solid fa-location-dot"></i> <input type="text" id="userDest" placeholder="Destination" value="" ></span>
 						
 					</div>
 
@@ -74,20 +74,28 @@ function renderProduct(product) {
 	container.innerHTML = template;
 
 	// fetch the dynamically rendered product details to parse to the shipping form and payment function
-
 	const productName = `${product.name}`;
 	const productPrice = `${product.price}`;
 
 	function gotoNextPage() {
 		const getToFormBtn = document.getElementById('getToFormPageBtn');
+		console.log(getToFormBtn);
+
+		const userDest = document.getElementById('userDest');
 
 		getToFormBtn.addEventListener('click', (event) => {
 			event.preventDefault();
 
+			const userDestValue = userDest.value;
+			sessionStorage.setItem('destData', userDestValue);
+
 			sessionStorage.setItem('productName', productName);
 			sessionStorage.setItem('productPrice', productPrice);
 
-			window.location.href = '/shipping-info';
+			if (productName && productPrice && userDestValue) {
+				console.log('these are available');
+				window.location.href = '/shipping-info';
+			} else console.log('not available');
 		});
 	}
 

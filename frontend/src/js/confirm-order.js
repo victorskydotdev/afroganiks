@@ -1,17 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
 	const orderForm = document.querySelector('.shipping-form');
+	const countryElement = document.querySelector('.country-input');
+	const name = document.getElementById('customer-name');
+	const email = document.getElementById('email-address');
 
-	const name = document.getElementById('customer-name').value;
+	const capturedCountryValue = sessionStorage.getItem('destData');
 
-	const email = document.getElementById('email-address').value;
+	countryElement.value = `Your shipping destination has been set to: ${capturedCountryValue}`;
 
 	orderForm.addEventListener('submit', (e) => {
 		e.preventDefault();
 
-		const capturedName = name;
-		const capturedEmail = email;
-
-		console.log(capturedEmail, capturedName);
+		// we are capturing the name and email cos we want to pass them to the next page. on the success page, we'll retrieve the price and email from the session storage and pass them to the payment gateway for processing
+		const capturedName = name.value;
+		const capturedEmail = email.value;
 
 		sessionStorage.setItem('storedName', capturedName);
 		sessionStorage.setItem('storedEmail', capturedEmail);
@@ -31,23 +33,4 @@ if (productPrice || productName) {
 	priceInfo.value = productPrice;
 } else {
 	console.log('nothing found in session storage');
-}
-
-//===== logic for payments =====//
-
-// initialize all the global variables on the soccess page
-const nameHeading = document.getElementById('customer-name');
-const productInfoWrap = document.getElementById('product-name');
-
-// fetch the session storage data again
-// fetch the sessionStorage data (name and email)
-const customerName = sessionStorage.getItem('storedName');
-const customerEmail = sessionStorage.getItem('storedEmail');
-const productInfo = sessionStorage.getItem('productName');
-
-if (!(productInfoWrap || nameHeading)) {
-	console.log('nothing');
-} else {
-	nameHeading.textContent = customerName;
-	// productInfoWrap.textContent = productInfo;
 }

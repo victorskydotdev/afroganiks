@@ -15,9 +15,10 @@ layout: 'success-base.njk'
 		<h4 class="email-area">Please proceed to payment to complete your order</h4>
 
 		<form action="#" id="payment">
-			<button onclick="payWithPaystack" type="submit">
-				proceed to payments
-			</button>
+			<button type="submit">Checkout</button>
 		</form>
 	</div>
 </section>
+
+<script src="https://js.paystack.co/v1/inline.js"></script>
+<script src="/frontend//src/js/payment.js"></script>
