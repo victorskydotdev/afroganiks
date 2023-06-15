@@ -1,3 +1,37 @@
+//? this logic is for the product page
+
+// user location modal logic
+const userLocation = document.querySelectorAll('.country-btn');
+const userLocationModal = document.querySelector('.user-location-modal');
+
+const convertCurrency = () => {
+	for (let locationBtn = 0; locationBtn < userLocation.length; locationBtn++) {
+		const numOfBtns = userLocation[locationBtn];
+
+		// init product currency and amount elements
+		const amount = document.querySelectorAll('.amount');
+		const currency = document.querySelectorAll('.currency');
+
+		numOfBtns.addEventListener('click', () => {
+			// userLocationModal.style.display = 'none';
+
+			alert(
+				'Hey there! Please our product page is down. Please do bear with us as our development team is actively working to revamp our product page in order to give you an amazing shopping experience on Afroganiks.com. While you are here, please use the WhatsApp icon at the bottom-right of the screen to chat with us directly, thank you!'
+			);
+		});
+	}
+};
+
+convertCurrency();
+
+// for (let i = 0; i < currency.length; i++) {
+// 	console.log(currency[i].textContent);
+// }
+
+// for (let i = 0; i < amount.length; i++) {
+// 	console.log(amount[i].textContent);
+// }
+
 document.addEventListener('DOMContentLoaded', () => {
 	// the code below runs when the dom content is loaded
 

@@ -1,3 +1,8 @@
+// import '/dotenv/config';
+require('dotenv').config({});
+
+console.log(process.env.PAYMENT_API_KEY);
+
 // init all the variables
 const customerNameField = document.getElementById('customer-name');
 const productNameField = document.getElementById('product-name');
@@ -10,6 +15,8 @@ console.log(emailValue);
 const priceValue = parseInt(sessionStorage.getItem('productPrice'));
 console.log(priceValue);
 
+// console.log(process.env.PAYMENT_API_KEY);
+
 customerNameField.textContent = capturedCustomerName;
 productNameField.textContent = capturedProductName;
 
@@ -21,7 +28,7 @@ function payWithPaystack(e) {
 	e.preventDefault();
 
 	let handler = PaystackPop.setup({
-		key: 'pk_test_51d682f716acbcc54d5ebb0ec9c1dffa715d40d1',
+		key: 'PAYMENT_API_KEY',
 
 		email: emailValue,
 

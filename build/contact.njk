@@ -28,6 +28,33 @@ layout: 'base.njk'
 				action="/contact-form-success"
 				name="contact"
 				class="form">
+				<!-- contact reason checkboxes -->
+				<div class="checkboxes">
+					<div class="checkbox-container">
+						<div class="wrap">
+							<input type="checkbox" name="Shirt" id="shirt" />
+							<label class="box" for="shirt">Print Shirts</label>
+						</div>
+
+						<div class="wrap">
+							<input type="checkbox" name="Tote bag" id="bag" />
+							<label class="box" for="bag">Print Tote bags</label>
+						</div>
+
+						<div class="wrap">
+							<input type="checkbox" name="Cap" id="cap" />
+							<label class="box" for="cap">Print cap</label>
+						</div>
+
+						<div class="wrap">
+							<input type="checkbox" name="Cups/mugs" id="cup" />
+							<label class="box" for="cup">Print Mugs/Cups</label>
+						</div>
+					</div>
+				</div>
+				<!-- end of checkboxes -->
+
+				<!-- user info -->
 				<div class="input-wrap name">
 					<input type="text" placeholder="First name" />
 
@@ -39,7 +66,7 @@ layout: 'base.njk'
 				</div>
 
 				<div class="input-wrap">
-					<input type="text" placeholder="Location" />
+					<input type="text" placeholder="Country" />
 				</div>
 
 				<div class="input-wrap">
@@ -50,8 +77,9 @@ layout: 'base.njk'
 						rows="10"
 						placeholder="Additional Information"></textarea>
 				</div>
+				<!-- end of user info -->
 
-				<div class="input-wrap"></div>
+				<!-- <div class="input-wrap"></div> -->
 
 				<button type="submit" class="btn">Submit</button>
 			</form>

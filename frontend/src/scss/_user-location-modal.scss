@@ -1,0 +1,67 @@
+@import 'resets';
+
+.user-location-modal {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	// background: rgba(0, 0, 0, 0.849);
+	background: $light;
+	z-index: 100;
+
+	.container {
+		// background: #f1f1f1;
+		width: 90%;
+		margin: 0 auto;
+		height: 100vh;
+
+		padding-top: 3em;
+
+		.modal-heading {
+			color: $body-p-color;
+			position: relative;
+			margin-bottom: 2em;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 160%;
+				left: 0;
+				height: 2px;
+				width: 100%;
+				background: $body-p-color;
+			}
+		}
+
+		.location-container {
+			display: grid;
+			gap: 2em;
+
+			.wrap {
+				.heading {
+					margin-bottom: 1em;
+					color: $body-p-color;
+				}
+
+				.country-select {
+					display: flex;
+					flex-wrap: wrap;
+					gap: 0.8em;
+
+					button {
+						border: none;
+						background: $accent-green;
+						padding: $btn-padding;
+						font-family: $secondary-font;
+						font-weight: $font-medium;
+						border-radius: $btn-radius;
+						color: $light;
+						text-transform: capitalize;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+}
