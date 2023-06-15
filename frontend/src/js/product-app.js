@@ -16,7 +16,7 @@ const convertCurrency = () => {
 			// userLocationModal.style.display = 'none';
 
 			alert(
-				"Hey there! Please we've temporarily turned off this product page. Please do bear with us as our development team is actively working to revamp our product page in order to give you an amazing shopping experience on Afroganiks.com. While you are here, please use the WhatsApp icon at the bottom-right of the screen to chat with us directly, thank you!"
+				"Hey there! Please we've temporarily turned off this product page. Please do bear with us as our development team is actively working to revamp our product page in order to give you an amazing shopping experience on Afroganiks.com. While you are here, please use the chat icon at the bottom-right of the screen to chat with us directly, thank you!"
 			);
 		});
 	}
