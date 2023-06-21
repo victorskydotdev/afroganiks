@@ -55,6 +55,10 @@
 					<li>
 						<a href="/about">About</a>
 					</li>
+
+					<li>
+						<a href="/contact">Contact</a>
+					</li>
 				</ul>
 
 				<div class="second-nav">
@@ -112,7 +116,8 @@
 								<input
 									type="checkbox"
 									name="bulk-purchase"
-									id="bulk-purchase" />
+									id="bulk-purchase"
+									required />
 								<span>Bulk Purchase</span>
 							</label>
 						</div>
@@ -122,21 +127,30 @@
 								<input
 									type="checkbox"
 									name="General-Enquiries"
-									id="enquiries" />
+									id="enquiries"
+									required />
 								<span>General Enquiries</span>
 							</label>
 						</div>
 
 						<div class="wrap">
 							<label class="box" for="consultation">
-								<input type="checkbox" name="consultation" id="consultation" />
+								<input
+									type="checkbox"
+									name="consultation"
+									id="consultation"
+									required />
 								<span>Consultation</span>
 							</label>
 						</div>
 
 						<div class="wrap">
 							<label class="box" for="distribution">
-								<input type="checkbox" name="distribution" id="distribution" />
+								<input
+									type="checkbox"
+									name="distribution"
+									id="distribution"
+									required />
 								<span>Distribution</span>
 							</label>
 						</div>
@@ -149,6 +163,10 @@
 					<input type="text" placeholder="First name" name="First-name" />
 
 					<input type="text" placeholder="Last name" name="Last-name" />
+				</div>
+
+				<div class="input-wrap">
+					<input type="text" placeholder="Phone" name="phone" />
 				</div>
 
 				<div class="input-wrap">
