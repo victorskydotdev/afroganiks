@@ -6,11 +6,8 @@ const productNameField = document.getElementById('product-name');
 const capturedCustomerName = sessionStorage.getItem('storedName');
 const capturedProductName = sessionStorage.getItem('productName');
 const emailValue = sessionStorage.getItem('storedEmail');
-console.log(emailValue);
-const priceValue = parseInt(sessionStorage.getItem('productPrice'));
-console.log(priceValue);
 
-// console.log(process.env.PAYMENT_API_KEY);
+const priceValue = parseInt(sessionStorage.getItem('productPrice'));
 
 customerNameField.textContent = capturedCustomerName;
 productNameField.textContent = capturedProductName;
@@ -32,7 +29,6 @@ function makePayment() {
 		customer: {
 			email: emailValue,
 			name: capturedCustomerName,
-			phone_number: '08100784622',
 		},
 		customizations: {
 			title: 'Afroganiks Industries Limited',
