@@ -88,10 +88,15 @@
 		<h3 class="form-title">Registration</h3>
 
 		<form class="form" action="" data-netlify="true">
+			<input
+				type="hidden"
+				name="subject"
+				data-remove-prefix
+				value="info from potential Afroganiks distributor" />
 			<!-- inputs -->
 
 			<!-- first wrap -->
-			<div class="form-input-wrap">
+			<div class="form-input-wrap form-wrap-one">
 				<!-- customer name -->
 				<input
 					class="input-field"
@@ -120,7 +125,7 @@
 				</div>
 				<!-- phone and email -->
 
-				<!-- radio button -->
+				<!-- gender wrap -->
 				<div class="radio-wrap">
 					<h3>Sex</h3>
 
@@ -135,7 +140,7 @@
 						<label for="sex3">I'd rather not say</label>
 					</div>
 				</div>
-				<!-- radio button -->
+				<!-- end of gender wrap -->
 
 				<!-- residential address -->
 				<input
@@ -170,11 +175,97 @@
 						required />
 				</div>
 				<!-- end of further address info -->
+
+				<!-- marital status -->
+				<div class="radio-wrap">
+					<h3>Marital Status</h3>
+
+					<div>
+						<input
+							type="radio"
+							id="single"
+							name="marital-status"
+							value="S]single" />
+						<label for="single">Single</label>
+
+						<input type="radio" id="married" name="marital-status
+						value="married" />
+						<label for="married">Married</label>
+
+						<input
+							type="radio"
+							id="others"
+							name="marital-status"
+							value="others" />
+						<label for="others">Others</label>
+					</div>
+				</div>
+				<!-- end of marital status -->
 			</div>
 			<!-- end of first wrap -->
 
-			<div class="form-input-wrap"></div>
+			<!-- second wrap -->
+			<div class="form-input-wrap">
+				<!-- customer name -->
+				<input
+					class="input-field"
+					type="text"
+					name="name-next-of-kin"
+					id=""
+					placeholder="Name of next of kin"
+					required />
+				<!-- name -->
 
+				<div>
+					<input
+						class="input-field"
+						type="text"
+						name="next of kin's address"
+						placeholder="Next of kin's address"
+						required />
+
+					<input
+						class="input-field"
+						type="text"
+						name="next of kin's phone number"
+						placeholder="Phone"
+						required />
+
+					<input
+						class="input-field"
+						type="email"
+						name="email address"
+						placeholder="Email Address"
+						required />
+				</div>
+
+				<!-- further address info -->
+				<div>
+					<input
+						class="input-field"
+						type="text"
+						name="city"
+						placeholder="City"
+						required />
+
+					<input
+						class="input-field"
+						type="text"
+						name="state"
+						placeholder="State"
+						required />
+
+					<input
+						class="input-field"
+						type="text"
+						name="country"
+						placeholder="Country"
+						required />
+				</div>
+				<!-- end of further address info -->
+			</div>
+
+			<!-- business name and address as well as products selection -->
 			<div class="form-input-wrap"></div>
 
 			<button class="dist-btn" type="submit">Submit</button>
@@ -324,5 +415,21 @@
 
 		<!-- confirm order -->
 		<script src="/frontend/dist/js/orderInitbundle.js"></script>
+
+		<!--Start of Tawk.to Script-->
+		<script type="text/javascript">
+			var Tawk_API = Tawk_API || {},
+				Tawk_LoadStart = new Date();
+			(function () {
+				var s1 = document.createElement('script'),
+					s0 = document.getElementsByTagName('script')[0];
+				s1.async = true;
+				s1.src = 'https://embed.tawk.to/6492f5b794cf5d49dc5f0629/1h3f0vlhc';
+				s1.charset = 'UTF-8';
+				s1.setAttribute('crossorigin', '*');
+				s0.parentNode.insertBefore(s1, s0);
+			})();
+		</script>
+		<!--End of Tawk.to Script-->
 	</body>
 </html>

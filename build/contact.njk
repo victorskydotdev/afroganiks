@@ -28,6 +28,12 @@ layout: 'base.njk'
 				action="/contact-form-success"
 				name="contact"
 				class="form">
+				<input
+					type="hidden"
+					name="subject"
+					data-remove-prefix
+					value="Customer enquiry from contact-us page" />
+
 				<!-- contact reason checkboxes -->
 				<div class="checkboxes">
 					<div class="checkbox-container">

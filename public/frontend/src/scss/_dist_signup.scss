@@ -34,9 +34,12 @@
 			padding-bottom: 4em;
 
 			.form-input-wrap {
+				position: relative;
+
 				input {
 					outline: none;
 				}
+
 				.input-field {
 					width: 100%;
 					margin-bottom: 1em;
@@ -49,8 +52,35 @@
 				}
 			}
 
+			.form-wrap-one {
+				margin-bottom: 5em;
+
+				&::after {
+					content: '';
+					position: absolute;
+					height: 1.5px;
+					width: 100%;
+					top: 106%;
+					left: 0;
+					border: 1.5px dashed $accent-green;
+					// background: $accent-green;
+				}
+			}
+
 			.radio-wrap {
-				margin-bottom: 1em;
+				// margin-bottom: 1em;
+				margin: 1em 0 2em 0;
+
+				h3 {
+					margin-bottom: 0.5em;
+				}
+
+				div {
+					label {
+						margin-right: 0.4em;
+						color: $body-p-color;
+					}
+				}
 			}
 
 			.dist-btn {

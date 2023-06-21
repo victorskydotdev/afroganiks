@@ -422,7 +422,12 @@ layout: 'base.njk'
 			<p class="p-text">Join our Newsletter</p>
 		</div>
 
-		<form class="form" action="">
+		<form class="form" action="" name="newletter" data-netlify="true">
+			<input
+				type="hidden"
+				name="subject"
+				data-remove-prefix
+				value="Newsletter Sign up from site visitor" />
 			<div class="wrap">
 				<input required type="email" name="email" id="email" />
 
