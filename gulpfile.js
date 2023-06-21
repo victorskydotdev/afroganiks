@@ -51,17 +51,17 @@ function sassTask() {
 }
 
 //  js task
-function jsTask() {
-	return src('./frontend/src/js/*.js')
-		.pipe(concat('afroJsFiles.js'))
-		.pipe(
-			babel({
-				presets: ['@babel/preset-env'],
-			})
-		)
-		.pipe(uglify())
-		.pipe(dest('./frontend/dist/js'));
-}
+// function jsTask() {
+// 	return src('./frontend/src/js/*.js')
+// 		.pipe(concat('afroJsFiles.js'))
+// 		.pipe(
+// 			babel({
+// 				presets: ['@babel/preset-env'],
+// 			})
+// 		)
+// 		.pipe(uglify())
+// 		.pipe(dest('./frontend/dist/js'));
+// }
 
 // cachebursting task
 const cbString = new Date().getTime();
@@ -76,7 +76,7 @@ function watchTask() {
 	watch('./frontend/src/images/*.{jpg,png}', imgOptimizeTask);
 	watch('./frontend/dist/images/*.{jpg,png}', webpTask);
 	watch('./frontend/src/scss/*.scss', sassTask);
-	watch('./frontend/src/js/*.js', jsTask);
+	// watch('./frontend/src/js/*.js', jsTask);
 }
 
 // default task
@@ -84,7 +84,7 @@ exports.default = series(
 	imgOptimizeTask,
 	webpTask,
 	sassTask,
-	jsTask,
+	// jsTask,
 	cacheBustTask,
 	watchTask
 );

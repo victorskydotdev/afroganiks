@@ -1,0 +1,103 @@
+---
+title: Distributor Registration Form
+layout: 'base.njk'
+---
+
+<section class="reg-section">
+	<div class="container">
+		<h3 class="form-title">Registration</h3>
+
+		<form class="form" action="" data-netlify="true">
+			<!-- inputs -->
+
+			<!-- first wrap -->
+			<div class="form-input-wrap">
+				<!-- customer name -->
+				<input
+					class="input-field"
+					type="text"
+					name="customer name"
+					id=""
+					placeholder="Full Name"
+					required />
+				<!-- name -->
+
+				<!-- phone and email -->
+				<div>
+					<input
+						class="input-field"
+						type="text"
+						name="phone number"
+						placeholder="Phone"
+						required />
+
+					<input
+						class="input-field"
+						type="email"
+						name="email address"
+						placeholder="Email Address"
+						required />
+				</div>
+				<!-- phone and email -->
+
+				<!-- radio button -->
+				<div class="radio-wrap">
+					<h3>Sex</h3>
+
+					<div>
+						<input type="radio" id="sex1" name="sex" value="male" />
+						<label for="sex1">Male</label>
+
+						<input type="radio" id="sex2" name="sex" value="female" />
+						<label for="sex2">Female</label>
+
+						<input type="radio" id="sex3" name="sex" value="no sex selected" />
+						<label for="sex3">I'd rather not say</label>
+					</div>
+				</div>
+				<!-- radio button -->
+
+				<!-- residential address -->
+				<input
+					class="input-field"
+					type="text"
+					name="customer residential address"
+					placeholder="Residential Address"
+					required />
+				<!-- end of residential address -->
+
+				<!-- further address info -->
+				<div>
+					<input
+						class="input-field"
+						type="text"
+						name="city"
+						placeholder="City"
+						required />
+
+					<input
+						class="input-field"
+						type="text"
+						name="state"
+						placeholder="State"
+						required />
+
+					<input
+						class="input-field"
+						type="text"
+						name="country"
+						placeholder="Country"
+						required />
+				</div>
+				<!-- end of further address info -->
+			</div>
+			<!-- end of first wrap -->
+
+			<div class="form-input-wrap"></div>
+
+			<div class="form-input-wrap"></div>
+
+			<button class="dist-btn" type="submit">Submit</button>
+		</form>
+	</div>
+</section>

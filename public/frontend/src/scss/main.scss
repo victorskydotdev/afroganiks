@@ -23,6 +23,7 @@
 
 // product description page styles
 @use 'product-desc-section';
+@use 'productDescModal';
 
 // shipping info page styles
 @use 'shipping-info';
@@ -49,3 +50,5 @@
 // find a distributor
 @use 'find-dist';
 @use 'dist-modal';
+
+@use 'dist_signup';

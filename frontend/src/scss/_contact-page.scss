@@ -45,7 +45,6 @@
 					margin-bottom: 2em;
 
 					.checkbox-container {
-						background: red;
 						display: flex;
 						flex-wrap: wrap;
 						gap: 10px;
@@ -55,16 +54,36 @@
 								display: block;
 								position: relative;
 								border: none;
-							}
 
-							input {
-								border: 2px solid #3400af;
-								// height: 40px;
-								// width: 100%;
-								border-radius: 40px;
-								position: absolute;
-								cursor: pointer;
-								padding: 0.5em 2em;
+								input {
+									border: 2px solid #3400af;
+									border-radius: 40px;
+									position: absolute;
+									cursor: pointer;
+									padding: 0.5em 2em;
+								}
+
+								input[type='checkbox'] {
+									display: none;
+								}
+
+								span {
+									display: inline-block;
+									border: rgba(214, 205, 0, 0.55) 2px solid;
+									padding: 10px;
+									border-radius: 10px;
+									color: $light;
+									cursor: pointer;
+									font-size: 15px;
+									font-family: $secondary-font;
+									font-weight: $font-medium;
+								}
+
+								input:checked ~ span {
+									background: rgb(214, 203, 0);
+									border: rgb(214, 203, 0) 2px solid;
+									color: $body-heading-color;
+								}
 							}
 						}
 					}
@@ -80,7 +99,6 @@
 						border: 1.5px solid $accent-green;
 						margin-bottom: 1em;
 						font-family: $secondary-font;
-						// color: ;
 						font-weight: $font-medium;
 					}
 				}
@@ -94,6 +112,7 @@
 					width: 100%;
 					font-weight: $font-medium;
 					cursor: pointer;
+					font-size: 15px;
 				}
 			}
 		}

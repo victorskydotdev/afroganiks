@@ -38,22 +38,38 @@ function renderProduct(product) {
 
 			<div class="wrap">
 				<div class="product-image-wrap">
-					<img class"product-img" src="${product.productImage}" alt="${product.name}">
+					<div class="img"><img class"product-img" src="${product.productImage}" alt="${
+		product.name
+	}"></div>
 				</div>
 
 				<div class="product-info">
-					<h1 id="product-name" value="${product.name}" class="heading">${product.name}</h1>
-					<p id="product-price" value="${product.price}" class="price-text">Price: $${product.price}</p>
+				<h1 id="product-name" value="${product.name}" class="heading">${
+		product.name
+	}</h1>
+					<p id="product-price" value="${product.price}" class="price-text">Price: $${
+		product.price
+	}</p>
 				</div>
 			</div>
 
-			<!-- ***comment*** product description -->
-			<!-- <div class="product-desc-wrap">
-				<p>${product.description}</p>
-			</div> -->
+			<!-- production description wrap -->
+			<div class="product-desc-wrap">
+				<h3 class="prod-desc-heading">Product Description</h3>
+
+				<p class="description-text">${
+					product.pharmacology[0] !== undefined
+						? `<p>${product.pharmacology[0]}</p>`
+						: ''
+				}</p>
+				
+
+				<button id="lm-btn" class="learnmore-btn">Read more ></button>
+			</div>
+			<!-- end of product description box -->
 
 			<div class="payment-box">
-				<form class="form-wrap" action="#" method="post" netlify>
+				<form class="form-wrap" method="post">
 
 					<div class="location-wrap">
 						<label>Ship to:</label>
@@ -71,7 +87,9 @@ function renderProduct(product) {
   `;
 
 	// Set the template as the HTML content of the container
-	container.innerHTML = template;
+	if (container) {
+		container.innerHTML = template;
+	}
 
 	// fetch the dynamically rendered product details to parse to the shipping form and payment function
 	const productName = `${product.name}`;
@@ -79,24 +97,26 @@ function renderProduct(product) {
 
 	function gotoNextPage() {
 		const getToFormBtn = document.getElementById('getToFormPageBtn');
-		console.log(getToFormBtn);
+		// console.log(getToFormBtn);
 
 		const userDest = document.getElementById('userDest');
 
-		getToFormBtn.addEventListener('click', (event) => {
-			event.preventDefault();
+		if (getToFormBtn) {
+			getToFormBtn.addEventListener('click', (event) => {
+				event.preventDefault();
 
-			const userDestValue = userDest.value;
-			sessionStorage.setItem('destData', userDestValue);
+				const userDestValue = userDest.value;
+				sessionStorage.setItem('destData', userDestValue);
 
-			sessionStorage.setItem('productName', productName);
-			sessionStorage.setItem('productPrice', productPrice);
+				sessionStorage.setItem('productName', productName);
+				sessionStorage.setItem('productPrice', productPrice);
 
-			if (productName && productPrice && userDestValue) {
-				console.log('these are available');
-				window.location.href = '/shipping-info';
-			} else console.log('not available');
-		});
+				if (productName && productPrice && userDestValue) {
+					console.log('these are available');
+					window.location.href = '/shipping-info';
+				} else console.log('not available');
+			});
+		} else console.log('get to button is not on this page');
 	}
 
 	gotoNextPage();

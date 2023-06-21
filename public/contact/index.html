@@ -108,23 +108,37 @@
 				<div class="checkboxes">
 					<div class="checkbox-container">
 						<div class="wrap">
-							<input type="checkbox" name="Shirt" id="shirt" />
-							<label class="box" for="shirt">Print Shirts</label>
+							<label class="box" for="bulk-purchase">
+								<input
+									type="checkbox"
+									name="bulk-purchase"
+									id="bulk-purchase" />
+								<span>Bulk Purchase</span>
+							</label>
 						</div>
 
 						<div class="wrap">
-							<input type="checkbox" name="Tote bag" id="bag" />
-							<label class="box" for="bag">Print Tote bags</label>
+							<label class="box" for="enquiries">
+								<input
+									type="checkbox"
+									name="General-Enquiries"
+									id="enquiries" />
+								<span>General Enquiries</span>
+							</label>
 						</div>
 
 						<div class="wrap">
-							<input type="checkbox" name="Cap" id="cap" />
-							<label class="box" for="cap">Print cap</label>
+							<label class="box" for="consultation">
+								<input type="checkbox" name="consultation" id="consultation" />
+								<span>Consultation</span>
+							</label>
 						</div>
 
 						<div class="wrap">
-							<input type="checkbox" name="Cups/mugs" id="cup" />
-							<label class="box" for="cup">Print Mugs/Cups</label>
+							<label class="box" for="distribution">
+								<input type="checkbox" name="distribution" id="distribution" />
+								<span>Distribution</span>
+							</label>
 						</div>
 					</div>
 				</div>
@@ -132,25 +146,25 @@
 
 				<!-- user info -->
 				<div class="input-wrap name">
-					<input type="text" placeholder="First name" />
+					<input type="text" placeholder="First name" name="First-name" />
 
-					<input type="text" placeholder="Last name" />
+					<input type="text" placeholder="Last name" name="Last-name" />
 				</div>
 
 				<div class="input-wrap">
-					<input type="text" placeholder="Email Address" />
+					<input type="text" placeholder="Email Address" name="email-address" />
 				</div>
 
 				<div class="input-wrap">
-					<input type="text" placeholder="Country" />
+					<input type="text" placeholder="Country" name="country" />
 				</div>
 
 				<div class="input-wrap">
 					<textarea
-						name=""
 						id=""
 						cols="30"
 						rows="10"
+						name="message-body"
 						placeholder="Additional Information"></textarea>
 				</div>
 				<!-- end of user info -->
@@ -285,15 +299,25 @@
 
 		<!-- <script src="/frontend/dist/js/afroJsFiles.js?cb=1685003408159"></script> -->
 
-		<!-- payment gateway integration -->
-		<script type="module" src="/frontend/src/js/payment.js"></script>
+		<!-- payment -->
+		<script src="/frontend/dist/js/paymentbundle.js"></script>
 
-		<script src="/frontend/src/js/nav.js"></script>
+		<!-- dist find distributor location modal popup -->
+		<script src="/frontend/dist/js/findDistributorsbundle.js"></script>
 
-		<script src="/frontend/src/js/product-app.js"></script>
+		<!-- product description modal -->
+		<script src="/frontend/dist/js/prodDescModalbundle.js"></script>
 
-		<script src="/frontend/src/js/renderProduct.js"></script>
+		<!-- nav -->
+		<script src="/frontend/dist/js/navbundle.js"></script>
 
-		<script src="/frontend/src/js/confirm-order.js"></script>
+		<!-- product app -->
+		<script src="/frontend/dist/js/productAppbundle.js"></script>
+
+		<!-- renderProduct -->
+		<script src="/frontend/dist/js/renderProductsbundle.js"></script>
+
+		<!-- confirm order -->
+		<script src="/frontend/dist/js/orderInitbundle.js"></script>
 	</body>
 </html>

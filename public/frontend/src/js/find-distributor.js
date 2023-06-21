@@ -71,7 +71,7 @@ const checkBtnClicked = () => {
                       <p>Address: ${distributor.address}</p>
 											</div>
 											<div class="call-wrap">
-												<a class="dist-call-btn" href="tel:${distributor.callLine}"><i class="fa-solid fa-phone"></i> <span class="link-span">Call Distributor</span></a>
+												<a class="dist-call-btn" href="tel:${distributor.call_line}"><i class="fa-solid fa-phone"></i> <span class="link-span">Call Distributor</span></a>
 											</div>
                     </div>
                   `

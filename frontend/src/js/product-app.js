@@ -13,11 +13,11 @@ const convertCurrency = () => {
 		const currency = document.querySelectorAll('.currency');
 
 		numOfBtns.addEventListener('click', () => {
-			// userLocationModal.style.display = 'none';
+			userLocationModal.style.display = 'none';
 
-			alert(
-				"Hey there! Please we've temporarily turned off this product page. Please do bear with us as our development team is actively working to optimize our product page in order to give you an amazing shopping experience on Afroganiks.com. While you are here, please use the chat icon at the bottom-right of the screen to chat with us directly, thank you!"
-			);
+			// alert(
+			// 	"Hey there! Please we've temporarily turned off this product page. Please do bear with us as our development team is actively working to optimize our product page in order to give you an amazing shopping experience on Afroganiks.com. While you are here, please use the chat icon at the bottom-right of the screen to chat with us directly, thank you!"
+			// );
 		});
 	}
 };
@@ -44,12 +44,15 @@ document.addEventListener('DOMContentLoaded', () => {
 			// Iterate over the order buttons using a for loop
 			// console.log(data.products[0]);
 
+			// variable for the order buttons on the product page
 			const orderButtons = document.querySelectorAll('.order-btn');
 
 			// loop through the order buttons
 			for (let i = 0; i < orderButtons.length; i++) {
 				const button = orderButtons[i];
 				const prodId = data.products[i].id;
+
+				// next we assign product IDs to the buttons of the corresponding products in our json object, so that we can dynamically render them in the product description page
 
 				// assign the product id to the button
 				button.dataset.prodId = prodId;
@@ -62,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					// Store the product ID in session storage
 					sessionStorage.setItem('productId', productId);
 
+					// this moves the session storage data to the next page so that the script in the next page will fetch and pass it to be utilized
 					window.location.href = '/product-description';
 				});
 			}

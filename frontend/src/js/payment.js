@@ -1,8 +1,3 @@
-// import '/dotenv/config';
-require('dotenv').config({});
-
-console.log(process.env.PAYMENT_API_KEY);
-
 // init all the variables
 const customerNameField = document.getElementById('customer-name');
 const productNameField = document.getElementById('product-name');
@@ -22,35 +17,26 @@ productNameField.textContent = capturedProductName;
 
 const paymentForm = document.getElementById('payment');
 
-paymentForm.addEventListener('submit', payWithPaystack, false);
+paymentForm.addEventListener('submit', makePayment, false);
 
-function payWithPaystack(e) {
-	e.preventDefault();
+const secret_key = process.env.PAYMENT_API_KEY;
 
-	let handler = PaystackPop.setup({
-		key: 'PAYMENT_API_KEY',
+function makePayment() {
+	FlutterwaveCheckout({
+		public_key: secret_key,
+		tx_ref: 'titanic-48981487343MDI0NzMx',
+		amount: priceValue,
+		currency: 'USD',
+		payment_options: 'card, banktransfer, ussd',
 
-		email: emailValue,
-
-		amount: priceValue * 100,
-
-		ref: '' + Math.floor(Math.random() * 1000000000 + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
-
-		// label: "Optional string that replaces customer email"
-
-		onClose: function () {
-			alert('Window closed.');
+		customer: {
+			email: emailValue,
+			name: capturedCustomerName,
+			phone_number: '08100784622',
 		},
-
-		callback: function (response) {
-			let message = 'Payment complete! Reference: ' + response.reference;
-
-			alert(message);
-
-			// redirect to a thank you page
-			window.location.href = '/';
+		customizations: {
+			title: 'Afroganiks Industries Limited',
+			description: 'Product Payment',
 		},
 	});
-
-	handler.openIframe();
 }

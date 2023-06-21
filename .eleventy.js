@@ -5,6 +5,7 @@ module.exports = function (eleventyConfig) {
 	// certain files such as the svg files are not parsed to the dist folder during imagemin image optimization task run by gulp
 	eleventyConfig.addPassthroughCopy('./frontend/src');
 	eleventyConfig.addPassthroughCopy('./frontend/json');
+	eleventyConfig.addPassthroughCopy('./env');
 
 	return {
 		dir: {

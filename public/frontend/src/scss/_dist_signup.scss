@@ -1,0 +1,70 @@
+@import 'resets';
+
+.reg-section {
+	padding: 10em 0;
+	position: relative;
+
+	&::after {
+		content: '';
+		height: 400px;
+		width: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+		background: rgba(106, 186, 67, 0.45);
+		z-index: -1;
+	}
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		background: $light;
+		border-radius: $box-radius;
+		box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.11);
+
+		.form-title {
+			text-align: center;
+			color: rgba(214, 149, 19, 1);
+
+			padding: 2em;
+		}
+
+		.form {
+			padding: 0 1em;
+			padding-bottom: 4em;
+
+			.form-input-wrap {
+				input {
+					outline: none;
+				}
+				.input-field {
+					width: 100%;
+					margin-bottom: 1em;
+					border: none;
+					border-radius: 10px;
+					padding: 0.7em;
+					font-family: $secondary-font;
+					color: $light;
+					background: $accent-green;
+				}
+			}
+
+			.radio-wrap {
+				margin-bottom: 1em;
+			}
+
+			.dist-btn {
+				display: inline-block;
+				padding: $btn-padding;
+				background: $accent-green;
+				color: $light;
+				font-family: $secondary-font;
+				font-weight: $font-medium;
+				border: none;
+				margin-top: 2em;
+				cursor: pointer;
+				border-radius: $btn-radius;
+			}
+		}
+	}
+}

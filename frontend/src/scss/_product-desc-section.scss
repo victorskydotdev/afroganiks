@@ -3,6 +3,7 @@
 .product-container-section {
 	margin-bottom: 4em;
 	padding-top: 10em;
+	min-height: 100vh;
 
 	.product-container {
 		width: 90%;
@@ -11,18 +12,30 @@
 		.product {
 			display: grid;
 			gap: 3em;
+			position: relative;
 
 			.wrap {
 				display: grid;
 				gap: 2em;
-				.product-image-wrap {
-					display: flex;
-					justify-content: center;
-				}
 
-				.product-image-wrap > img {
-					inline-size: 70%;
+				.product-image-wrap {
+					width: 100%;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					min-height: 400px;
+					background: $light;
+					box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.075);
 					border-radius: $box-radius;
+
+					.img {
+						width: 95%;
+					}
+
+					.img > img {
+						width: 100%;
+						border-radius: $box-radius;
+					}
 				}
 
 				.product-info {
@@ -38,6 +51,29 @@
 						font-family: $secondary-font;
 						color: $body-heading-color;
 					}
+				}
+			}
+
+			.product-desc-wrap {
+				.prod-desc-heading {
+					color: $body-heading-color;
+					margin-bottom: 1em;
+				}
+
+				.descritption-text {
+					line-height: 1.6;
+					color: $body-p-color;
+					font-size: 15px;
+					margin-bottom: 0.6em;
+				}
+
+				.learnmore-btn {
+					border: none;
+					background: transparent;
+					cursor: pointer;
+					font-family: $secondary-font;
+					color: $accent-green;
+					font-weight: $font-medium;
 				}
 			}
 
@@ -99,18 +135,37 @@
 
 		@media screen and (min-width: 43em) {
 			.product {
+				position: relative;
+
 				.wrap {
 					display: grid;
 					grid-template-columns: 350px 200px;
 					gap: 3em;
 
-					.product-image-wrap > img {
-						inline-size: 100%;
-					}
-
 					.product-image-wrap {
 						width: 100%;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						min-height: 400px;
+						background: $light;
+						box-shadow: 10px 5px 20px rgba(0, 0, 0, 0.075);
+						border-radius: $box-radius;
+
+						.img {
+							width: 95%;
+						}
+
+						.img > img {
+							width: 100%;
+							border-radius: $box-radius;
+						}
 					}
+
+					// .product-image-wrap > img {
+					// 	inline-size: 100%;
+					// 	display: inline-block;
+					// }
 
 					.product-info {
 						padding-top: 2em;
@@ -118,6 +173,13 @@
 							white-space: nowrap;
 						}
 					}
+				}
+
+				.product-desc-wrap {
+					position: absolute;
+					left: 398px;
+					top: 130px;
+					max-width: 400px;
 				}
 			}
 		}
@@ -149,6 +211,12 @@
 							white-space: nowrap;
 						}
 					}
+				}
+
+				.product-desc-wrap {
+					position: absolute;
+					left: 348px;
+					max-width: 30%;
 				}
 
 				.payment-box {
