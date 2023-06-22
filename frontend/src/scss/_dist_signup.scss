@@ -36,13 +36,23 @@
 			.img-upload-wrap {
 				margin-bottom: 2em;
 				display: grid;
-				gap: 1em;
+				gap: 1.5em;
+
+				input,
+				label {
+					cursor: pointer;
+					font-weight: 700;
+				}
 			}
 
 			.display-img {
 				border: 2px $accent-green solid;
-				height: 100px;
+				height: 200px;
 				border-radius: $box-radius;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: cover;
+				max-width: 350px;
 			}
 
 			.form-input-wrap {
@@ -106,6 +116,31 @@
 						margin-right: 0.4em;
 						color: $body-p-color;
 					}
+				}
+			}
+
+			.product-categories {
+				margin-top: 1em;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1em;
+
+				.product {
+					border: 2px $body-p-color solid;
+					border-radius: $box-radius;
+
+					label {
+						padding: 10px;
+						cursor: pointer;
+						display: inline-block;
+						color: $body-p-color;
+						position: relative;
+						font-size: 15px;
+					}
+
+					// input[type='checkbox'] {
+					// 	// display: none;
+					// }
 				}
 			}
 

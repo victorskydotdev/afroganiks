@@ -12,7 +12,7 @@ layout: 'base.njk'
 				type="hidden"
 				name="subject"
 				data-remove-prefix
-				value="info from potential Afroganiks distributor" />
+				value="Sign up info from potential Afroganiks distributor" />
 
 			<!-- inputs -->
 
@@ -222,7 +222,83 @@ layout: 'base.njk'
 					placeholder="Business Address" />
 			</div>
 
+			<!-- product categories -->
+			<div class="product-categories">
+				<!-- feloklear -->
+				<div class="product">
+					<label for="feloklear"
+						>Feloklear <input type="checkbox" name="feloklear" id="feloklear"
+					/></label>
+				</div>
+
+				<!-- freeflow for women -->
+				<div class="product">
+					<label for="freeflow-women"
+						>Freeflow for Women
+						<input type="checkbox" name="freeflow (women)" id="freeflow-women"
+					/></label>
+				</div>
+
+				<!-- freeflow for men -->
+				<div class="product">
+					<label for="freeflow-men"
+						>Freeflow for men
+						<input type="checkbox" name="freeflow (men)" id="freeflow-men"
+					/></label>
+				</div>
+
+				<!-- gynovit -->
+				<div class="product">
+					<label for="gynovit"
+						>Gynovit <input type="checkbox" name="gynovit" id="gynovit"
+					/></label>
+				</div>
+
+				<!-- prostagen -->
+				<div class="product">
+					<label for="prostagen"
+						>prostagen <input type="checkbox" name="prostagen" id="prostagen"
+					/></label>
+				</div>
+
+				<!-- greenolax -->
+				<div class="product">
+					<label for="greenolax"
+						>greenolax <input type="checkbox" name="greenolax" id="greenolax"
+					/></label>
+				</div>
+
+				<!-- wellness tea -->
+				<div class="product">
+					<label for="wellness-tea"
+						>wellness tea
+						<input
+							type="checkbox"
+							name="Afroganiks wellness tea"
+							id="wellness-tea"
+					/></label>
+				</div>
+			</div>
+
 			<button class="dist-btn" type="submit">Submit</button>
 		</form>
 	</div>
 </section>
+
+<script>
+	const imageInput = document.getElementById('img-input');
+	let uploadedImage = '';
+	let displayImg = document.querySelector('.display-img');
+
+	imageInput.addEventListener('change', (event) => {
+		const fileReader = new FileReader();
+		const selectedFile = event.target.files[0];
+
+		fileReader.addEventListener('load', () => {
+			uploadedImage = fileReader.result;
+			displayImg.style.backgroundImage = `url(${uploadedImage})`;
+		});
+
+		fileReader.readAsDataURL(selectedFile);
+	});
+</script>
