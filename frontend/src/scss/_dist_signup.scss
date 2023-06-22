@@ -33,11 +33,24 @@
 			padding: 0 1em;
 			padding-bottom: 4em;
 
+			.img-upload-wrap {
+				margin-bottom: 2em;
+				display: grid;
+				gap: 1em;
+			}
+
+			.display-img {
+				border: 2px $accent-green solid;
+				height: 100px;
+				border-radius: $box-radius;
+			}
+
 			.form-input-wrap {
 				position: relative;
 
 				input {
 					outline: none;
+					font-family: $secondary-font;
 				}
 
 				.input-field {
@@ -63,7 +76,20 @@
 					top: 106%;
 					left: 0;
 					border: 1.5px dashed $accent-green;
-					// background: $accent-green;
+				}
+			}
+
+			.form-wrap-two {
+				margin-bottom: 5em;
+
+				&::after {
+					content: '';
+					position: absolute;
+					height: 1.5px;
+					width: 100%;
+					top: 106%;
+					left: 0;
+					border: 1.5px dashed $accent-green;
 				}
 			}
 
@@ -95,6 +121,34 @@
 				cursor: pointer;
 				border-radius: $btn-radius;
 			}
+		}
+
+		@media screen and (min-width: 43em) {
+			width: 80%;
+
+			.form {
+				.form-input-wrap {
+					.flex-here {
+						display: flex;
+						justify-content: space-between;
+						gap: 10px;
+
+						input {
+							width: 50%;
+						}
+					}
+				}
+			}
+		}
+
+		@media screen and (min-width: 62em) {
+			width: 60%;
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		&::after {
+			height: 600px;
 		}
 	}
 }

@@ -13,7 +13,19 @@ layout: 'base.njk'
 				name="subject"
 				data-remove-prefix
 				value="info from potential Afroganiks distributor" />
+
 			<!-- inputs -->
+
+			<!-- img upload -->
+			<div class="img-upload-wrap">
+				<div class="upload-input-wrap">
+					<label for="img-input">Uplaod a passport</label>
+					<input type="file" id="img-input" accept="image/png, img/jpg" />
+				</div>
+
+				<div class="display-img"></div>
+			</div>
+			<!-- end of img upload wrap -->
 
 			<!-- first wrap -->
 			<div class="form-input-wrap form-wrap-one">
@@ -28,7 +40,7 @@ layout: 'base.njk'
 				<!-- name -->
 
 				<!-- phone and email -->
-				<div>
+				<div class="flex-here">
 					<input
 						class="input-field"
 						type="text"
@@ -80,19 +92,21 @@ layout: 'base.njk'
 						placeholder="City"
 						required />
 
-					<input
-						class="input-field"
-						type="text"
-						name="state"
-						placeholder="State"
-						required />
+					<div class="location flex-here">
+						<input
+							class="input-field"
+							type="text"
+							name="state"
+							placeholder="State"
+							required />
 
-					<input
-						class="input-field"
-						type="text"
-						name="country"
-						placeholder="Country"
-						required />
+						<input
+							class="input-field"
+							type="text"
+							name="country"
+							placeholder="Country"
+							required />
+					</div>
 				</div>
 				<!-- end of further address info -->
 
@@ -125,7 +139,7 @@ layout: 'base.njk'
 			<!-- end of first wrap -->
 
 			<!-- second wrap -->
-			<div class="form-input-wrap">
+			<div class="form-input-wrap form-wrap-two">
 				<!-- customer name -->
 				<input
 					class="input-field"
@@ -144,19 +158,21 @@ layout: 'base.njk'
 						placeholder="Next of kin's address"
 						required />
 
-					<input
-						class="input-field"
-						type="text"
-						name="next of kin's phone number"
-						placeholder="Phone"
-						required />
+					<div class="flex-here">
+						<input
+							class="input-field"
+							type="text"
+							name="next of kin's phone number"
+							placeholder="Phone"
+							required />
 
-					<input
-						class="input-field"
-						type="email"
-						name="email address"
-						placeholder="Email Address"
-						required />
+						<input
+							class="input-field"
+							type="email"
+							name="email address"
+							placeholder="Email Address"
+							required />
+					</div>
 				</div>
 
 				<!-- further address info -->
@@ -168,25 +184,43 @@ layout: 'base.njk'
 						placeholder="City"
 						required />
 
-					<input
-						class="input-field"
-						type="text"
-						name="state"
-						placeholder="State"
-						required />
+					<div class="flex-here">
+						<input
+							class="input-field"
+							type="text"
+							name="state"
+							placeholder="State"
+							required />
 
-					<input
-						class="input-field"
-						type="text"
-						name="country"
-						placeholder="Country"
-						required />
+						<input
+							class="input-field"
+							type="text"
+							name="country"
+							placeholder="Country"
+							required />
+					</div>
 				</div>
 				<!-- end of further address info -->
 			</div>
 
 			<!-- business name and address as well as products selection -->
-			<div class="form-input-wrap"></div>
+			<div class="form-input-wrap">
+				<!-- Business name -->
+				<input
+					class="input-field"
+					type="text"
+					name="Customer Business Name"
+					id=""
+					placeholder="Business Name (if any)" />
+				<!--end of busuness name -->
+
+				<input
+					class="input-field"
+					type="text"
+					name="business address"
+					id=""
+					placeholder="Business Address" />
+			</div>
 
 			<button class="dist-btn" type="submit">Submit</button>
 		</form>
