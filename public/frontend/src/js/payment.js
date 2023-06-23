@@ -6,15 +6,40 @@ const productNameField = document.getElementById('product-name');
 const capturedCustomerName = sessionStorage.getItem('storedName');
 const capturedProductName = sessionStorage.getItem('productName');
 const emailValue = sessionStorage.getItem('storedEmail');
+const phoneValue = sessionStorage.getItem('storedPhone');
+console.log(phoneValue);
 
 const priceValue = parseInt(sessionStorage.getItem('productPrice'));
+console.log(priceValue);
 
-customerNameField.textContent = capturedCustomerName;
-productNameField.textContent = capturedProductName;
+const storedCurrencyForPayments = sessionStorage.getItem('selectedCurrency');
+
+let paymentCurrency;
+
+if (storedCurrencyForPayments === '£') {
+	paymentCurrency = 'GBP';
+} else if (storedCurrencyForPayments === '$') {
+	paymentCurrency = 'USD';
+} else if (storedCurrencyForPayments === 'N') {
+	paymentCurrency = 'NGN';
+} else if (storedCurrencyForPayments === 'GH₵') {
+	paymentCurrency = 'GHS';
+} else {
+	console.log("currency doesn't exist");
+}
+
+if (customerNameField) {
+	customerNameField.textContent = capturedCustomerName;
+}
+if (productNameField) {
+	productNameField.textContent = capturedProductName;
+}
 
 const paymentForm = document.getElementById('payment');
 
-paymentForm.addEventListener('submit', makePayment, false);
+if (paymentForm) {
+	paymentForm.addEventListener('submit', makePayment, false);
+}
 
 const secret_key = process.env.PAYMENT_API_KEY;
 
@@ -23,12 +48,13 @@ function makePayment() {
 		public_key: secret_key,
 		tx_ref: 'titanic-48981487343MDI0NzMx',
 		amount: priceValue,
-		currency: 'USD',
+		currency: paymentCurrency,
 		payment_options: 'card, banktransfer, ussd',
 
 		customer: {
 			email: emailValue,
 			name: capturedCustomerName,
+			phone_number: phoneValue,
 		},
 		customizations: {
 			title: 'Afroganiks Industries Limited',

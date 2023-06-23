@@ -1,4 +1,8 @@
-// const prod = sessionStorage.getItem('productId');
+//? product description logic goes here ************
+//?*************************************************/
+const storedCurrency = sessionStorage.getItem('selectedCurrency');
+
+console.log(storedCurrency);
 
 document.addEventListener('DOMContentLoaded', () => {
 	// Retrieve the product ID from session storage
@@ -32,6 +36,34 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderProduct(product) {
 	const container = document.getElementById('product-container');
 
+	const currency = storedCurrency;
+
+	const nairaExchangeRate = 819.99; // naira
+	const ukExchangeRate = 0.79; // pounds
+	// const eurExchangeRate = 0.91; // euro
+	const ghExchangeRate = 11.25; // cedis
+
+	// Define a variable to hold the calculated amount
+	let amount;
+
+	// Perform the calculation based on the currency value using a switch statement
+	switch (currency) {
+		case 'N':
+			amount = `${product.price}` * Math.round(nairaExchangeRate);
+			break;
+		// case '€':
+		// 	amount = `${product.price}` * Math.round(eurExchangeRate) - 1;
+		// 	break;
+		case '£':
+			amount = `${product.price}` * Math.round(ukExchangeRate) - 1;
+			break;
+		case 'GH₵':
+			amount = `${product.price}` * Math.round(ghExchangeRate) - 1;
+			break;
+		default:
+			amount = `${product.price}`;
+	}
+
 	// HTML template
 	const template = `
     <section class="product">
@@ -40,16 +72,20 @@ function renderProduct(product) {
 				<div class="product-image-wrap">
 					<div class="img"><img class"product-img" src="${product.productImage}" alt="${
 		product.name
-	}"></div>
+	}">
+					</div>
 				</div>
 
 				<div class="product-info">
-				<h1 id="product-name" value="${product.name}" class="heading">${
-		product.name
-	}</h1>
-					<p id="product-price" value="${product.price}" class="price-text">Price: $${
-		product.price
-	}</p>
+					<h1 id="product-name" value="${product.name}" class="heading">${product.name}
+					</h1>
+
+					<p id="product-price" value="${product.price}" class="price-text">Price: 
+						<span class="currency">${currency}</span>
+						<span id="product-amount">
+							${amount}
+						</span>
+					</p>
 				</div>
 			</div>
 
@@ -89,35 +125,43 @@ function renderProduct(product) {
 	// Set the template as the HTML content of the container
 	if (container) {
 		container.innerHTML = template;
-	}
+	} else console.log('container not in the DOM');
 
 	// fetch the dynamically rendered product details to parse to the shipping form and payment function
 	const productName = `${product.name}`;
-	const productPrice = `${product.price}`;
+	// const productPrice = `${product.price}`;
+	const productPriceValue = document.getElementById('product-amount');
+	if (productPriceValue !== null) {
+		// const productPrice = productPriceValue.outerText;
+		const productPrice = amount;
 
-	function gotoNextPage() {
-		const getToFormBtn = document.getElementById('getToFormPageBtn');
-		// console.log(getToFormBtn);
+		function gotoNextPage() {
+			const getToFormBtn = document.getElementById('getToFormPageBtn');
+			// console.log(getToFormBtn);
 
-		const userDest = document.getElementById('userDest');
+			const userDest = document.getElementById('userDest');
 
-		if (getToFormBtn) {
-			getToFormBtn.addEventListener('click', (event) => {
-				event.preventDefault();
+			if (getToFormBtn) {
+				getToFormBtn.addEventListener('click', (event) => {
+					event.preventDefault();
 
-				const userDestValue = userDest.value;
-				sessionStorage.setItem('destData', userDestValue);
+					const userDestValue = userDest.value;
+					sessionStorage.setItem('destData', userDestValue);
 
-				sessionStorage.setItem('productName', productName);
-				sessionStorage.setItem('productPrice', productPrice);
+					sessionStorage.setItem('productName', productName);
+					sessionStorage.setItem('productPrice', productPrice);
 
-				if (productName && productPrice && userDestValue) {
-					console.log('these are available');
-					window.location.href = '/shipping-info';
-				} else console.log('not available');
-			});
-		} else console.log('get to button is not on this page');
+					// move session storage data into the shipping info fields
+					if (productName && productPrice && userDestValue) {
+						window.location.href = '/shipping-info';
+					} else
+						console.log(
+							'product price, product name, and userdest not available'
+						);
+				});
+			} else console.log('get to form button is not on this page');
+		}
+
+		gotoNextPage();
 	}
-
-	gotoNextPage();
 }

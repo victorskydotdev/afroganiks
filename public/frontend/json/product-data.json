@@ -7,7 +7,7 @@
 
 			"name": "Greenolax Capsules",
 
-			"price": 50,
+			"price": 15,
 
 			"pharmacology": "",
 
@@ -43,7 +43,7 @@
 
 			"name": "Gynovit Capsules",
 
-			"price": 50,
+			"price": 10,
 
 			"pharmacology": "The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place.",
 
@@ -79,7 +79,7 @@
 
 			"name": "Wellness Tea",
 
-			"price": 100,
+			"price": 10,
 
 			"therapeutic_class": "",
 
@@ -115,7 +115,7 @@
 
 			"name": "FreFlo Herbal Capsule (for men)",
 
-			"price": 75,
+			"price": 10,
 
 			"therapeutic_class": "",
 
@@ -151,7 +151,7 @@
 
 			"name": "Prostagen Capsules",
 
-			"price": 40,
+			"price": 10,
 
 			"therapeutic_class": "",
 
@@ -187,7 +187,7 @@
 
 			"name": "FreFlo Herbal Capsule",
 
-			"price": 50,
+			"price": 10,
 
 			"therapeutic_class": "",
 
@@ -223,7 +223,7 @@
 
 			"name": "Afroganiks Bitters",
 
-			"price": 100,
+			"price": 10,
 
 			"therapeutic_class": "",
 
@@ -307,7 +307,7 @@
 
 			"name": "Feloklear",
 
-			"price": 50,
+			"price": 10,
 
 			"pharmacology": [
 				"The active ingredients of Feloklear are largely used for: Treating vaginal discharge (caused by yeast infection, P.I.D. or Candida albicans)",
@@ -363,7 +363,7 @@
 
 			"name": "FreeFlow Herbal Capsule (for women)",
 
-			"price": 60,
+			"price": 10,
 
 			"therapeutic_class": "",
 

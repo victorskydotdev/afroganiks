@@ -1,37 +1,208 @@
 //? this logic is for the product page
 
-// user location modal logic
-const userLocation = document.querySelectorAll('.country-btn');
+// user location modal logic - istening for where the customer is coming from
+const userLocation = document.querySelectorAll('.country-btn'); // to initialize the close button functionality when the buttons are clicked
 const userLocationModal = document.querySelector('.user-location-modal');
 
-const convertCurrency = () => {
-	for (let locationBtn = 0; locationBtn < userLocation.length; locationBtn++) {
-		const numOfBtns = userLocation[locationBtn];
+// init the regions
+const usRegion = document.querySelectorAll('.dollar-country'); // array of countries
+const naija = document.querySelector('.naira-country');
+const ghanaCedis = document.querySelector('.cedis-country');
+const englishRegion = document.querySelector('.pound-country');
+const euroRegion = document.querySelector('.euro-country');
 
-		// init product currency and amount elements
-		const amount = document.querySelectorAll('.amount');
-		const currency = document.querySelectorAll('.currency');
+// init product currency and amount elements
+const amount = document.querySelectorAll('.amount');
+const currency = document.querySelectorAll('.currency');
 
-		numOfBtns.addEventListener('click', () => {
-			userLocationModal.style.display = 'none';
+const hideForUsRegions = () => {
+	for (let i = 0; i < usRegion.length; i++) {
+		usRegion[i].addEventListener('click', () => {
+			for (let i = 0; i < currency.length; i++) {
+				currency[i].textContent = '$';
 
-			// alert(
-			// 	"Hey there! Please we've temporarily turned off this product page. Please do bear with us as our development team is actively working to optimize our product page in order to give you an amazing shopping experience on Afroganiks.com. While you are here, please use the chat icon at the bottom-right of the screen to chat with us directly, thank you!"
-			// );
+				const amountIndollar = parseInt(amount[i].textContent);
+				const countryRate = 1;
+				userLocationModal.style.display = 'none';
+
+				const forex = amountIndollar * countryRate;
+
+				amount[i].textContent = Math.round(forex);
+
+				const amountInNums = parseInt(amount[i].textContent);
+				console.log(typeof amountInNums, amountInNums);
+
+				sessionStorage.setItem('modalShownForUs', true);
+
+				sessionStorage.setItem('selectedCurrency', currency[i].textContent);
+
+				sessionStorage.getItem('selectedCurrency');
+			}
 		});
 	}
 };
 
-convertCurrency();
+hideForUsRegions();
 
-// for (let i = 0; i < currency.length; i++) {
-// 	console.log(currency[i].textContent);
-// }
+// naira currency conversion  function
+const nairaCurrencyConvert = () => {
+	if (naija) {
+		naija.addEventListener('click', () => {
+			for (let i = 0; i < currency.length; i++) {
+				currency[i].textContent = 'N';
 
-// for (let i = 0; i < amount.length; i++) {
-// 	console.log(amount[i].textContent);
-// }
+				const amountIndollar = parseInt(amount[i].textContent);
+				const countryRate = 819.99;
+				const forex = amountIndollar * countryRate;
 
+				amount[i].textContent = Math.round(forex);
+
+				const amountInNums = parseInt(amount[i].textContent);
+				console.log(typeof amountInNums, amountInNums);
+
+				userLocationModal.style.display = 'none';
+
+				sessionStorage.setItem('modalShownForNigeria', true);
+
+				sessionStorage.setItem('selectedCurrency', currency[i].textContent);
+
+				sessionStorage.getItem('selectedCurrency');
+			}
+		});
+	}
+};
+
+nairaCurrencyConvert();
+// end of naira conversion function
+
+// ghana cedis currency conversion function
+const cedisCurrencyConversion = () => {
+	if (ghanaCedis) {
+		ghanaCedis.addEventListener('click', () => {
+			for (let i = 0; i < currency.length; i++) {
+				currency[i].textContent = 'GH₵';
+
+				const amountIndollar = parseInt(amount[i].textContent);
+				const countryRate = 11.25;
+				const forex = amountIndollar * countryRate;
+
+				amount[i].textContent = Math.round(forex);
+
+				userLocationModal.style.display = 'none';
+
+				sessionStorage.setItem('modalShownForGhana', true);
+
+				sessionStorage.setItem('selectedCurrency', currency[i].textContent);
+
+				sessionStorage.getItem('selectedCurrency');
+			}
+		});
+	}
+};
+
+cedisCurrencyConversion();
+// end of ghana cedis conversion function
+
+// uk currency conversion function
+const ukCurrencyConversion = () => {
+	if (englishRegion) {
+		englishRegion.addEventListener('click', () => {
+			for (let i = 0; i < currency.length; i++) {
+				currency[i].textContent = '£';
+
+				const amountIndollar = parseInt(amount[i].textContent); //official amount for the products
+				const countryRate = 0.79; // local currency converted against the official product amount
+				const forex = amountIndollar * countryRate;
+
+				amount[i].textContent = Math.round(forex);
+
+				userLocationModal.style.display = 'none';
+
+				sessionStorage.setItem('modalShownForUk', true);
+
+				sessionStorage.setItem('selectedCurrency', currency[i].textContent);
+
+				sessionStorage.getItem('selectedCurrency');
+			}
+		});
+	}
+};
+
+ukCurrencyConversion();
+// end of uk conversion function
+
+// euro currency conversion function
+// const euroCurrencyConversion = () => {
+// 	if (euroRegion) {
+// 		euroRegion.addEventListener('click', () => {
+// 			for (let i = 0; i < currency.length; i++) {
+// 				currency[i].textContent = '$';
+
+// 				const amountIndollar = parseInt(amount[i].textContent);
+// 				const countryRate = 1;
+// 				userLocationModal.style.display = 'none';
+
+// 				const forex = amountIndollar * countryRate;
+
+// 				amount[i].textContent = Math.round(forex);
+
+// 				const amountInNums = parseInt(amount[i].textContent);
+// 				console.log(typeof amountInNums, amountInNums);
+
+// 				sessionStorage.setItem('modalShownForUs', true);
+
+// 				sessionStorage.setItem('selectedCurrency', currency[i].textContent);
+
+// 				sessionStorage.getItem('selectedCurrency');
+// 			}
+// 		});
+// 	}
+// };
+// euroCurrencyConversion();
+// end of euro conversion function
+
+//
+if (sessionStorage.getItem('modalShownForNigeria')) {
+	for (let i = 0; i < amount.length; i++) {
+		currency[i].textContent = 'N';
+
+		const amountIndollar = parseInt(amount[i].textContent);
+		const countryRate = 819.99;
+		const forex = amountIndollar * countryRate;
+
+		amount[i].textContent = Math.round(forex);
+
+		userLocationModal.style.display = 'none';
+	}
+} else if (sessionStorage.getItem('modalShownForGhana')) {
+	for (let i = 0; i < amount.length; i++) {
+		currency[i].textContent = 'GH₵';
+
+		const amountIndollar = parseInt(amount[i].textContent);
+		const countryRate = 11.25;
+		const forex = amountIndollar * countryRate;
+
+		amount[i].textContent = Math.round(forex);
+
+		userLocationModal.style.display = 'none';
+	}
+} else if (sessionStorage.getItem('modalShownForUk')) {
+	for (let i = 0; i < amount.length; i++) {
+		currency[i].textContent = '€';
+
+		const amountIndollar = parseInt(amount[i].textContent); //official amount for the products
+		const countryRate = 0.91; // local currency converted against the official product amount
+		const forex = amountIndollar * countryRate;
+
+		amount[i].textContent = Math.round(forex);
+
+		userLocationModal.style.display = 'none';
+	}
+} else if (sessionStorage.getItem('modalShownForUs')) {
+	userLocationModal.style.display = 'none';
+}
+
+//
 document.addEventListener('DOMContentLoaded', () => {
 	// the code below runs when the dom content is loaded
 
