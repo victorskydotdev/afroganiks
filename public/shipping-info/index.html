@@ -86,11 +86,22 @@
 <section class="section-wrap">
 	<div class="layout-wrap">
 		<div class="form-container">
-			<form action="" netlify method="post" class="shipping-form" id="shipping">
+			<form
+				action="/success"
+				data-netlify="true"
+				method="post"
+				class="shipping-form"
+				id="shipping">
 				<div class="heading-container">
 					<h3 class="heading">Enter shipping address</h3>
 					<p class="subheading">You're almost done!</p>
 				</div>
+
+				<input
+					type="hidden"
+					name="subject"
+					data-remove-prefix
+					value="Customer Order from Afroganiks.com" />
 
 				<div class="input country-wrap">
 					<label for="">Country</label>
@@ -163,6 +174,7 @@
 					<input
 						type="text"
 						id="name"
+						hidden
 						name="name-of-product-ordered"
 						class="name-input"
 						required />
@@ -171,6 +183,7 @@
 					<input
 						type="number"
 						id="price"
+						hidden
 						class="price-input"
 						name="amount-paid-at-checkout"
 						required />
