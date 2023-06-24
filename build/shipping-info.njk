@@ -8,21 +8,15 @@ layout: 'base.njk'
 		<div class="form-container">
 			<form
 				action="/success"
-				data-netlify="true"
+				netlify
 				method="POST"
 				class="shipping-form"
-				name="Customer Order from Afroganiks.com"
+				name="customer-order"
 				id="shipping">
 				<div class="heading-container">
 					<h3 class="heading">Enter shipping address</h3>
 					<p class="subheading">You're almost done!</p>
 				</div>
-
-				<input
-					type="hidden"
-					name="subject"
-					data-remove-prefix
-					value="Customer Order from Afroganiks.com" />
 
 				<div class="input country-wrap">
 					<input
