@@ -41,11 +41,9 @@ if (paymentForm) {
 	paymentForm.addEventListener('submit', makePayment, false);
 }
 
-const secret_key = process.env.PAYMENT_API_KEY;
-
 function makePayment() {
 	FlutterwaveCheckout({
-		public_key: secret_key,
+		public_key: `${process.env.PAYMENT_API_KEY}`,
 		tx_ref: 'titanic-48981487343MDI0NzMx',
 		amount: priceValue,
 		currency: paymentCurrency,
