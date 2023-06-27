@@ -43,7 +43,7 @@ if (paymentForm) {
 
 function makePayment() {
 	FlutterwaveCheckout({
-		public_key: `${process.env.PAYMENT_API_KEY}`,
+		public_key: process.env.PAYMENT_API_KEY,
 		tx_ref: 'titanic-48981487343MDI0NzMx',
 		amount: priceValue,
 		currency: paymentCurrency,
