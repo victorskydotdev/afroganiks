@@ -48,7 +48,10 @@
 
 			"price": 10,
 
-			"pharmacology": "The active ingredients in Gynovit have been clinically proven to boost female reproductive hormones and ovulation, improve endometrial lining, strengthen the cervix, manages symptoms of PCOS, prevents fibroid growth, regulates menstruation and reduces frequent miscarriages., thereby helping women achieve pregnancy faster.",
+			"pharmacology": [
+				"The active ingredients in Gynovit have been clinically proven to boost female reproductive hormones and ovulation, ",
+				"improve endometrial lining, strengthen the cervix, manages symptoms of PCOS, prevents fibroid growth, regulates menstruation and reduces frequent miscarriages, thereby helping women achieve pregnancy faster."
+			],
 
 			"active_ingredients": [
 				"Serenoa repens 150mg",
@@ -426,7 +429,9 @@
 
 			"name": "Anuovulation / lack of ovulation treatment package",
 
-			"price": 100
+			"price": 100,
+
+			"pharmacology": []
 		},
 
 		{

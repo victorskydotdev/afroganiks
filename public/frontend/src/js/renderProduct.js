@@ -96,7 +96,7 @@ function renderProduct(product) {
 				<p class="description-text">${
 					product.pharmacology[0] !== undefined
 						? `<p>${product.pharmacology[0]}</p>`
-						: ''
+						: 'Product description not loaded from the server. Please chat with us with either the WhatsApp or Chat icons at the bottom right your screen'
 				}</p>
 				
 

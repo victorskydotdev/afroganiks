@@ -22,6 +22,8 @@ const mutationObserver = new MutationObserver((entries) => {
 		learnMoreBtn.addEventListener('click', () => {
 			prodDescModal.style.display = 'block';
 
+			const closeBtn = document.querySelector('.modal-close-btn');
+
 			console.log(learnMoreBtn);
 
 			const productUrl = '/frontend/json/product-data.json';
@@ -261,6 +263,9 @@ const mutationObserver = new MutationObserver((entries) => {
           `;
 
 					contentContainer.innerHTML = modalTemplate;
+					closeBtn.addEventListener('click', () => {
+						prodDescModal.style.display = 'none';
+					});
 				});
 		});
 

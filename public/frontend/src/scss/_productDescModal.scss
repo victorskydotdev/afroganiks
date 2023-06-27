@@ -18,11 +18,36 @@
 		// width: 90%;
 		margin: 0 auto;
 		background: $light;
+		position: relative;
+		min-height: 200px;
 
 		.heading-wrap {
 			width: 90%;
 			margin: 0 auto;
 			padding: 2em 0 0 0;
+
+			margin-bottom: 2em;
+		}
+
+		.modal-close-btn {
+			position: fixed;
+			top: 25px;
+			right: 40px;
+			background: $light;
+			height: 40px;
+			width: 40px;
+			box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+			cursor: pointer;
+			border-radius: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			z-index: 100;
+
+			.fa-xmark {
+				font-size: 1.5rem;
+				color: red;
+			}
 		}
 
 		.content {
@@ -30,9 +55,11 @@
 			margin: 0 auto;
 
 			.product-description {
-				padding: 0 0 2em 0;
+				padding: 0 0 5em 0;
 
 				.container {
+					max-width: 500px;
+
 					.text-heading {
 						margin-bottom: 1em;
 					}
