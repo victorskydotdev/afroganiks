@@ -1,5 +1,7 @@
 //? this logic is for the product page
 
+// ******currency conversion logic starts here******
+
 // user location modal logic - istening for where the customer is coming from
 const userLocation = document.querySelectorAll('.country-btn'); // to initialize the close button functionality when the buttons are clicked
 const userLocationModal = document.querySelector('.user-location-modal');
@@ -131,37 +133,6 @@ const ukCurrencyConversion = () => {
 ukCurrencyConversion();
 // end of uk conversion function
 
-// euro currency conversion function
-// const euroCurrencyConversion = () => {
-// 	if (euroRegion) {
-// 		euroRegion.addEventListener('click', () => {
-// 			for (let i = 0; i < currency.length; i++) {
-// 				currency[i].textContent = '$';
-
-// 				const amountIndollar = parseInt(amount[i].textContent);
-// 				const countryRate = 1;
-// 				userLocationModal.style.display = 'none';
-
-// 				const forex = amountIndollar * countryRate;
-
-// 				amount[i].textContent = Math.round(forex);
-
-// 				const amountInNums = parseInt(amount[i].textContent);
-// 				console.log(typeof amountInNums, amountInNums);
-
-// 				sessionStorage.setItem('modalShownForUs', true);
-
-// 				sessionStorage.setItem('selectedCurrency', currency[i].textContent);
-
-// 				sessionStorage.getItem('selectedCurrency');
-// 			}
-// 		});
-// 	}
-// };
-// euroCurrencyConversion();
-// end of euro conversion function
-
-//
 if (sessionStorage.getItem('modalShownForNigeria')) {
 	for (let i = 0; i < amount.length; i++) {
 		currency[i].textContent = 'N';
@@ -188,7 +159,7 @@ if (sessionStorage.getItem('modalShownForNigeria')) {
 	}
 } else if (sessionStorage.getItem('modalShownForUk')) {
 	for (let i = 0; i < amount.length; i++) {
-		currency[i].textContent = '€';
+		currency[i].textContent = '£';
 
 		const amountIndollar = parseInt(amount[i].textContent); //official amount for the products
 		const countryRate = 0.91; // local currency converted against the official product amount
@@ -202,46 +173,154 @@ if (sessionStorage.getItem('modalShownForNigeria')) {
 	userLocationModal.style.display = 'none';
 }
 
-//
-document.addEventListener('DOMContentLoaded', () => {
-	// the code below runs when the dom content is loaded
+// *******currency conversion logic ends here********************************************************************************************************************************************************************
 
-	// fetch json product data
+// ****************cart logic starts here ************************************************************************************************************
+
+const cartBtn = document.getElementById('cart-btn');
+const cart = document.querySelector('.cart-modal-box');
+const cartCloseBtn = document.querySelector('.cart-close-btn');
+const productCartContent = document.querySelector('.product-content');
+const emptyCart = document.querySelector('.emptycart-msg');
+
+cartBtn.addEventListener('click', () => {
+	cart.style.display = 'block';
+});
+
+// Rest of your code...
+if (cartCloseBtn) {
+	cartCloseBtn.addEventListener('click', () => {
+		cart.style.display = 'none';
+	});
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+	// Fetch JSON product data
 	const url = '/frontend/json/product-data.json';
 
 	fetch(url)
 		.then((response) => response.json())
 		.then((data) => {
+			// Retrieve the cart items from localStorage
+			const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+			// Update the cart template based on the retrieved cart items
+			updateCartTemplate(cartItems);
+
 			// Iterate over the order buttons using a for loop
-			// console.log(data.products[0]);
+			const addToCartBtn = document.querySelectorAll('.add-to-cart-btn');
 
-			// variable for the order buttons on the product page
-			const orderButtons = document.querySelectorAll('.order-btn');
-
-			// loop through the order buttons
-			for (let i = 0; i < orderButtons.length; i++) {
-				const button = orderButtons[i];
+			for (let i = 0; i < addToCartBtn.length; i++) {
+				const button = addToCartBtn[i];
 				const prodId = data.products[i].id;
 
-				// next we assign product IDs to the buttons of the corresponding products in our json object, so that we can dynamically render them in the product description page
-
-				// assign the product id to the button
+				// Assign the product id to the button
 				button.dataset.prodId = prodId;
 
 				button.addEventListener('click', () => {
-					// Find the product object with the matching ID in the JSON data
 					const productId = button.dataset.prodId;
 					const product = data.products.find((item) => item.id === productId);
 
-					// Store the product ID in session storage
-					sessionStorage.setItem('productId', productId);
+					// Add the product to the cart
+					addToCart(product);
 
-					// this moves the session storage data to the next page so that the script in the next page will fetch and pass it to be utilized
-					window.location.href = '/product-description';
+					// Update the cart template with the updated cart items
+					updateCartTemplate(cartItems);
 				});
+
+				function addToCart(product) {
+					// Check if the product already exists in the cart
+					const existingProduct = cartItems.find(
+						(item) => item.id === product.id
+					);
+
+					if (existingProduct) {
+						// If the product exists, update its quantity
+						existingProduct.quantity += 1;
+					} else {
+						// If the product doesn't exist, add it to the cart
+						product.quantity = 1;
+						cartItems.push(product);
+					}
+				}
 			}
 		})
 		.catch((error) => {
 			console.error('Error:', error);
 		});
+
+	function updateCartTemplate(cartItems) {
+		const productCartContent = document.querySelector('.product-content');
+
+		// Clear the existing cart items
+		productCartContent.innerHTML = '';
+
+		if (cartItems.length === 0) {
+			// If no products in the cart, display a message or default content
+			const emptyCartMessage = document.createElement('p');
+			emptyCartMessage.textContent = 'Your cart is empty.';
+			productCartContent.appendChild(emptyCartMessage);
+		} else {
+			// Generate the cart template based on the cart items
+			cartItems.forEach((product, index) => {
+				const cartItem = document.createElement('div');
+				cartItem.innerHTML = `
+						<section class="product-wrap">
+							<div class="wrap">
+								<div class="img-wrap">
+									<img src="${product.productImage}">
+								</div>
+		
+								<div class="product-info">
+									<h4 class="product-name">${product.name}</h4>
+		
+									<span class="quauntity-wrap">
+										<button class="sub">-</button>
+										<input value="1">
+										<button class="add">+</button>
+									</span>
+								</div>
+							</div>
+		
+							<div class="bin-wrap">
+								<i class="fa-solid fa-trash"></i>
+							</div>
+						</section>
+					`;
+				productCartContent.appendChild(cartItem);
+
+				const quantityInput = cartItem.querySelector('input');
+				const subtractBtn = cartItem.querySelector('.sub');
+				const addBtn = cartItem.querySelector('.add');
+
+				subtractBtn.addEventListener('click', () => {
+					// Decrease the quantity by 1
+					if (product.quantity > 1) {
+						product.quantity -= 1;
+						quantityInput.value = product.quantity;
+						updateCartItems(cartItems);
+					}
+				});
+
+				addBtn.addEventListener('click', () => {
+					// Increase the quantity by 1
+					product.quantity += 1;
+					quantityInput.value = product.quantity;
+					updateCartItems(cartItems);
+				});
+
+				const itemDeleteBtn = cartItem.querySelector('.bin-wrap');
+				itemDeleteBtn.addEventListener('click', () => {
+					// Remove the product from the cartItems array at the corresponding index
+					cartItems.splice(index, 1);
+
+					// Store the updated cart items in localStorage
+					localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+					// Update the cart template with the updated cart items
+					updateCartTemplate(cartItems);
+				});
+			});
+		}
+	}
 });
