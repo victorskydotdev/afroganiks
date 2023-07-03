@@ -93,7 +93,20 @@
 		}
 
 		.cart {
-			right: 25%;
+			right: 100px;
+			position: absolute;
+			// display: none;
+
+			.cart-indicator {
+				position: absolute;
+				top: 17%;
+				left: 0;
+				height: 15px;
+				width: 15px;
+				border-radius: 100%;
+				background: red;
+				cursor: pointer;
+			}
 
 			i {
 				border: 2px $accent-green solid;
@@ -142,7 +155,7 @@
 		}
 
 		.cart {
-			right: 18%;
+			right: 140px !important;
 		}
 	}
 

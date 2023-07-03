@@ -182,6 +182,19 @@ const cart = document.querySelector('.cart-modal-box');
 const cartCloseBtn = document.querySelector('.cart-close-btn');
 const productCartContent = document.querySelector('.product-content');
 const emptyCart = document.querySelector('.emptycart-msg');
+const cartDot = document.querySelector('.cart-indicator');
+// Iterate over the order buttons using a for loop
+const addToCartBtn = document.querySelectorAll('.add-to-cart-btn');
+
+const storedCurrency = sessionStorage.getItem('selectedCurrency');
+
+const selectedCurrency = storedCurrency;
+
+const nairaExchangeRate = 819.99; // naira
+const ukExchangeRate = 0.79; // pounds
+const ghExchangeRate = 11.25; // cedis
+
+let totalAmount = document.querySelector('.total-amount');
 
 cartBtn.addEventListener('click', () => {
 	cart.style.display = 'block';
@@ -202,13 +215,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		.then((response) => response.json())
 		.then((data) => {
 			// Retrieve the cart items from localStorage
-			const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+			let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
 
 			// Update the cart template based on the retrieved cart items
 			updateCartTemplate(cartItems);
-
-			// Iterate over the order buttons using a for loop
-			const addToCartBtn = document.querySelectorAll('.add-to-cart-btn');
 
 			for (let i = 0; i < addToCartBtn.length; i++) {
 				const button = addToCartBtn[i];
@@ -223,9 +233,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 					// Add the product to the cart
 					addToCart(product);
+					alert('product added to cart');
 
 					// Update the cart template with the updated cart items
 					updateCartTemplate(cartItems);
+
+					// Store the updated cart items in localStorage
+					localStorage.setItem('cartItems', JSON.stringify(cartItems));
 				});
 
 				function addToCart(product) {
@@ -260,33 +274,62 @@ document.addEventListener('DOMContentLoaded', () => {
 			const emptyCartMessage = document.createElement('p');
 			emptyCartMessage.textContent = 'Your cart is empty.';
 			productCartContent.appendChild(emptyCartMessage);
+
+			// Hide the red dot on the cart button
+			cartDot.style.display = 'none';
 		} else {
 			// Generate the cart template based on the cart items
 			cartItems.forEach((product, index) => {
 				const cartItem = document.createElement('div');
+				cartDot.style.display = ' block';
+				// cart.style.display = 'block';
+
+				// Define a variable to hold the calculated amount
+				let calculatedAmount;
+
+				// Perform the calculation based on the currency value using a switch statement
+				switch (selectedCurrency) {
+					case 'N':
+						calculatedAmount =
+							`${product.price}` * Math.round(nairaExchangeRate);
+						break;
+
+					case '£':
+						calculatedAmount =
+							`${product.price}` * Math.round(ukExchangeRate) - 1;
+						break;
+					case 'GH₵':
+						calculatedAmount =
+							`${product.price}` * Math.round(ghExchangeRate) - 1;
+						break;
+					default:
+						calculatedAmount = `${product.price}`;
+				}
+
 				cartItem.innerHTML = `
-						<section class="product-wrap">
-							<div class="wrap">
-								<div class="img-wrap">
-									<img src="${product.productImage}">
-								</div>
-		
-								<div class="product-info">
-									<h4 class="product-name">${product.name}</h4>
-		
-									<span class="quauntity-wrap">
-										<button class="sub">-</button>
-										<input value="1">
-										<button class="add">+</button>
-									</span>
-								</div>
-							</div>
-		
-							<div class="bin-wrap">
-								<i class="fa-solid fa-trash"></i>
-							</div>
-						</section>
-					`;
+          <section class="product-wrap">
+            <div class="wrap">
+              <div class="img-wrap">
+                <img src="${product.productImage}">
+              </div>
+
+              <div class="product-info">
+                <h4 class="product-name">${product.name}</h4>
+								<p class="product-price">${selectedCurrency}${calculatedAmount}</p>
+
+                <span class="quauntity-wrap">
+                  <button class="sub">-</button>
+                  <input value="${product.quantity}">
+                  <button class="add">+</button>
+                </span>
+              </div>
+            </div>
+
+            <div class="bin-wrap">
+              <i class="fa-solid fa-trash"></i>
+            </div>
+          </section>
+        `;
 				productCartContent.appendChild(cartItem);
 
 				const quantityInput = cartItem.querySelector('input');
@@ -299,6 +342,7 @@ document.addEventListener('DOMContentLoaded', () => {
 						product.quantity -= 1;
 						quantityInput.value = product.quantity;
 						updateCartItems(cartItems);
+						calculateTotalAmount(cartItems);
 					}
 				});
 
@@ -307,6 +351,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					product.quantity += 1;
 					quantityInput.value = product.quantity;
 					updateCartItems(cartItems);
+					calculateTotalAmount(cartItems);
 				});
 
 				const itemDeleteBtn = cartItem.querySelector('.bin-wrap');
@@ -319,8 +364,48 @@ document.addEventListener('DOMContentLoaded', () => {
 
 					// Update the cart template with the updated cart items
 					updateCartTemplate(cartItems);
+					calculateTotalAmount(cartItems);
 				});
+
+				// Calculate the total amount
+				calculateTotalAmount(cartItems);
 			});
+		}
+
+		function calculateTotalAmount(cartItems) {
+			let totalAmount = 0;
+
+			cartItems.forEach((product) => {
+				// Perform the calculation based on the currency value using a switch statement
+				let calculatedAmount;
+
+				switch (selectedCurrency) {
+					case 'N':
+						calculatedAmount =
+							`${product.price}` * Math.round(nairaExchangeRate);
+						break;
+
+					case '£':
+						calculatedAmount =
+							`${product.price}` * Math.round(ukExchangeRate) - 1;
+						break;
+					case 'GH₵':
+						calculatedAmount =
+							`${product.price}` * Math.round(ghExchangeRate) - 1;
+						break;
+					default:
+						calculatedAmount = `${product.price}`;
+				}
+
+				const subtotal = product.quantity * calculatedAmount;
+				totalAmount += subtotal;
+			});
+
+			// Update the total amount element on the page
+			const totalAmountElement = document.querySelector('.total-amount');
+			totalAmountElement.textContent = `${selectedCurrency} ${totalAmount.toFixed(
+				2
+			)}`;
 		}
 	}
 });

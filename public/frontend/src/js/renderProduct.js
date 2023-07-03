@@ -2,7 +2,7 @@
 //?*************************************************/
 const storedCurrency = sessionStorage.getItem('selectedCurrency');
 
-console.log(storedCurrency);
+// console.log(storedCurrency);
 
 document.addEventListener('DOMContentLoaded', () => {
 	// Retrieve the product ID from session storage
@@ -44,7 +44,7 @@ function renderProduct(product) {
 	const ghExchangeRate = 11.25; // cedis
 
 	// Define a variable to hold the calculated amount
-	let amount;
+	// let amount;
 
 	// Perform the calculation based on the currency value using a switch statement
 	switch (currency) {
