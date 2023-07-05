@@ -429,7 +429,7 @@
 
 			"name": "Anuovulation / lack of ovulation treatment package",
 
-			"price": 100,
+			"price": 45,
 
 			"pharmacology": []
 		},
@@ -453,7 +453,7 @@
 
 			"name": "Candidiasis treatment package",
 
-			"price": 100,
+			"price": 30,
 
 			"pharmacology": []
 		},
@@ -477,7 +477,7 @@
 
 			"name": "Erectile Dysfunction treatment package",
 
-			"price": 100,
+			"price": 45,
 
 			"pharmacology": []
 		},
@@ -489,7 +489,7 @@
 
 			"name": "High Blood Pressure treatment package",
 
-			"price": 100,
+			"price": 90,
 
 			"pharmacology": []
 		},
@@ -501,7 +501,7 @@
 
 			"name": "High-prolactin treatment package",
 
-			"price": 100,
+			"price": 70,
 
 			"pharmacology": []
 		},
@@ -513,7 +513,7 @@
 
 			"name": "Kidney Stone treatment package",
 
-			"price": 100,
+			"price": 85,
 
 			"pharmacology": []
 		},
@@ -525,7 +525,7 @@
 
 			"name": "Low-sperm count treatment package",
 
-			"price": 100,
+			"price": 45,
 
 			"pharmacology": []
 		},
@@ -537,7 +537,7 @@
 
 			"name": "Menstrual Seizure treatment package",
 
-			"price": 100,
+			"price": 45,
 
 			"pharmacology": []
 		},
@@ -549,7 +549,7 @@
 
 			"name": "Ovarian Cyst treatment package",
 
-			"price": 100,
+			"price": 55,
 
 			"pharmacology": []
 		},
@@ -561,7 +561,7 @@
 
 			"name": "Prostate Enlargement treatment package",
 
-			"price": 100,
+			"price": 105,
 
 			"pharmacology": []
 		},
@@ -573,7 +573,7 @@
 
 			"name": "Staphylococcus treatment package",
 
-			"price": 100,
+			"price": 40,
 
 			"pharmacology": []
 		}

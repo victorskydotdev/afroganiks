@@ -34,11 +34,11 @@ const hideForUsRegions = () => {
 				const amountInNums = parseInt(amount[i].textContent);
 				console.log(typeof amountInNums, amountInNums);
 
-				sessionStorage.setItem('modalShownForUs', true);
+				localStorage.setItem('modalShownForUs', true);
 
-				sessionStorage.setItem('selectedCurrency', currency[i].textContent);
+				localStorage.setItem('selectedCurrency', currency[i].textContent);
 
-				sessionStorage.getItem('selectedCurrency');
+				localStorage.getItem('selectedCurrency');
 			}
 		});
 	}
@@ -53,22 +53,26 @@ const nairaCurrencyConvert = () => {
 			for (let i = 0; i < currency.length; i++) {
 				currency[i].textContent = 'N';
 
+				console.log(amount[i].textContent);
+
 				const amountIndollar = parseInt(amount[i].textContent);
 				const countryRate = 819.99;
 				const forex = amountIndollar * countryRate;
 
 				amount[i].textContent = Math.round(forex);
 
+				console.log(forex);
+
 				const amountInNums = parseInt(amount[i].textContent);
-				console.log(typeof amountInNums, amountInNums);
+				// console.log(typeof amountInNums, amountInNums);
 
 				userLocationModal.style.display = 'none';
 
-				sessionStorage.setItem('modalShownForNigeria', true);
+				localStorage.setItem('modalShownForNigeria', true);
 
-				sessionStorage.setItem('selectedCurrency', currency[i].textContent);
+				localStorage.setItem('selectedCurrency', currency[i].textContent);
 
-				sessionStorage.getItem('selectedCurrency');
+				localStorage.getItem('selectedCurrency');
 			}
 		});
 	}
@@ -92,11 +96,11 @@ const cedisCurrencyConversion = () => {
 
 				userLocationModal.style.display = 'none';
 
-				sessionStorage.setItem('modalShownForGhana', true);
+				localStorage.setItem('modalShownForGhana', true);
 
-				sessionStorage.setItem('selectedCurrency', currency[i].textContent);
+				localStorage.setItem('selectedCurrency', currency[i].textContent);
 
-				sessionStorage.getItem('selectedCurrency');
+				localStorage.getItem('selectedCurrency');
 			}
 		});
 	}
@@ -120,11 +124,11 @@ const ukCurrencyConversion = () => {
 
 				userLocationModal.style.display = 'none';
 
-				sessionStorage.setItem('modalShownForUk', true);
+				localStorage.setItem('modalShownForUk', true);
 
-				sessionStorage.setItem('selectedCurrency', currency[i].textContent);
+				localStorage.setItem('selectedCurrency', currency[i].textContent);
 
-				sessionStorage.getItem('selectedCurrency');
+				localStorage.getItem('selectedCurrency');
 			}
 		});
 	}
@@ -133,7 +137,7 @@ const ukCurrencyConversion = () => {
 ukCurrencyConversion();
 // end of uk conversion function
 
-if (sessionStorage.getItem('modalShownForNigeria')) {
+if (localStorage.getItem('modalShownForNigeria')) {
 	for (let i = 0; i < amount.length; i++) {
 		currency[i].textContent = 'N';
 
@@ -145,7 +149,7 @@ if (sessionStorage.getItem('modalShownForNigeria')) {
 
 		userLocationModal.style.display = 'none';
 	}
-} else if (sessionStorage.getItem('modalShownForGhana')) {
+} else if (localStorage.getItem('modalShownForGhana')) {
 	for (let i = 0; i < amount.length; i++) {
 		currency[i].textContent = 'GH₵';
 
@@ -157,7 +161,7 @@ if (sessionStorage.getItem('modalShownForNigeria')) {
 
 		userLocationModal.style.display = 'none';
 	}
-} else if (sessionStorage.getItem('modalShownForUk')) {
+} else if (localStorage.getItem('modalShownForUk')) {
 	for (let i = 0; i < amount.length; i++) {
 		currency[i].textContent = '£';
 
@@ -169,7 +173,7 @@ if (sessionStorage.getItem('modalShownForNigeria')) {
 
 		userLocationModal.style.display = 'none';
 	}
-} else if (sessionStorage.getItem('modalShownForUs')) {
+} else if (localStorage.getItem('modalShownForUs')) {
 	userLocationModal.style.display = 'none';
 }
 
@@ -186,7 +190,7 @@ const cartDot = document.querySelector('.cart-indicator');
 // Iterate over the order buttons using a for loop
 const addToCartBtn = document.querySelectorAll('.add-to-cart-btn');
 
-const storedCurrency = sessionStorage.getItem('selectedCurrency');
+const storedCurrency = localStorage.getItem('selectedCurrency');
 
 const selectedCurrency = storedCurrency;
 
