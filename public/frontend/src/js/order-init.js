@@ -1,17 +1,20 @@
 //? ======= logic for shipping info page goes here =========== /
 
+const customerOrderProds = sessionStorage.getItem('orderedProducts');
+console.log(customerOrderProds);
+
 document.addEventListener('DOMContentLoaded', () => {
 	const orderForm = document.querySelector('.shipping-form');
-	const countryElement = document.querySelector('.country-input');
+	// const countryElement = document.querySelector('.country-input');
 	const name = document.getElementById('customer-name');
 	const email = document.getElementById('email-address');
 	const phone = document.getElementById('customer-phone');
 
-	const capturedCountryValue = sessionStorage.getItem('destData');
+	// const capturedCountryValue = sessionStorage.getItem('destData');
 
-	if (countryElement) {
-		countryElement.value = `Your shipping destination has been set to: ${capturedCountryValue}`;
-	} else console.log('Country element value is parsed to the order form');
+	// if (countryElement) {
+	// 	countryElement.value = `Your shipping destination has been set to: ${capturedCountryValue}`;
+	// } else console.log('Country element value is parsed to the order form');
 
 	if (orderForm) {
 		orderForm.addEventListener('submit', (e) => {
@@ -33,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // fetching the product price and product name to pass into hidden html form fields
-const productName = sessionStorage.getItem('productName');
+const productName = customerOrderProds;
 const productPrice = parseInt(sessionStorage.getItem('productPrice'));
 // console.log(typeof productPrice);
 

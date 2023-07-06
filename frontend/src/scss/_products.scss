@@ -62,26 +62,21 @@
 					height: 100%;
 
 					.price {
-						border-radius: 30px;
-						font-size: 30px;
+						border-radius: 15px;
+						font-size: 20px;
 						font-weight: $font-bold;
 						text-transform: capitalize;
 						position: relative;
 						z-index: 0;
 						display: flex;
 						align-items: center;
-
-						&::after {
-							content: '';
-							position: absolute;
-							top: -65%;
-							left: -20%;
-							background: yellow;
-							height: 80px;
-							width: 80px;
-							z-index: -1;
-							border-radius: 100%;
-						}
+						background: rgb(214, 203, 0);
+						padding: 1em;
+						color: $light;
+						border-radius: 20px;
+						font-family: $secondary-font;
+						font-weight: $font-medium;
+						font-size: 1rem;
 					}
 
 					.btn {

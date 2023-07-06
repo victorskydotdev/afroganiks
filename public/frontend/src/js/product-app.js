@@ -1,5 +1,7 @@
 //? this logic is for the product page
 
+// const { listeners } = require('gulp');
+
 // ******currency conversion logic starts here******
 
 // user location modal logic - istening for where the customer is coming from
@@ -268,7 +270,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 
 	function updateCartTemplate(cartItems) {
+		// cart container nodes below
+
+		// cart products container
 		const productCartContent = document.querySelector('.product-content');
+
+		// total amount element
+		const totalAmountElement = document.querySelector('.total-amount');
 
 		// Clear the existing cart items
 		productCartContent.innerHTML = '';
@@ -323,7 +331,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 <span class="quauntity-wrap">
                   <button class="sub">-</button>
-                  <input value="${product.quantity}">
+                  <input class="prod-quantity" value="${product.quantity}">
                   <button class="add">+</button>
                 </span>
               </div>
@@ -336,14 +344,31 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
 				productCartContent.appendChild(cartItem);
 
+				// map the products and items in the cart since they are an array
+				const productsIntoStrings = cartItems.map((product) => {
+					return `${product.name}`;
+				});
+
+				// convert them into a string
+				const orderedProducts = JSON.stringify(productsIntoStrings); //the stringified array items are stored in sessionStorage in the moveToNextPage() function by a click event
+
+				// we are also storing the total amount that customer is paying for in sessionStorage in the calculateTotalAmount() function
+
+				// console.log(typeof orderedProducts);
+				// end of array.map() for the items in the cart
+
 				const quantityInput = cartItem.querySelector('input');
 				const subtractBtn = cartItem.querySelector('.sub');
 				const addBtn = cartItem.querySelector('.add');
+				let prodQuantity = document.querySelector('.prod-quantity');
+
+				console.log(prodQuantity.value);
 
 				subtractBtn.addEventListener('click', () => {
 					// Decrease the quantity by 1
 					if (product.quantity > 1) {
 						product.quantity -= 1;
+
 						quantityInput.value = product.quantity;
 						updateCartItems(cartItems);
 						calculateTotalAmount(cartItems);
@@ -359,6 +384,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				});
 
 				const itemDeleteBtn = cartItem.querySelector('.bin-wrap');
+
 				itemDeleteBtn.addEventListener('click', () => {
 					// Remove the product from the cartItems array at the corresponding index
 					cartItems.splice(index, 1);
@@ -369,10 +395,29 @@ document.addEventListener('DOMContentLoaded', () => {
 					// Update the cart template with the updated cart items
 					updateCartTemplate(cartItems);
 					calculateTotalAmount(cartItems);
+
+					// // Refresh the page
+					// location.reload();
 				});
 
 				// Calculate the total amount
 				calculateTotalAmount(cartItems);
+
+				// cart checkout button
+				const cartCheckoutBtn = document.getElementById('cart-checkout');
+
+				// event listener for the cart checkout button
+				const moveDataToNExtPage = () => {
+					cartCheckoutBtn.addEventListener('click', () => {
+						// store the mapped products at line 342 inside a sessionStorage
+						sessionStorage.setItem('orderedProducts', orderedProducts);
+
+						window.location.href = '/shipping-info';
+						console.log('button clicked!');
+					});
+				};
+
+				moveDataToNExtPage();
 			});
 		}
 
@@ -406,10 +451,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 
 			// Update the total amount element on the page
-			const totalAmountElement = document.querySelector('.total-amount');
+
 			totalAmountElement.textContent = `${selectedCurrency} ${totalAmount.toFixed(
 				2
 			)}`;
+
+			// we store the total amount in session storage so that we can access them in the next page for payment processing
+			sessionStorage.setItem('total', totalAmount);
 		}
 	}
 });
