@@ -11,7 +11,6 @@ module.exports = {
 		payment: './frontend/src/js/payment.js',
 		prodDescModal: './frontend/src/js/prodDescModal.js',
 		productApp: './frontend/src/js/product-app.js',
-		renderProducts: './frontend/src/js/renderProduct.js',
 	},
 
 	output: {

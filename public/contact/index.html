@@ -104,22 +104,22 @@
 				<h3 class="heading">Get in touch with us</h3>
 			</div>
 
+			<!-- the main contact form -->
 			<form
-				netlify
 				action="/frontdesk-success"
-				name="contact"
 				method="post"
-				class="form">
+				class="form"
+				netlify
+				name="contact-us-form">
 				<!-- contact reason checkboxes -->
-				<div class="checkboxes">
+				<span class="checkboxes">
 					<div class="checkbox-container">
 						<div class="wrap">
 							<label class="box" for="bulk-purchase">
 								<input
 									type="checkbox"
 									name="bulk-purchase"
-									id="bulk-purchase"
-									required />
+									id="bulk-purchase" />
 								<span>Bulk Purchase</span>
 							</label>
 						</div>
@@ -129,69 +129,70 @@
 								<input
 									type="checkbox"
 									name="General-Enquiries"
-									id="enquiries"
-									required />
+									id="enquiries" />
 								<span>General Enquiries</span>
 							</label>
 						</div>
 
 						<div class="wrap">
 							<label class="box" for="consultation">
-								<input
-									type="checkbox"
-									name="consultation"
-									id="consultation"
-									required />
+								<input type="checkbox" name="consultation" id="consultation" />
 								<span>Consultation</span>
 							</label>
 						</div>
 
 						<div class="wrap">
 							<label class="box" for="distribution">
-								<input
-									type="checkbox"
-									name="distribution"
-									id="distribution"
-									required />
+								<input type="checkbox" name="distribution" id="distribution" />
 								<span>Distribution</span>
 							</label>
 						</div>
 					</div>
-				</div>
+				</span>
 				<!-- end of checkboxes -->
 
 				<!-- user info -->
-				<div class="input-wrap name">
-					<input type="text" placeholder="First name" name="First-name" />
+				<span class="input-wrap name">
+					<input
+						type="text"
+						placeholder="First name"
+						name="First-name"
+						required />
 
-					<input type="text" placeholder="Last name" name="Last-name" />
-				</div>
+					<input
+						type="text"
+						placeholder="Last name"
+						name="Last-name"
+						required />
+				</span>
 
-				<div class="input-wrap">
-					<input type="text" placeholder="Phone" name="phone" />
-				</div>
+				<span class="input-wrap">
+					<input type="text" placeholder="Phone" name="phone" required />
+				</span>
 
-				<div class="input-wrap">
-					<input type="text" placeholder="Email Address" name="email-address" />
-				</div>
+				<span class="input-wrap">
+					<input
+						type="text"
+						placeholder="Email Address"
+						name="email-address"
+						required />
+				</span>
 
-				<div class="input-wrap">
-					<input type="text" placeholder="Country" name="country" />
-				</div>
+				<span class="input-wrap">
+					<input type="text" placeholder="Country" name="country" required />
+				</span>
 
-				<div class="input-wrap">
+				<span class="input-wrap">
 					<textarea
 						id=""
 						cols="30"
 						rows="10"
 						name="message-body"
-						placeholder="Additional Information"></textarea>
-				</div>
+						placeholder="Additional Information"
+						required></textarea>
+				</span>
 				<!-- end of user info -->
-
-				<!-- <div class="input-wrap"></div> -->
-
-				<button class="btn">Submit</button>
+				<button class="btn" type="submit">Submit</button>
 			</form>
 		</div>
 	</div>
@@ -342,6 +343,7 @@
 
 		<!-- payment -->
 		<script src="/frontend/dist/js/paymentbundle.js"></script>
+		<!-- <script src="/frontend/src/js/payment.js"></script> -->
 
 		<!-- dist find distributor location modal popup -->
 		<script src="/frontend/dist/js/findDistributorsbundle.js"></script>

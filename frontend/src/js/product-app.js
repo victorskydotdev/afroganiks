@@ -1,8 +1,4 @@
-//? this logic is for the product page
-
-// const { listeners } = require('gulp');
-
-// ******currency conversion logic starts here******
+// currency conversion logic starts here******
 
 // user location modal logic - istening for where the customer is coming from
 const userLocation = document.querySelectorAll('.country-btn'); // to initialize the close button functionality when the buttons are clicked
@@ -179,9 +175,9 @@ if (localStorage.getItem('modalShownForNigeria')) {
 	userLocationModal.style.display = 'none';
 }
 
-// *******currency conversion logic ends here********************************************************************************************************************************************************************
+// currency conversion logic ends here********************************************************************************************************************************************************************
 
-// ****************cart logic starts here ************************************************************************************************************
+// cart logic starts here ************************************************************************************************************
 
 const cartBtn = document.getElementById('cart-btn');
 const cart = document.querySelector('.cart-modal-box');
@@ -189,6 +185,7 @@ const cartCloseBtn = document.querySelector('.cart-close-btn');
 const productCartContent = document.querySelector('.product-content');
 const emptyCart = document.querySelector('.emptycart-msg');
 const cartDot = document.querySelector('.cart-indicator');
+
 // Iterate over the order buttons using a for loop
 const addToCartBtn = document.querySelectorAll('.add-to-cart-btn');
 
@@ -281,15 +278,19 @@ document.addEventListener('DOMContentLoaded', () => {
 		// Clear the existing cart items
 		productCartContent.innerHTML = '';
 
+		const emptyCartMessage = document.createElement('p');
+
 		if (cartItems.length === 0) {
 			// If no products in the cart, display a message or default content
-			const emptyCartMessage = document.createElement('p');
+
 			emptyCartMessage.textContent = 'Your cart is empty.';
 			productCartContent.appendChild(emptyCartMessage);
 
 			// Hide the red dot on the cart button
 			cartDot.style.display = 'none';
 		} else {
+			const productsLog = []; // Step 1: Declare an empty array
+
 			// Generate the cart template based on the cart items
 			cartItems.forEach((product, index) => {
 				const cartItem = document.createElement('div');
@@ -349,8 +350,9 @@ document.addEventListener('DOMContentLoaded', () => {
 					return `${product.name}`;
 				});
 
-				// convert them into a string
+				// // convert them into a string
 				const orderedProducts = JSON.stringify(productsIntoStrings); //the stringified array items are stored in sessionStorage in the moveToNextPage() function by a click event
+				// console.log(orderedProducts);
 
 				// we are also storing the total amount that customer is paying for in sessionStorage in the calculateTotalAmount() function
 
@@ -362,13 +364,12 @@ document.addEventListener('DOMContentLoaded', () => {
 				const addBtn = cartItem.querySelector('.add');
 				let prodQuantity = document.querySelector('.prod-quantity');
 
-				console.log(prodQuantity.value);
+				// console.log(prodQuantity.value);
 
 				subtractBtn.addEventListener('click', () => {
 					// Decrease the quantity by 1
 					if (product.quantity > 1) {
 						product.quantity -= 1;
-
 						quantityInput.value = product.quantity;
 						updateCartItems(cartItems);
 						calculateTotalAmount(cartItems);
@@ -385,7 +386,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				const itemDeleteBtn = cartItem.querySelector('.bin-wrap');
 
-				itemDeleteBtn.addEventListener('click', () => {
+				itemDeleteBtn.addEventListener('click', (e) => {
 					// Remove the product from the cartItems array at the corresponding index
 					cartItems.splice(index, 1);
 
@@ -396,9 +397,21 @@ document.addEventListener('DOMContentLoaded', () => {
 					updateCartTemplate(cartItems);
 					calculateTotalAmount(cartItems);
 
-					// // Refresh the page
-					// location.reload();
+					// Update sessionStorage with the updated cartItems
+					// sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+					// Refresh the page
+					location.reload();
+					window.location.href = '/product#product-section';
+
+					// const productNameField = document.getElementById('name');
+
+					// console.log(
+					// 	`Product: ${product.name}, Quantity: ${product.quantity}`
+					// );
 				});
+
+				console.log(`Product: ${product.name}, Quantity: ${product.quantity}`);
 
 				// Calculate the total amount
 				calculateTotalAmount(cartItems);
@@ -406,18 +419,44 @@ document.addEventListener('DOMContentLoaded', () => {
 				// cart checkout button
 				const cartCheckoutBtn = document.getElementById('cart-checkout');
 
+				// console.log(cartItems);
 				// event listener for the cart checkout button
-				const moveDataToNExtPage = () => {
+				const moveDataToNextPage = () => {
 					cartCheckoutBtn.addEventListener('click', () => {
-						// store the mapped products at line 342 inside a sessionStorage
-						sessionStorage.setItem('orderedProducts', orderedProducts);
+						if (!cartItems) {
+							console.log('your cart is empty');
+						} else {
+							// Step 2: Push the product name and updated quantity to productsLog array
+							productsLog.push({
+								name: product.name,
+								quantity: product.quantity,
+							});
 
-						window.location.href = '/shipping-info';
-						console.log('button clicked!');
+							// Step 3: Convert the productsLog array to JSON string
+							const productsLogString = JSON.stringify(productsLog);
+
+							// console.log(productsLogString);
+
+							// Step 4: Store the JSON string in sessionStorage
+							sessionStorage.setItem('loggedProducts', productsLogString);
+
+							console.log(productsLogString);
+
+							window.location.href = '/shipping-info';
+							console.log('button clicked!');
+						}
 					});
 				};
 
-				moveDataToNExtPage();
+				moveDataToNextPage();
+			});
+		}
+
+		function updateCartItems(cartItems) {
+			cartItems.forEach((product, index) => {
+				const quantityInput =
+					document.querySelectorAll('.prod-quantity')[index];
+				quantityInput.value = product.quantity;
 			});
 		}
 
@@ -458,6 +497,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 			// we store the total amount in session storage so that we can access them in the next page for payment processing
 			sessionStorage.setItem('total', totalAmount);
+			// sessionStorage.setItem('updatedOrder');
 		}
 	}
 });

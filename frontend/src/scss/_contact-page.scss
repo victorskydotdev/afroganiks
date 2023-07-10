@@ -29,7 +29,7 @@
 		}
 
 		.form-area {
-			background: $dominant-green;
+			background: $accent-green;
 			border-radius: $box-radius;
 			padding: 2em;
 
@@ -43,6 +43,7 @@
 			.form {
 				.checkboxes {
 					margin-bottom: 2em;
+					display: inline-block;
 
 					.checkbox-container {
 						display: flex;
@@ -56,7 +57,6 @@
 								border: none;
 
 								input {
-									border: 2px solid #3400af;
 									border-radius: 40px;
 									position: absolute;
 									cursor: pointer;
@@ -69,7 +69,7 @@
 
 								span {
 									display: inline-block;
-									border: rgba(214, 205, 0, 0.55) 2px solid;
+									border: $light 2px solid;
 									padding: 10px;
 									border-radius: 10px;
 									color: $light;
@@ -100,6 +100,7 @@
 						margin-bottom: 1em;
 						font-family: $secondary-font;
 						font-weight: $font-medium;
+						color: $body-p-color;
 					}
 				}
 
@@ -113,6 +114,7 @@
 					font-weight: $font-medium;
 					cursor: pointer;
 					font-size: 15px;
+					color: $light;
 				}
 			}
 		}
@@ -126,16 +128,18 @@
 		width: 100%;
 
 		.container {
-			display: flex;
-			justify-content: center;
+			// display: flex;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			// justify-content: center;
 
 			.text-area {
-				width: 45%;
 				padding-top: 4em;
+				max-height: 300px;
 
 				.image-wrap {
 					left: -30%;
-					bottom: -40%;
+					bottom: -130%;
 				}
 
 				.image-wrap > img {
@@ -144,6 +148,7 @@
 			}
 
 			.form {
+				width: 100%;
 				.name {
 					display: flex;
 					gap: 10px;

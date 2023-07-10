@@ -1,7 +1,9 @@
-//? ======= logic for shipping info page goes here =========== /
+// logic for shipping info page goes here =========== /
 
-const customerOrderProds = sessionStorage.getItem('orderedProducts');
-console.log(customerOrderProds);
+// const customerOrderProds = sessionStorage.getItem('orderedProducts');
+const customerOrderProds = sessionStorage.getItem('loggedProducts');
+
+const productTotalAmount = sessionStorage.getItem('total');
 
 document.addEventListener('DOMContentLoaded', () => {
 	const orderForm = document.querySelector('.shipping-form');
@@ -10,17 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const email = document.getElementById('email-address');
 	const phone = document.getElementById('customer-phone');
 
-	// const capturedCountryValue = sessionStorage.getItem('destData');
-
-	// if (countryElement) {
-	// 	countryElement.value = `Your shipping destination has been set to: ${capturedCountryValue}`;
-	// } else console.log('Country element value is parsed to the order form');
-
 	if (orderForm) {
 		orderForm.addEventListener('submit', (e) => {
-			e.preventDefault();
-
-			// we are capturing the name and email cos we want to pass them to the success page which will be handled by the payment.js logic. On the success page, we'll retrieve the price and email from the session storage and pass them to the payment gateway for processing
 			const capturedName = name.value;
 			const capturedEmail = email.value;
 			const capturedPhone = phone.value;
@@ -37,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // fetching the product price and product name to pass into hidden html form fields
 const productName = customerOrderProds;
-const productPrice = parseInt(sessionStorage.getItem('productPrice'));
-// console.log(typeof productPrice);
+const productPrice = parseInt(productTotalAmount);
+sessionStorage.setItem('productName', productName);
 
 if (productPrice || productName) {
 	const priceInfo = document.getElementById('price');

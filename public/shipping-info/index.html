@@ -87,28 +87,29 @@
 <section class="section-wrap">
 	<div class="layout-wrap">
 		<div class="form-container">
-			<form
-				action="/success"
-				netlify
-				method="POST"
-				class="shipping-form"
-				name="customer-order"
-				id="shipping">
-				<div class="heading-container">
-					<h3 class="heading">Enter shipping address</h3>
-					<p class="subheading">You're almost done!</p>
-				</div>
+			<div class="heading-container">
+				<h3 class="heading">Enter shipping address</h3>
+				<p class="subheading">You're almost done!</p>
+			</div>
 
-				<div class="input country-wrap">
+			<!-- new form -->
+			<form
+				method="post"
+				action="/success"
+				id="shipping"
+				name="customer-order-form"
+				netlify
+				class="shipping-form">
+				<span class="input country-wrap">
 					<input
 						class="country-input"
 						type="text"
 						placeholder="Country*"
 						name="country"
 						required />
-				</div>
+				</span>
 
-				<div class="contact-info name-wrap">
+				<span class="contact-info name-wrap">
 					<input
 						class="info-input"
 						type="text"
@@ -132,9 +133,9 @@
 						id="email-address"
 						name="customer-email"
 						required />
-				</div>
+				</span>
 
-				<div class="address-info">
+				<span class="address-info">
 					<input
 						type="text"
 						class="address-input"
@@ -155,7 +156,7 @@
 						placeholder="State*"
 						name="state"
 						required />
-				</div>
+				</span>
 
 				<div class="btn-wrap">
 					<button type="submit" class="checkout-btn">Go to payments</button>
@@ -168,6 +169,7 @@
 						type="text"
 						id="name"
 						name="name-of-product-ordered"
+						hidden
 						class="name-input"
 						placeholder="products ordered"
 						required />
@@ -176,6 +178,7 @@
 					<input
 						type="number"
 						id="price"
+						hidden
 						class="price-input"
 						name="amount-paid-at-checkout"
 						placeholder="product price"
@@ -342,6 +345,7 @@
 
 		<!-- payment -->
 		<script src="/frontend/dist/js/paymentbundle.js"></script>
+		<!-- <script src="/frontend/src/js/payment.js"></script> -->
 
 		<!-- dist find distributor location modal popup -->
 		<script src="/frontend/dist/js/findDistributorsbundle.js"></script>

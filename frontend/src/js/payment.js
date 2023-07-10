@@ -5,14 +5,17 @@ const productNameField = document.getElementById('product-name');
 // fetching relevant storage data
 const capturedCustomerName = sessionStorage.getItem('storedName');
 const capturedProductName = sessionStorage.getItem('productName');
+
+console.log(capturedProductName);
 const emailValue = sessionStorage.getItem('storedEmail');
 const phoneValue = sessionStorage.getItem('storedPhone');
 console.log(phoneValue);
 
-const priceValue = parseInt(sessionStorage.getItem('productPrice'));
+const priceValue = parseInt(sessionStorage.getItem('total'));
+console.log(priceValue);
 console.log(priceValue);
 
-const storedCurrencyForPayments = sessionStorage.getItem('selectedCurrency');
+const storedCurrencyForPayments = localStorage.getItem('selectedCurrency');
 
 let paymentCurrency;
 
