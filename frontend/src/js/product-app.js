@@ -501,3 +501,5 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 });
+
+// sessionStorage.setItem('productItem', process.env.PAYMENT_API_KEY);

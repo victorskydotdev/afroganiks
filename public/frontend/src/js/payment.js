@@ -44,7 +44,13 @@ if (paymentForm) {
 	paymentForm.addEventListener('submit', makePayment, false);
 }
 
+// const paymentKey = sessionStorage.getItem('productItem');
+
+// paymentKey
+
 function makePayment() {
+	// generating distinct payment ref and pass it to the payment object
+
 	FlutterwaveCheckout({
 		public_key: process.env.PAYMENT_API_KEY,
 		tx_ref: 'titanic-48981487343MDI0NzMx',
