@@ -1,8 +1,15 @@
 @import 'resets';
 
 .gallery-section {
+	margin-bottom: 5em;
+
 	.text-container {
 		margin-bottom: 2em;
+		text-align: center;
+
+		.heading {
+			color: $accent-green;
+		}
 	}
 
 	.container {
@@ -22,6 +29,36 @@
 				border: 2px solid $accent-green;
 				border-radius: $box-radius;
 				cursor: pointer;
+				aspect-ratio: 10/10;
+			}
+		}
+	}
+
+	@media screen and (min-width: 43em) {
+		.text-container {
+			padding-top: 4em;
+
+			.heading {
+				font-size: 1.5rem;
+			}
+		}
+
+		.container {
+			.image-wrap {
+				grid-template-columns: repeat(3, 1fr);
+			}
+		}
+	}
+
+	@media screen and (min-width: 62em) {
+		.text-container {
+			padding-top: 4em;
+			margin-bottom: 5em;
+		}
+
+		.container {
+			.image-wrap {
+				grid-template-columns: repeat(4, 1fr);
 			}
 		}
 	}
