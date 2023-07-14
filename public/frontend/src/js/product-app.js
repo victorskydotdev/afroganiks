@@ -426,6 +426,11 @@ document.addEventListener('DOMContentLoaded', () => {
 						if (!cartItems) {
 							console.log('your cart is empty');
 						} else {
+							sessionStorage.setItem(
+								'productItem',
+								process.env.PAYMENT_API_KEY
+							);
+
 							// Step 2: Push the product name and updated quantity to productsLog array
 							productsLog.push({
 								name: product.name,
@@ -501,5 +506,3 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 });
-
-// sessionStorage.setItem('productItem', process.env.PAYMENT_API_KEY);

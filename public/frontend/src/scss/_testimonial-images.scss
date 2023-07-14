@@ -1,0 +1,28 @@
+@import 'resets';
+
+.gallery-section {
+	.text-container {
+		margin-bottom: 2em;
+	}
+
+	.container {
+		width: 90%;
+		margin: 0 auto;
+		display: grid;
+		gap: 10px;
+
+		.image-wrap {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 10px;
+
+			img {
+				inline-size: 100%;
+				display: inline-block;
+				border: 2px solid $accent-green;
+				border-radius: $box-radius;
+				cursor: pointer;
+			}
+		}
+	}
+}
