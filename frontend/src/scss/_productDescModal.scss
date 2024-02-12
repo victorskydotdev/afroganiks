@@ -10,12 +10,10 @@
 	z-index: 101;
 	display: flex;
 	align-items: center;
-	display: none;
 	padding: 0;
 	overflow: scroll;
 
 	.modal-content-container {
-		// width: 90%;
 		margin: 0 auto;
 		background: $light;
 		position: relative;
