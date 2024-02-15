@@ -61,6 +61,7 @@ function makePayment() {
 			name: capturedCustomerName,
 			phone_number: phoneValue,
 		},
+
 		customizations: {
 			title: 'Afroganiks Industries Limited',
 			description: 'Product Payment',

@@ -7,7 +7,7 @@
 		"start": "eleventy --serve",
 		"build": "build",
 		"gulp-tasks": "gulp",
-		"webpack": "webpack"
+		"webpack": "webpack --watch"
 	},
 	"keywords": [
 		"Afroganiks",

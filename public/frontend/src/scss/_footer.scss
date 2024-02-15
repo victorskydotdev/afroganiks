@@ -155,8 +155,13 @@
 		}
 
 		.location-wrap-section {
+			display: grid;
+			gap: 30px;
+
 			.address {
 				font-family: $secondary-font;
+				margin-bottom: 2em;
+
 				.heading {
 					color: $accent-green;
 					margin-bottom: 1em;
