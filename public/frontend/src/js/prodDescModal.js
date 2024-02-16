@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				lmButton.addEventListener('click', (event) => {
 					event.preventDefault();
 
-					console.log(product);
+					// console.log(product);
 
 					if (product) {
 						prodDescModal.style.display = 'block';
@@ -117,10 +117,80 @@ document.addEventListener('DOMContentLoaded', () => {
 									</div>
 									<!-- end of pharmacology -->
 
+									<!-- health benefits -->
+									<div class="wrap">
+										<ul>
+											<li>${
+												product.health_benefits[0] !== undefined
+													? `<p class="description-text">${product.health_benefits[0]}</p>`
+													: ''
+											}</li>
+											<li>${
+												product.health_benefits[1] !== undefined
+													? `<p class="description-text">${product.health_benefits[1]}</p>`
+													: ''
+											}</li>
+											<li>${
+												product.health_benefits[2] !== undefined
+													? `<p class="description-text">${product.health_benefits[2]}</p>`
+													: ''
+											}</li>
+											<li>${
+												product.health_benefits[3] !== undefined
+													? `<p class="description-text">${product.health_benefits[3]}</p>`
+													: ''
+											}</li>
+											<li>${
+												product.health_benefits[4] !== undefined
+													? `<p class="description-text">${product.health_benefits[4]}</p>`
+													: ''
+											}</li>
+											<li>${
+												product.health_benefits[5] !== undefined
+													? `<p class="description-text">${product.health_benefits[5]}</p>`
+													: ''
+											}</li>
+											<li>${
+												product.health_benefits[6] !== undefined
+													? `<p class="description-text">${product.health_benefits[6]}</p>`
+													: ''
+											}</li>
+											<li>${
+												product.health_benefits[7] !== undefined
+													? `<p class="description-text">${product.health_benefits[7]}</p>`
+													: ''
+											}</li>
+											<li>${
+												product.health_benefits[8] !== undefined
+													? `<p class="description-text">${product.health_benefits[8]}</p>`
+													: ''
+											}</li>
+											<li>${
+												product.health_benefits[9] !== undefined
+													? `<p class="description-text">${product.health_benefits[9]}</p>`
+													: ''
+											}</li>
+											<li>${
+												product.health_benefits[10] !== undefined
+													? `<p class="description-text">${product.health_benefits[10]}</p>`
+													: ''
+											}</li>
+											<li>${
+												product.health_benefits[11] !== undefined
+													? `<p class="description-text">${product.health_benefits[11]}</p>`
+													: ''
+											}</li>
+											<li>${
+												product.health_benefits[12] !== undefined
+													? `<p class="description-text">${product.health_benefits[12]}</p>`
+													: ''
+											}</li>
+										</ul>									
+									</div>
+									<!-- end of health benefits -->
+
 									<!-- active ingredients -->
 									<div class="wrap">
-										
-
 										<ul>
 											<li>${
 												product.active_ingredients[0] !== undefined
@@ -143,16 +213,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- pack size -->
 									<div class="wrap">
-										
-
 										<p>${product.pack_size !== undefined ? `<p>${product.pack_size}</p>` : ''}</p>
 									</div>
 									<!-- end of pack size -->
 
 									<!-- dosage form composition -->
 									<div class="wrap">
-										
-
 										<p>${
 											product.dosage_form_compoisition !== undefined
 												? `<p>${product.dosage_form_composition}</p>`
@@ -163,8 +229,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- therapeutic class -->
 									<div class="wrap">
-										
-
 										<p>${
 											product.therapeutic_class !== undefined
 												? `<p>${product.therapeutic_class}</p>`
@@ -175,8 +239,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- dosage administration -->
 									<div class="wrap">
-										
-
 										<p>${
 											product.dosage_administration !== undefined
 												? `<p>${product.dosage_administration}</p>`
@@ -187,8 +249,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- directions for use -->
 									<div class="wrap">
-										
-
 										<ul>
 											<li>${
 												product.direction_for_use[0] !== undefined
@@ -211,8 +271,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- indications -->
 									<div class="wrap">
-										
-
 										<p>${
 											product.indications !== undefined
 												? `<p>${product.indications}</p>`
@@ -223,8 +281,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- contraindications -->
 									<div class="wrap">
-										
-
 										<p>${
 											product.contraindications !== undefined
 												? `<p>${product.contraindications}</p>`
@@ -235,8 +291,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- precautions and warnings -->
 									<div class="wrap">
-										
-
 										<p>${
 											product.precautions_warnings !== undefined
 												? `<p>${product.precautions_warnings}</p>`
@@ -247,8 +301,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- adverse effects and reactions -->
 									<div class="wrap">
-										
-
 										<p>${
 											product.adverse_effects_reactions !== undefined
 												? `<p>${product.adverse_effects_reactions}</p>`
@@ -297,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 closeBtn.addEventListener('click', () => {
-	console.log('Close button clicked');
+	// console.log('Close button clicked');
 
 	prodDescModal.style.display = 'none';
 });
