@@ -38,10 +38,41 @@ document.addEventListener('DOMContentLoaded', () => {
 								<div class="container">
 									<h3 class="text-heading">${product.name}</h3>
 
+									<!-- introduction -->
+									<div class="wrap">
+										<p>${
+											product.introduction[0] !== undefined
+												? `<p>${product.introduction[0]}</p>`
+												: ''
+										}</p>
+
+										<p>${
+											product.introduction[1] !== undefined
+												? `<p>${product.introduction[1]}</p>`
+												: ''
+										}</p>
+
+										<p>${
+											product.introduction[2] !== undefined
+												? `<p>${product.introduction[2]}</p>`
+												: ''
+										}</p>
+
+										<p>${
+											product.introduction[3] !== undefined
+												? `<p>${product.introduction[3]}</p>`
+												: ''
+										}</p>
+
+										<p>${
+											product.introduction[4] !== undefined
+												? `<p>${product.introduction[4]}</p>`
+												: ''
+										}</p>
+									</div>
+
 									<!-- pharmacology -->
 									<div class="wrap">
-										<h4 class="heading">Pharmacology:</h4>
-
 										<p>${
 											product.pharmacology[0] !== undefined
 												? `<p>${product.pharmacology[0]}</p>`
@@ -88,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- active ingredients -->
 									<div class="wrap">
-										<h4 class="heading">Active Ingredients:</h4>
+										
 
 										<ul>
 											<li>${
@@ -112,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- pack size -->
 									<div class="wrap">
-										<h4 class="heading">Pack size:</h4>
+										
 
 										<p>${product.pack_size !== undefined ? `<p>${product.pack_size}</p>` : ''}</p>
 									</div>
@@ -120,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- dosage form composition -->
 									<div class="wrap">
-										<h4 class="heading">Dosage form composition:</h4>
+										
 
 										<p>${
 											product.dosage_form_compoisition !== undefined
@@ -132,7 +163,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- therapeutic class -->
 									<div class="wrap">
-										<h4 class="heading">Therapeutic class:</h4>
+										
 
 										<p>${
 											product.therapeutic_class !== undefined
@@ -144,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- dosage administration -->
 									<div class="wrap">
-										<h4 class="heading">Dosage administation:</h4>
+										
 
 										<p>${
 											product.dosage_administration !== undefined
@@ -156,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- directions for use -->
 									<div class="wrap">
-										<h4 class="heading">Directions for use:</h4>
+										
 
 										<ul>
 											<li>${
@@ -180,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- indications -->
 									<div class="wrap">
-										<h4 class="heading">Indications:</h4>
+										
 
 										<p>${
 											product.indications !== undefined
@@ -192,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- contraindications -->
 									<div class="wrap">
-										<h4 class="heading">Contra-indications:</h4>
+										
 
 										<p>${
 											product.contraindications !== undefined
@@ -204,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- precautions and warnings -->
 									<div class="wrap">
-										<h4 class="heading">Precautions/warnings:</h4>
+										
 
 										<p>${
 											product.precautions_warnings !== undefined
@@ -216,7 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 									<!-- adverse effects and reactions -->
 									<div class="wrap">
-										<h4 class="heading">Adverse effects/reactions:</h4>
+										
 
 										<p>${
 											product.adverse_effects_reactions !== undefined

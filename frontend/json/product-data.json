@@ -9,6 +9,8 @@
 
 			"price": 15,
 
+			"introduction": [],
+
 			"pharmacology": [],
 
 			"active_ingredients": [
@@ -53,6 +55,8 @@
 			"name": "Gynovit Capsules",
 
 			"price": 10,
+
+			"introduction": [],
 
 			"pharmacology": [
 				"The active ingredients in Gynovit have been clinically proven to boost female reproductive hormones and ovulation, ",
@@ -99,6 +103,10 @@
 
 			"price": 10,
 
+			"introduction": [
+				"Boosts the immune system, reduces cholesterol level, balances sugar level, reduces blood pressure, improves blood circulation, improves sleep and vitality."
+			],
+
 			"pharmacology": [],
 
 			"active_ingredients": [],
@@ -137,7 +145,9 @@
 
 			"price": 10,
 
-			"pharmacology": "",
+			"introduction": [],
+
+			"pharmacology": [],
 
 			"active_ingredients": [],
 
@@ -149,7 +159,7 @@
 
 			"dosage_administration": "",
 
-			"direction_for_use": "",
+			"direction_for_use": "take 2 capsules every morning & night daily, for maximum result use for 3-4 months",
 
 			"indications": "",
 
@@ -175,21 +185,27 @@
 
 			"price": 10,
 
+			"introduction": [],
+
 			"pharmacology": [
-				"Blended with well researched herbs discovered over 800 years ago to be effective in the treatment of benign prostatic hyperplasia (BPH) in men or enlarged prostate gland and reduces the risk of prostate cancer."
+				"Blended with well researched herbs discovered over 800 years ago to be effective in the treatment of benign prostatic hyperplasia (BPH) in men or enlarged prostate gland and reduces the risk of prostate cancer.",
+
+				"Active ingredients include:",
+
+				"1. Serenoa repens 150mg",
+
+				"2. Cucurbita pepo 150m",
+
+				"3. Medicago sativa 200mg"
 			],
 
-			"active_ingredients": [
-				"Serenoa repens 150mg",
-				"Cucurbita pepo 150m",
-				"Medicago sativa 200mg"
-			],
+			"active_ingredients": "",
 
 			"pack_size": "A pack of Prostagen Capsule -500mg contains 60 capsules",
 
 			"dosage_form_composition": "Prostagen Capsules 500mg",
 
-			"therapeutic_class": "Urological",
+			"therapeutic_class": "Therapeutic class: Urological",
 
 			"dosage_administration": "Prostagen Capsule is best taken orally and the recommended dosage is two capsules of Prostagen Capsule with warm or normal water 10 minutes after breakfast and two capsules 10 minutes after dinner. For best result, patient is advised to use minimum of 8 packs for 120 days.",
 
@@ -237,8 +253,10 @@
 
 			"price": 10,
 
+			"introduction": [],
+
 			"pharmacology": [
-				"The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place."
+				"The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place."
 			],
 
 			"active_ingredients": [
@@ -393,6 +411,8 @@
 
 			"price": 10,
 
+			"introduction": [],
+
 			"pharmacology": [
 				"The active ingredients of Feloklear are largely used for: Treating vaginal discharge (caused by yeast infection, P.I.D. or Candida albicans)",
 
@@ -449,8 +469,10 @@
 
 			"price": 10,
 
+			"introduction": [],
+
 			"pharmacology": [
-				"The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place."
+				"The active ingredients in FreFlo Capsule for women have been successfully used to correct menstrual disorder, lack of ovulation (anovulation), balancing of female reproductive hormones and premature ovarian failure, thereby making it naturally easier for conception to take place."
 			],
 
 			"active_ingredients": [
