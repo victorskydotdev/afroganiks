@@ -506,3 +506,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	}
 });
+
+// making the home page featured products clickable
+const productBtns = document.querySelectorAll('.product-btn');
+
+productBtns.forEach((btn) => {
+	btn.addEventListener('click', () => {
+		window.location.href = '/product';
+	});
+});

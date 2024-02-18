@@ -23,12 +23,18 @@
 				scroll-snap-align: center;
 			}
 
-			.product {
-				height: 300px;
-				background: $accent-green;
-				border-radius: $box-radius;
-				overflow: hidden;
-				padding: 10px;
+			.product-btn {
+				background: transparent;
+				border: none;
+				cursor: pointer;
+
+				.product {
+					height: 300px;
+					background: $accent-green;
+					border-radius: $box-radius;
+					overflow: hidden;
+					padding: 10px;
+				}
 			}
 
 			.product > * {
