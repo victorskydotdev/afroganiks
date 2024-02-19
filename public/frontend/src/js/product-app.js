@@ -512,6 +512,6 @@ const productBtns = document.querySelectorAll('.product-btn');
 
 productBtns.forEach((btn) => {
 	btn.addEventListener('click', () => {
-		window.location.href = '/product';
+		window.location.href = '/product#product-section';
 	});
 });
