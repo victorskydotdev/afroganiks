@@ -6,6 +6,7 @@ const ivoryCoastBtn = document.getElementById('iv-btn');
 const ukBtn = document.getElementById('uk-btn');
 const camBtn = document.getElementById('cameroon-btn');
 const LibBtn = document.getElementById('lib-btn');
+const sierraLeoneBtn = document.getElementById('sl-btn');
 
 const genBtn = document.querySelectorAll('.click-btn');
 const modal = document.querySelector('.dist-modal');
@@ -48,6 +49,9 @@ const checkBtnClicked = () => {
 				case 'uk-btn':
 					countryName = 'UK';
 					break;
+				case 'sl-btn':
+					countryName = 'Sierra Leone';
+					break;
 				default:
 					break;
 			}
@@ -60,7 +64,7 @@ const checkBtnClicked = () => {
 							(distributor) => distributor.country === countryName
 						);
 
-						if (countryDistributors.length > 0) {
+						if (countryDistributors.length >= 0) {
 							const modalContent = countryDistributors
 								.map(
 									(distributor) => `

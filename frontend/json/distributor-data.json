@@ -1230,6 +1230,48 @@
 			"country": "Nigeria",
 
 			"call_line": "08118693817"
+		},
+
+		{
+			"id": 89,
+
+			"name": "Dr. Cheks Emmanuel",
+
+			"phone": "08037515235",
+
+			"address": "Delta State (Asaba)",
+
+			"country": "Nigeria",
+
+			"call_line": "08118693817"
+		},
+
+		{
+			"id": 90,
+
+			"name": "Nurse Oluyemi Saibu",
+
+			"phone": "08037515235",
+
+			"address": "Ojo, Lagos",
+
+			"country": "Nigeria",
+
+			"call_line": "08034266605"
+		},
+
+		{
+			"id": 91,
+
+			"name": "Lawrence Samai",
+
+			"phone": "08037515235",
+
+			"address": "Sierra Leone",
+
+			"country": "Sierra Leone",
+
+			"call_line": "+23233582135"
 		}
 	]
 }
